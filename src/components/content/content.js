@@ -1,9 +1,11 @@
 // Desc: Content component
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { SideNavigation } from "../navigation/navigation"
 import { TopFilters } from "./filters"
 import { ItemGrid, ItemList } from "./items"
 import { useParams } from "react-router-dom"
+import { Waveform } from "./Waveform";
+// import Waveform from "./Waveform";
 
 export const QuranChapters = () => {
 
@@ -19,7 +21,7 @@ export const QuranChapters = () => {
         Promise.all([
         fetch('http://api.alquran.cloud/v1/surah').then(response => {
             if (!response.ok) {
-                    throw new Error('Network response for Quran version was not ok');
+                    throw new Error('Network response for Quran chapters was not ok');
                 }
                 return response.json();
             }),
@@ -50,8 +52,8 @@ export const QuranChapters = () => {
                                 <div>Error: {error}</div>
                             ) : (
                                 <div className="grid grid-cols-5 gap-6 surah-window">
-                                    {quran.map(surah => (
-                                        <ItemGrid surahNumber={surah.number} surahNameEN={surah.englishName} surahMeaningEN={surah.englishNameTranslation} surahType={surah.revelationType} />
+                                    {quran.map((surah, index) => (
+                                        <ItemGrid key={index} surahNumber={surah.number} surahNameEN={surah.englishName} surahMeaningEN={surah.englishNameTranslation} surahType={surah.revelationType} />
                                     ))}
                                 </div>
                             )}
@@ -71,14 +73,16 @@ export const QuranAyahs = () => {
     const { paramValue } = useParams();
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+    const [surah, setSurah] = useState([]);
     const [ayahEN, setAyahEN] = useState([]);
     const [ayahAR, setAyahAR] = useState([]);
 
 
-    const fetchData = () => {
+
+    const fetchData = useCallback(() => {
         Promise.all([
           fetch(`http://api.alquran.cloud/v1/surah/${paramValue}/en.asad`),
-          fetch(`http://api.alquran.cloud/v1/surah/${paramValue}/ar.abdulbasitmurattal`)
+          fetch(`http://api.alquran.cloud/v1/surah/${paramValue}/ar.abdulbasitmurattal`),
         ])
           .then(([responseEnglish, responseArabic]) =>
             Promise.all([
@@ -89,23 +93,21 @@ export const QuranAyahs = () => {
           .then(([ayahEN, ayahAR]) => {
             setAyahEN(ayahEN.data.ayahs);
             setAyahAR(ayahAR.data.ayahs);
+            setSurah(ayahAR.data);
             setLoading(false);
           })
           .catch(error => {
             setError(error.message);
             setLoading(false);
           });
-    };
+    }, [paramValue]);
     
     useEffect(() => {
-        fetchData();
-    }, []);
+        fetchData(); // Call fetchData on initial render
+    }, [fetchData]); // Include fetchData in the dependency array
 
-    const audioLinks = ayahAR.map((ayah) => ayah.audio); // Extract the audioSecondary links
-    const allAudioLinks = audioLinks.join(',');
 
-    const audioFiles = allAudioLinks.split(','); // Convert the comma-separated string to an array
-
+    let AudioSrc = `http://cdn.islamic.network/quran/audio-surah/128/ar.abdulbasitmurattal/${paramValue}.mp3`;
 
     return (
         <div className="content-wrapper">
@@ -133,8 +135,8 @@ export const QuranAyahs = () => {
                             )}
                         </div>
                     </div>
-                    <div className="col-span-2 flex justify-end">
-                        
+                    <div className="col-span-2">
+                        <Waveform number={surah.number} revelationType={surah.revelationType} name={surah.name} englishName={surah.englishName} englishNameTranslation={surah.englishNameTranslation} AudioSrc={AudioSrc} />
                     </div>
                 </div>
             </div>

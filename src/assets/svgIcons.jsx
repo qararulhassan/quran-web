@@ -202,6 +202,24 @@ export const List = (props) => {
     )
 }
 
+export const List2 = (props) => {
+    const svgStyle = props.svgStyle;
+    const strokeWidth = props.strokeWidth;
+
+    return (
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" className={svgStyle}>
+            <g>
+                <path d="M0 0c0 17.738-14.38 32.117-32.117 32.117H-321.35c-17.737 0-32.117-14.379-32.117-32.117v-.032c0-17.738 14.38-32.117 32.117-32.117h289.233C-14.38-32.149 0-17.77 0-.032Z" transform="translate(497 256.016)" fill="none" stroke="currentColor" strokeWidth={strokeWidth} strokeLinecap="round" strokeLinejoin="round"></path>
+                <path d="M0 0c0 17.737-14.38 32.117-32.117 32.117H-321.35c-17.737 0-32.117-14.38-32.117-32.117v-.032c0-17.738 14.38-32.117 32.117-32.117h289.233C-14.38-32.149 0-17.77 0-.032Z" transform="translate(497 400.616)" fill="none" stroke="currentColor" strokeWidth={strokeWidth} strokeLinecap="round" strokeLinejoin="round"></path>
+                <path d="M0 0c0 17.738-14.38 32.117-32.117 32.117H-321.35c-17.737 0-32.117-14.379-32.117-32.117v-.032c0-17.738 14.38-32.117 32.117-32.117h289.233C-14.38-32.149 0-17.77 0-.032Z" transform="translate(497 111.416)" fill="none" stroke="currentColor" strokeWidth={strokeWidth} strokeLinecap="round" strokeLinejoin="round"></path>
+                <path d="M0 0c17.737 0 32.133-14.396 32.133-32.133 0-17.738-14.396-32.134-32.133-32.134-17.738 0-32.134 14.396-32.134 32.134C-32.134-14.396-17.738 0 0 0Z" transform="translate(47.134 432.733)" fill="none" stroke="currentColor" strokeWidth={strokeWidth} strokeLinecap="round" strokeLinejoin="round"></path>
+                <path d="M0 0c17.737 0 32.133-14.396 32.133-32.133 0-17.738-14.396-32.134-32.133-32.134-17.738 0-32.134 14.396-32.134 32.134C-32.134-14.396-17.738 0 0 0Z" transform="translate(47.134 288.133)" fill="none" stroke="currentColor" strokeWidth={strokeWidth} strokeLinecap="round" strokeLinejoin="round"></path>
+                <path d="M0 0c17.737 0 32.133-14.396 32.133-32.133 0-17.738-14.396-32.134-32.133-32.134-17.738 0-32.134 14.396-32.134 32.134C-32.134-14.396-17.738 0 0 0Z" transform="translate(47.134 143.533)" fill="none" stroke="currentColor" strokeWidth={strokeWidth} strokeLinecap="round" strokeLinejoin="round"></path>
+            </g>
+        </svg>
+    )
+}
+
 export const Up = (props) => {
     const svgStyle = props.svgStyle;
     const strokeWidth = props.strokeWidth;
@@ -258,6 +276,44 @@ export const Share = (props) => {
     )
 }
 
+export const Forward = (props) => {
+    const svgStyle = props.svgStyle;
+    const strokeWidth = props.strokeWidth;
+
+    return (
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" className={svgStyle}>
+            <g>
+                <path d="M289.132 254.178v106.186L497 192.598 289.132 21.204v107.914h0C137.733 129.119 15 251.733 15 402.985v87.81h0c15.033-133.954 127.917-235.542 262.838-236.534l11.294-.083z" fill="none" stroke="currentColor" strokeWidth={strokeWidth} strokeLinecap="round" strokeLinejoin="round"></path>
+            </g>
+        </svg>
+    )
+}
+
+export const Previous = (props) => {
+    const svgStyle = props.svgStyle;
+    const strokeWidth = props.strokeWidth;
+
+    return (
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 295 244" className={svgStyle} fill="none">
+            <path d="M292.819 228.372C292.819 240.101 279.962 247.293 269.968 241.153L96.7994 134.782C87.2675 128.927 87.2675 115.075 96.7994 109.22L269.968 2.84814C279.962 -3.29184 292.819 3.89913 292.819 15.6291V228.372Z" stroke="currentColor" strokeWidth={strokeWidth} strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M1 173.857V224C1 232.26 10.1785 243 21.5 243C32.8215 243 42 232.26 42 224V19C42 10.7414 32.8215 1 21.5 1C10.1785 1 1 10.7414 1 19V174.338" stroke="currentColor" strokeWidth={strokeWidth} strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+    )
+}
+
+export const Forward2 = (props) => {
+    const svgStyle = props.svgStyle;
+    const strokeWidth = props.strokeWidth;
+
+    return (
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 295 244" className={svgStyle} fill="none">
+            <path d="M0.999966 15.629C0.999965 3.90001 13.8569 -3.29197 23.8509 2.84801L197.019 109.22C206.551 115.075 206.551 128.927 197.019 134.782L23.8509 241.153C13.8569 247.293 0.999986 240.102 0.999985 228.372L0.999966 15.629Z" stroke="currentColor" strokeWidth={strokeWidth} strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M292.819 70.1448L292.819 20.0014C292.819 11.7418 283.64 1.0014 272.319 1.00141C260.997 1.00141 251.819 11.7418 251.819 20.0014L251.819 225.001C251.819 233.26 260.997 243.001 272.319 243.001C283.64 243.001 292.819 233.26 292.819 225.001L292.819 69.6629" stroke="currentColor" strokeWidth={strokeWidth} strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+
+    )
+}
+
 export const Play = (props) => {
     const svgStyle = props.svgStyle;
     const strokeWidth = props.strokeWidth;
@@ -267,6 +323,18 @@ export const Play = (props) => {
             <g>
                 <path d="M256 11C120.69 11 11 120.69 11 256v0c0 135.31 109.69 245 245 245s245-109.69 245-245v0c0-135.31-109.69-245-245-245z" fill="none" stroke="currentColor" strokeWidth={strokeWidth} strokeLinecap="round" strokeLinejoin="round"></path>
                 <path d="m196.826 350.47 150.463-93.007-150.463-93.857z" fill="none" stroke="currentColor" strokeWidth={strokeWidth} strokeLinecap="round" strokeLinejoin="round"></path>
+            </g>
+        </svg>
+    )
+}
+
+export const PlayFill = (props) => {
+    const svgStyle = props.svgStyle;
+
+    return (
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" className={svgStyle}>
+            <g>
+                <path d="M256 0C114.617 0 0 114.615 0 256s114.617 256 256 256 256-114.615 256-256S397.383 0 256 0zm88.48 269.57-128 80a16.008 16.008 0 0 1-16.238.422A15.994 15.994 0 0 1 192 336V176c0-5.82 3.156-11.172 8.242-13.992a15.957 15.957 0 0 1 16.238.422l128 80c4.676 2.93 7.52 8.055 7.52 13.57s-2.844 10.641-7.52 13.57z" fill="currentColor"></path>
             </g>
         </svg>
     )
@@ -287,6 +355,34 @@ export const Pause = (props) => {
     )
 }
 
+export const PauseFill = (props) => {
+    const svgStyle = props.svgStyle;
+
+    return (
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 409.6 409.6" className={svgStyle}>
+            <g>
+                <path d="M204.8 0C91.648 0 0 91.648 0 204.8s91.648 204.8 204.8 204.8 204.8-91.648 204.8-204.8S317.952 0 204.8 0zm-22.528 256c0 12.8-10.24 22.528-22.528 22.528-12.8 0-22.528-10.24-22.528-22.528V153.6c-.512-12.288 9.728-22.528 22.016-22.528 12.8 0 23.04 10.24 23.04 22.528V256zm90.624 0c0 12.8-10.24 22.528-22.528 22.528-12.8 0-22.528-10.24-22.528-22.528V153.6c-.512-12.288 9.728-22.528 22.016-22.528 12.8 0 23.04 10.24 23.04 22.528V256z" fill="currentColor"></path>
+            </g>
+        </svg>
+    )
+}
+
+export const Loop = (props) => {
+    const svgStyle = props.svgStyle;
+    const strokeWidth = props.strokeWidth;
+
+    return (
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" className={svgStyle}>
+            <g>
+                <path d="M456 91.992H96c-22.091 0-40 18.131-40 40.496v186.281" fill="none" stroke="currentColor" strokeWidth={strokeWidth} strokeLinecap="round" strokeLinejoin="round"></path>
+                <path d="M56 420.008h360c22.091 0 40-18.131 40-40.496V193.231" fill="none" stroke="currentColor" strokeWidth={strokeWidth} strokeLinecap="round" strokeLinejoin="round"></path>
+                <path d="m376 11 80 80.992-80 80.992" fill="none" stroke="currentColor" strokeWidth={strokeWidth} strokeLinecap="round" strokeLinejoin="round"></path>
+                <path d="m136 339.017-80 80.991L136 501" fill="none" stroke="currentColor" strokeWidth={strokeWidth} strokeLinecap="round" strokeLinejoin="round"></path>
+            </g>
+        </svg>
+    )
+}
+
 export const Copy = (props) => {
     const svgStyle = props.svgStyle;
     const strokeWidth = props.strokeWidth;
@@ -301,7 +397,7 @@ export const Copy = (props) => {
     )
 }
 
-export const Meeca = (props) => {
+export const Mecca = (props) => {
     const svgStyle = props.svgStyle;
 
     return (
@@ -381,6 +477,20 @@ export const Madina = (props) => {
                 <path fill="#47b28e" d="M51.67 54.53v3.29h-1.78v-1.61c0-1.05-.84-1.91-1.88-1.91-.24 0-.47.05-.69.14-.69.28-1.19.97-1.19 1.77v1.61h-2.08v-1.61c0-1.05-.84-1.91-1.88-1.91-.11 0-.22.01-.33.03-.87.16-1.55.94-1.55 1.88v1.61h-2.08v-1.61a1.9 1.9 0 0 0-1.32-1.82.776.776 0 0 0-.18-.05.582.582 0 0 0-.19-.03c-.04-.01-.09-.01-.13-.01-.06 0-.11 0-.17.01-.98.05-1.77.89-1.77 1.9v1.61h-2.08v-1.61c0-.91-.63-1.68-1.48-1.87-.13-.02-.26-.04-.4-.04-1.03 0-1.88.86-1.88 1.91v1.61h-2.08v-1.61c0-.78-.46-1.45-1.12-1.75-.23-.1-.49-.16-.76-.16-1.03 0-1.88.86-1.88 1.91v1.61h-.74v-3.29l.65-.76h28.34l.65.76z"></path>
                 <path fill="#53bf9f" d="M52.59 52.79h-1.83l-.02-2.75c.02-10.21-7.91-15.12-11.29-17.21-.53-.32-.87-.54-1.12-.73l.14-.03c.29.19.69.42 1.32.76 3.83 2.09 12.8 7 12.78 17.21l.02 2.75zM51.67 57.82v-3.29l-.65-.76h1.86l.74.76v3.29zM55.17 59.54v3.48h-1.62v-1.47c0-.53-.19-1.02-.51-1.38v-.63l-1.06-.73h1.99l1.2.73z"></path>
                 <path fill="#3ba580" d="M19.73 58.81h1.99l-1.06.75v.76c-.25.34-.39.77-.39 1.23v1.47h-1.74v-3.46l1.2-.75zm15.66-26.72c-.24.18-.6.41-1.14.74-3.38 2.09-11.31 7-11.28 17.2l-.03 2.76h-1.83l.03-2.76c-.03-10.2 8.94-15.11 12.77-17.2.64-.35 1.05-.58 1.33-.77l.15.03zM20.82 53.77h1.86l-.65.76v3.29h-1.95v-3.29z"></path>
+            </g>
+        </svg>
+    )
+}
+
+export const Download = (props) => {
+    const svgStyle = props.svgStyle;
+    const strokeWidth = props.strokeWidth;
+
+    return (
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" className={svgStyle}>
+            <g>
+                <path d="M336 336.142h76c44.182 0 80-35.818 80-80 0-44.185-31.818-80-76-80 0-44.185-35.818-80-80-80-9.526 0-18.538 1.948-27.012 5.005-22-27.236-55.251-45.005-92.988-45.005-66.274 0-120 53.726-120 120-44.182 0-76 35.815-76 80 0 44.182 35.818 80 80 80h76" fill="none" stroke="currentColor" strokeWidth={strokeWidth} strokeLinecap="round" strokeLinejoin="round"></path>
+                <path d="M336 336.142h76c44.182 0 80-35.818 80-80 0-44.185-31.818-80-76-80 0-44.185-35.818-80-80-80-9.526 0-18.538 1.948-27.012 5.005-22-27.236-55.251-45.005-92.988-45.005-66.274 0-120 53.726-120 120-44.182 0-76 35.815-76 80 0 44.182 35.818 80 80 80h76M256 216.142v239.711M196 404.142 241.858 450c7.81 7.81 20.474 7.81 28.284 0L316 404.142" fill="none" stroke="currentColor" strokeWidth={strokeWidth} strokeLinecap="round" strokeLinejoin="round"></path>
             </g>
         </svg>
     )

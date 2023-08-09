@@ -1,6 +1,6 @@
 // Desc: List Item component
 import React, { useState, useEffect, useRef } from 'react'
-import { Heart, HeartFill, Play, Right, Share, Copy, Meeca, Madina, Pause } from "../../assets/svgIcons";
+import { Heart, HeartFill, Play, Right, Share, Copy, Mecca, Madina, Pause } from "../../assets/svgIcons";
 import { Link } from "react-router-dom";
 
 export const ItemGrid = ( props ) => {
@@ -13,13 +13,13 @@ export const ItemGrid = ( props ) => {
                     <div className="flex justify-between items-center">
                         <span className="bg-teal-100 text-teal-500 font-medium text-xl w-10 aspect-square inline-flex justify-center items-center rounded-full">{surahNumber}</span>
                         <div className="relative w-7 aspect-square group">    
-                            <Heart svgStyle="absolute w-full aspect-square text-gray-300 opacity-100 group-hover:opacity-0 transition duration-300 group-[.active]:opacity-0]"strokeWidth="35"  />
+                            <Heart svgStyle="absolute w-full aspect-square text-gray-300 opacity-100 group-hover:opacity-0 transition duration-300 group-[.active]:opacity-0]" strokeWidth="35"  />
                             <HeartFill svgStyle="absolute w-full aspect-square text-red-500 opacity-0 group-hover:opacity-100 transition duration-300 group-[.active]:opacity-100" strokeWidth="35"  />
                         </div>
                     </div>
                     <div className="grid gap-1">
                         <h2 className="font-bold text-xl">{surahNameEN}</h2>
-                        <p className="font-medium uppercase text-gray-400 grid grid-flow-col items-center justify-between w-full"><span>{surahMeaningEN}</span> {surahType === 'Meccan' ? ( <Meeca svgStyle="w-7 aspect-square" /> ) : ( <Madina svgStyle="w-8 aspect-square" /> )}</p>
+                        <p className="font-medium uppercase text-gray-400 grid grid-flow-col items-center justify-between w-full"><span>{surahMeaningEN}</span> {surahType === 'Meccan' ? ( <Mecca svgStyle="w-7 aspect-square" /> ) : ( <Madina svgStyle="w-8 aspect-square" /> )}</p>
                     </div>
                 </div>
             </Link>
@@ -58,6 +58,9 @@ export const ItemList = ( props ) => {
     };
 
     useEffect(() => {
+        // Create a variable to store the current ref value
+        const currentAudioRef = audioRef.current;
+      
         const handleEnded = () => {
           // When the audio ends, reset the pausedAt state to null
           setPausedAt(null);
@@ -65,20 +68,20 @@ export const ItemList = ( props ) => {
         };
       
         // Add the "ended" event listener to the audio element
-        audioRef.current.addEventListener('ended', handleEnded);
+        currentAudioRef.addEventListener('ended', handleEnded);
       
         // Clean up the event listener when the component unmounts
         return () => {
-          // Check if audioRef.current is not null before removing the event listener
-          if (audioRef.current) {
-            audioRef.current.removeEventListener('ended', handleEnded);
+          // Check if currentAudioRef is not null before removing the event listener
+          if (currentAudioRef) {
+            currentAudioRef.removeEventListener('ended', handleEnded);
           }
         };
-    }, []);
+    }, []);      
 
     return (
         <div className="list-item-wrapper">
-            <div className="list-item-container cursor-pointer bg-white p-8 rounded-2xl grid gap-8">
+            <div className="list-item-container bg-white p-8 rounded-2xl grid gap-8">
                 <div className="flex justify-between">
                     <span className="inline-block text-teal-500 text-4xl mr-8">{surahNumber}:{ayahNumber}</span>
                     <p className="font-cairo text-4xl text-right leading-relaxed">{ayahTextAR}</p>
@@ -91,7 +94,7 @@ export const ItemList = ( props ) => {
                 <p>{ayahTextEN}</p>
                 <p className="text-white block w-fill h-px bg-gray-300 text-[0px]">space</p>
                 <ul className="flex items-center gap-6">
-                    <li><Heart svgStyle="w-6 aspect-square text-gray-300 hover:text-red-500" strokeWidth="35" /></li>
+                    <li><Heart svgStyle="w-6 aspect-square text-gray-300 hover:text-red-500 cursor-pointer" strokeWidth="35" /></li>
                     <li><Share svgStyle="w-6 aspect-square text-gray-300 hover:text-teal-500" strokeWidth="35" /></li>
                     <li className='cursor-pointer' onClick={() => handleAudioClick('audio')}>
                         {currentAudio === 'audio' && isPlaying ? <Pause svgStyle="w-6 aspect-square text-teal-500" strokeWidth="35" /> : <Play svgStyle="w-6 aspect-square text-gray-300 hover:text-teal-500" strokeWidth="35" />}
