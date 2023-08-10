@@ -4,8 +4,7 @@ import { SideNavigation } from "../navigation/navigation"
 import { TopFilters } from "./filters"
 import { ItemGrid, ItemList } from "./items"
 import { useParams } from "react-router-dom"
-import { Waveform } from "./Waveform";
-// import Waveform from "./Waveform";
+import Waveform from "./Waveform";
 
 export const QuranChapters = () => {
 
@@ -107,7 +106,7 @@ export const QuranAyahs = () => {
     }, [fetchData]); // Include fetchData in the dependency array
 
 
-    let AudioSrc = `http://cdn.islamic.network/quran/audio-surah/128/ar.abdulbasitmurattal/${paramValue}.mp3`;
+    let audioSrc = `http://cdn.islamic.network/quran/audio-surah/128/ar.abdulbasitmurattal/${paramValue}.mp3`;
 
     return (
         <div className="content-wrapper">
@@ -128,15 +127,12 @@ export const QuranAyahs = () => {
                                     {ayahEN.map((ayah, index) => (
                                         <ItemList key={index} surahNumber={paramValue} ayahNumber={ayah.numberInSurah} ayahTextEN={ayah.text} ayahTextAR={ayahAR[index].text} ayahAudio={ayahAR[index].audio} />
                                     ))}
-                                    <audio controls>
-                                        <source src={`https://cdn.islamic.network/quran/audio-surah/128/ar.abdulbasitmurattal/${paramValue}.mp3`} type="audio/mp3" />
-                                    </audio>
                                 </div>
                             )}
                         </div>
                     </div>
                     <div className="col-span-2">
-                        <Waveform number={surah.number} revelationType={surah.revelationType} name={surah.name} englishName={surah.englishName} englishNameTranslation={surah.englishNameTranslation} AudioSrc={AudioSrc} />
+                        <Waveform number={surah.number} revelationType={surah.revelationType} name={surah.name} englishName={surah.englishName} englishNameTranslation={surah.englishNameTranslation} audioSrc={audioSrc} />
                     </div>
                 </div>
             </div>
