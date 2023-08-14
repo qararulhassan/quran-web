@@ -25,6 +25,10 @@ svg {
   animation: animatedgradient 4s ease infinite alternate;
 }
 
+#waveform wave:first-child {
+  @apply !hidden;
+}
+
 @keyframes animatedgradient {
   0% {
     background-position: 0% 50%;

@@ -4,51 +4,53 @@ import { Link } from "react-router-dom";
 import WaveSurfer from "wavesurfer.js";
 
 const Waveform = (props) => {
-    const {number, revelationType, name, englishName, englishNameTranslation, audioSrc} = props;
+    const {number, revelationType, name, englishName, englishNameTranslation, surahAudio} = props;
     const [waveform, setWaveform] = useState(null);
     const [playing, setPlaying] = useState(false);
     const [currentTime, setCurrentTime] = useState(0);
     const [duration, setDuration] = useState(0);
 
     useEffect(() => {
-        const track = document.querySelector("#track");
+        setTimeout(() => {
+            const track = document.querySelector("#track");
 
-        const newWaveform = WaveSurfer.create({
-            barWidth: 3,
-            barRadius: 3,
-            barGap: 3,
-            barMinHeight: 1,
-            cursorWidth: 1,
-            container: "#waveform",
-            backend: "WebAudio",
-            height: 60,
-            progressColor: "#FE6E00",
-            responsive: true,
-            waveColor: "#C4C4C4",
-            cursorColor: "transparent"
-        });
+            const newWaveform = WaveSurfer.create({
+                barWidth: 3,
+                barRadius: 3,
+                barGap: 3,
+                barMinHeight: 1,
+                cursorWidth: 1,
+                container: "#waveform",
+                backend: "WebAudio",
+                height: 60,
+                progressColor: "#FE6E00",
+                responsive: true,
+                waveColor: "#C4C4C4",
+                cursorColor: "transparent"
+            });
 
-        newWaveform.on('ready', () => {
-            setDuration(newWaveform.getDuration());
-        });
+            newWaveform.on('ready', () => {
+                setDuration(newWaveform.getDuration());
+            });
 
-        newWaveform.load(track);
+            newWaveform.load(track);
 
-        setWaveform(newWaveform);
+            setWaveform(newWaveform);
 
-        newWaveform.on('audioprocess', () => {
-            setCurrentTime(newWaveform.getCurrentTime());
-        });
+            newWaveform.on('audioprocess', () => {
+                setCurrentTime(newWaveform.getCurrentTime());
+            });
 
-        newWaveform.on('finish', () => {
-            setPlaying(false);
-        });
+            newWaveform.on('finish', () => {
+                setPlaying(false);
+            });
 
-        return () => {
-            if (newWaveform) {
-                newWaveform.destroy();
-            }
-        };
+            return () => {
+                if (newWaveform) {
+                    newWaveform.destroy();
+                }
+            };
+        }, 100);
     }, []);
 
     const formatTime = (seconds) => {
@@ -76,6 +78,26 @@ const Waveform = (props) => {
         }
     };
 
+    const handleDownload = async () => {
+        try {
+          // Fetch the audio data
+          const response = await fetch(surahAudio);
+          const audioData = await response.blob();
+    
+          // Create a URL for the blob
+          const blobUrl = URL.createObjectURL(audioData);
+    
+          // Create a temporary anchor tag for downloading
+          const downloadLink = document.createElement('a');
+          downloadLink.href = blobUrl;
+          downloadLink.download = `${englishName}`; // Specify the download filename
+          downloadLink.click();
+          URL.revokeObjectURL(blobUrl);
+        } catch (error) {
+          console.error('Error downloading audio:', error);
+        }
+    };
+
     return (
       <div className="player-wrapper">
           <div className="player-container">
@@ -93,7 +115,7 @@ const Waveform = (props) => {
                                   <HeartFill svgStyle="absolute w-full aspect-square text-red-500 opacity-0 group-hover:opacity-100 transition duration-300 group-[.active]:opacity-100" strokeWidth="35"  />
                               </div>
                           </li>
-                          <li><Download svgStyle="w-5 aspect-square text-white cursor-pointer" strokeWidth="35" /></li>
+                          <li onClick={handleDownload}><Download svgStyle="w-5 aspect-square text-white cursor-pointer" strokeWidth="35" /></li>
                       </ul>
                   </div>
                   <div className="mt-4">
@@ -102,10 +124,7 @@ const Waveform = (props) => {
                   </div>
                   <div>
                         <div id="waveform" className="my-4" />
-                        {/* <audio id="track" src="../../assets/test.mp3" /> */}
-                        {/* <audio id="track" src="http://cdn.islamic.network/quran/audio-surah/128/ar.abdulbasitmurattal/1.mp3" /> */}
-                        {/* <audio id="track" src="https://s3.eu-central-1.amazonaws.com/some-sprouts/Mindcrush.mp3" /> */}
-                        <audio id="track" src={audioSrc} />
+                        <audio id="track" src={surahAudio} controls />
                         <p className="flex justify-between text-cyan-800"><span id="time">{formatTime(currentTime)}</span><span id="duration">{formatTime(duration)}</span></p>
                   </div>
                   <ul className="flex gap-8 items-center justify-center mt-8">

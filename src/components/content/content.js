@@ -7,33 +7,33 @@ import { useParams } from "react-router-dom"
 import Waveform from "./Waveform";
 
 export const QuranChapters = () => {
-
+    
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
-    const [quran, setQuran] = useState([]);
+    const [surahs, setSurahs] = useState([]);
 
-    useEffect(() => {
-        fetchData();
-    }, []);
-
-    const fetchData = () => {
+    const fetchData = useCallback(() => {
         Promise.all([
-        fetch('http://api.alquran.cloud/v1/surah').then(response => {
-            if (!response.ok) {
-                    throw new Error('Network response for Quran chapters was not ok');
-                }
-                return response.json();
-            }),
+          fetch(`https://axntr01jcwgp.objectstorage.me-dubai-1.oci.customer-oci.com/n/axntr01jcwgp/b/quran-api/o/abdulbasit%2Fsurahs%2Fapi.json`),
         ])
-        .then(([quran]) => {
-            setQuran(quran.data);
+          .then(([responseSurah]) =>
+            Promise.all([
+              responseSurah.json()
+            ])
+          )
+          .then(([quran]) => {
+            setSurahs(quran.data.surahs);
             setLoading(false);
-        })
-        .catch(error => {
+          })
+          .catch(error => {
             setError(error.message);
             setLoading(false);
-        });
-    };
+          });
+    }, []);
+    
+    useEffect(() => {
+        fetchData();
+    }, [fetchData]);
 
     return (
         <div className="content-wrapper">
@@ -51,7 +51,7 @@ export const QuranChapters = () => {
                                 <div>Error: {error}</div>
                             ) : (
                                 <div className="grid grid-cols-5 gap-6 surah-window">
-                                    {quran.map((surah, index) => (
+                                    {surahs.map((surah, index) => (
                                         <ItemGrid key={index} surahNumber={surah.number} surahNameEN={surah.englishName} surahMeaningEN={surah.englishNameTranslation} surahType={surah.revelationType} />
                                     ))}
                                 </div>
@@ -64,35 +64,28 @@ export const QuranChapters = () => {
                 </div>
             </div>
         </div>
-    )
+    );
 }
 
 export const QuranAyahs = () => {
-
     const { paramValue } = useParams();
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
-    const [surah, setSurah] = useState([]);
-    const [ayahEN, setAyahEN] = useState([]);
-    const [ayahAR, setAyahAR] = useState([]);
-
-
+    const [surahs, setSurahs] = useState([]);
+    const [ayahs, setAyahs] = useState([]);
 
     const fetchData = useCallback(() => {
         Promise.all([
-          fetch(`http://api.alquran.cloud/v1/surah/${paramValue}/en.asad`),
-          fetch(`http://api.alquran.cloud/v1/surah/${paramValue}/ar.abdulbasitmurattal`),
+          fetch(`https://axntr01jcwgp.objectstorage.me-dubai-1.oci.customer-oci.com/n/axntr01jcwgp/b/quran-api/o/abdulbasit%2Fayahs%2F${paramValue}%2Fapi.json`),
         ])
-          .then(([responseEnglish, responseArabic]) =>
+          .then(([responseSurah]) =>
             Promise.all([
-              responseEnglish.json(),
-              responseArabic.json()
+              responseSurah.json()
             ])
           )
-          .then(([ayahEN, ayahAR]) => {
-            setAyahEN(ayahEN.data.ayahs);
-            setAyahAR(ayahAR.data.ayahs);
-            setSurah(ayahAR.data);
+          .then(([quran]) => {
+            setSurahs(quran.data);
+            setAyahs(quran.data.ayahs);
             setLoading(false);
           })
           .catch(error => {
@@ -102,11 +95,8 @@ export const QuranAyahs = () => {
     }, [paramValue]);
     
     useEffect(() => {
-        fetchData(); // Call fetchData on initial render
-    }, [fetchData]); // Include fetchData in the dependency array
-
-
-    let audioSrc = `http://cdn.islamic.network/quran/audio-surah/128/ar.abdulbasitmurattal/${paramValue}.mp3`;
+            fetchData();
+    }, [fetchData]);
 
     return (
         <div className="content-wrapper">
@@ -124,15 +114,15 @@ export const QuranAyahs = () => {
                                 <div>Error: {error}</div>
                             ) : (
                                 <div className="grid gap-6 surah-window">
-                                    {ayahEN.map((ayah, index) => (
-                                        <ItemList key={index} surahNumber={paramValue} ayahNumber={ayah.numberInSurah} ayahTextEN={ayah.text} ayahTextAR={ayahAR[index].text} ayahAudio={ayahAR[index].audio} />
+                                    {ayahs.map((ayah, index) => (
+                                        <ItemList key={index} surahNumber={paramValue} ayahNumber={ayah.numberInSurah} ayahTextEN={ayah.englishText} ayahTextAR={ayah.arabicText} ayahAudio={ayah.audio} />
                                     ))}
                                 </div>
                             )}
                         </div>
                     </div>
                     <div className="col-span-2">
-                        <Waveform number={surah.number} revelationType={surah.revelationType} name={surah.name} englishName={surah.englishName} englishNameTranslation={surah.englishNameTranslation} audioSrc={audioSrc} />
+                        <Waveform number={surahs.number} revelationType={surahs.revelationType} name={surahs.name} englishName={surahs.englishName} englishNameTranslation={surahs.englishNameTranslation} surahAudio={surahs.audio} />
                     </div>
                 </div>
             </div>
