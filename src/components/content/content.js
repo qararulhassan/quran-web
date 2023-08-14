@@ -122,7 +122,11 @@ export const QuranAyahs = () => {
                         </div>
                     </div>
                     <div className="col-span-2">
-                        <Waveform number={surahs.number} revelationType={surahs.revelationType} name={surahs.name} englishName={surahs.englishName} englishNameTranslation={surahs.englishNameTranslation} surahAudio={surahs.audio} />
+                        {
+                            setTimeout(() => {
+                                <Waveform number={surahs.number} revelationType={surahs.revelationType} name={surahs.name} englishName={surahs.englishName} englishNameTranslation={surahs.englishNameTranslation} surahAudio={surahs.audio} />
+                            } , 1000)
+                        }
                     </div>
                 </div>
             </div>

@@ -11,46 +11,44 @@ const Waveform = (props) => {
     const [duration, setDuration] = useState(0);
 
     useEffect(() => {
-        setTimeout(() => {
-            const track = document.querySelector("#track");
+        const track = document.querySelector("#track");
 
-            const newWaveform = WaveSurfer.create({
-                barWidth: 3,
-                barRadius: 3,
-                barGap: 3,
-                barMinHeight: 1,
-                cursorWidth: 1,
-                container: "#waveform",
-                backend: "WebAudio",
-                height: 60,
-                progressColor: "#FE6E00",
-                responsive: true,
-                waveColor: "#C4C4C4",
-                cursorColor: "transparent"
-            });
+        const newWaveform = WaveSurfer.create({
+            barWidth: 3,
+            barRadius: 3,
+            barGap: 3,
+            barMinHeight: 1,
+            cursorWidth: 1,
+            container: "#waveform",
+            backend: "WebAudio",
+            height: 60,
+            progressColor: "#FE6E00",
+            responsive: true,
+            waveColor: "#C4C4C4",
+            cursorColor: "transparent"
+        });
 
-            newWaveform.on('ready', () => {
-                setDuration(newWaveform.getDuration());
-            });
+        newWaveform.on('ready', () => {
+            setDuration(newWaveform.getDuration());
+        });
 
-            newWaveform.load(track);
+        newWaveform.load(track);
 
-            setWaveform(newWaveform);
+        setWaveform(newWaveform);
 
-            newWaveform.on('audioprocess', () => {
-                setCurrentTime(newWaveform.getCurrentTime());
-            });
+        newWaveform.on('audioprocess', () => {
+            setCurrentTime(newWaveform.getCurrentTime());
+        });
 
-            newWaveform.on('finish', () => {
-                setPlaying(false);
-            });
+        newWaveform.on('finish', () => {
+            setPlaying(false);
+        });
 
-            return () => {
-                if (newWaveform) {
-                    newWaveform.destroy();
-                }
-            };
-        }, 100);
+        return () => {
+            if (newWaveform) {
+                newWaveform.destroy();
+            }
+        };
     }, []);
 
     const formatTime = (seconds) => {
