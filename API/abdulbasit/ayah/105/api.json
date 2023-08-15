@@ -1,0 +1,87 @@
+{
+    "code": 200,
+    "status": "OK",
+    "data": {
+        "number": 105,
+        "name": "سُورَةُ الفِيلِ",
+        "englishName": "Al-Fil",
+        "englishNameTranslation": "The Elephant",
+        "audio": "/API/abdulbasit/surah/105.mp3",
+        "revelationType": "Meccan",
+        "ayahs": [
+            {
+                "number": 6189,
+                "englishText": "ART THOU NOT aware of how thy Sustainer dealt with the Army of the Elephant?",
+                "arabicText": "أَلَمْ تَرَ كَيْفَ فَعَلَ رَبُّكَ بِأَصْحَابِ الْفِيلِ",
+                "audio": "/API/abdulbasit/ayah/6189.mp3",
+                "numberInSurah": 1,
+                "juz": 30,
+                "manzil": 7,
+                "page": 601,
+                "ruku": 547,
+                "hizbQuarter": 240,
+                "sajda": false
+            },
+            {
+                "number": 6190,
+                "englishText": "Did He not utterly confound their artful planning?",
+                "arabicText": "أَلَمْ يَجْعَلْ كَيْدَهُمْ فِي تَضْلِيلٍ",
+                "audio": "/API/abdulbasit/ayah/6190.mp3",
+                "numberInSurah": 2,
+                "juz": 30,
+                "manzil": 7,
+                "page": 601,
+                "ruku": 547,
+                "hizbQuarter": 240,
+                "sajda": false
+            },
+            {
+                "number": 6191,
+                "englishText": "Thus, He let loose upon them great swarms of flying creatures",
+                "arabicText": "وَأَرْسَلَ عَلَيْهِمْ طَيْرًا أَبَابِيلَ",
+                "audio": "/API/abdulbasit/ayah/6191.mp3",
+                "numberInSurah": 3,
+                "juz": 30,
+                "manzil": 7,
+                "page": 601,
+                "ruku": 547,
+                "hizbQuarter": 240,
+                "sajda": false
+            },
+            {
+                "number": 6192,
+                "englishText": "which smote them with stone-hard blows of chastisement pre-ordained,",
+                "arabicText": "تَرْمِيهِمْ بِحِجَارَةٍ مِنْ سِجِّيلٍ",
+                "audio": "/API/abdulbasit/ayah/6192.mp3",
+                "numberInSurah": 4,
+                "juz": 30,
+                "manzil": 7,
+                "page": 601,
+                "ruku": 547,
+                "hizbQuarter": 240,
+                "sajda": false
+            },
+            {
+                "number": 6193,
+                "englishText": "and caused them to become like a field of grain that has been eaten down to stubble",
+                "arabicText": "فَجَعَلَهُمْ كَعَصْفٍ مَأْكُولٍ",
+                "audio": "/API/abdulbasit/ayah/6193.mp3",
+                "numberInSurah": 5,
+                "juz": 30,
+                "manzil": 7,
+                "page": 601,
+                "ruku": 547,
+                "hizbQuarter": 240,
+                "sajda": false
+            }
+        ],
+        "edition": {
+            "identifier": "en.asad",
+            "language": "en",
+            "name": "Asad",
+            "englishName": "Muhammad Asad",
+            "format": "text",
+            "type": "translation"
+        }
+    }
+}

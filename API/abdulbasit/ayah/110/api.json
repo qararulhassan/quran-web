@@ -1,0 +1,61 @@
+{
+    "code": 200,
+    "status": "OK",
+    "data": {
+        "number": 110,
+        "name": "سُورَةُ النَّصۡرِ",
+        "englishName": "An-Nasr",
+        "englishNameTranslation": "Divine Support",
+        "audio": "/API/abdulbasit/surah/110.mp3",
+        "revelationType": "Medinan",
+        "ayahs": [
+            {
+                "number": 6214,
+                "englishText": "WHEN GOD'S SUCCOUR comes, and victory,",
+                "arabicText": "إِذَا جَاءَ نَصْرُ اللَّهِ وَالْفَتْحُ",
+                "audio": "/API/abdulbasit/ayah/6214.mp3",
+                "numberInSurah": 1,
+                "juz": 30,
+                "manzil": 7,
+                "page": 603,
+                "ruku": 552,
+                "hizbQuarter": 240,
+                "sajda": false
+            },
+            {
+                "number": 6215,
+                "englishText": "and thou seest people enter God's religion in hosts,",
+                "arabicText": "وَرَأَيْتَ النَّاسَ يَدْخُلُونَ فِي دِينِ اللَّهِ أَفْوَاجًا",
+                "audio": "/API/abdulbasit/ayah/6215.mp3",
+                "numberInSurah": 2,
+                "juz": 30,
+                "manzil": 7,
+                "page": 603,
+                "ruku": 552,
+                "hizbQuarter": 240,
+                "sajda": false
+            },
+            {
+                "number": 6216,
+                "englishText": "extol thy Sustainer's limitless glory, and praise Him, and seek His forgiveness: for, behold, He is ever an acceptor of repentance.",
+                "arabicText": "فَسَبِّحْ بِحَمْدِ رَبِّكَ وَاسْتَغْفِرْهُ ۚ إِنَّهُ كَانَ تَوَّابًا",
+                "audio": "/API/abdulbasit/ayah/6216.mp3",
+                "numberInSurah": 3,
+                "juz": 30,
+                "manzil": 7,
+                "page": 603,
+                "ruku": 552,
+                "hizbQuarter": 240,
+                "sajda": false
+            }
+        ],
+        "edition": {
+            "identifier": "en.asad",
+            "language": "en",
+            "name": "Asad",
+            "englishName": "Muhammad Asad",
+            "format": "text",
+            "type": "translation"
+        }
+    }
+}

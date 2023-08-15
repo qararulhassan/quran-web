@@ -1,0 +1,61 @@
+{
+    "code": 200,
+    "status": "OK",
+    "data": {
+        "number": 108,
+        "name": "سُورَةُ الكَوۡثَرِ",
+        "englishName": "Al-Kawthar",
+        "englishNameTranslation": "Abundance",
+        "audio": "/API/abdulbasit/surah/108.mp3",
+        "revelationType": "Meccan",
+        "ayahs": [
+            {
+                "number": 6205,
+                "englishText": "BEHOLD, We have bestowed upon thee good in abundance:",
+                "arabicText": "إِنَّا أَعْطَيْنَاكَ الْكَوْثَرَ",
+                "audio": "/API/abdulbasit/ayah/6205.mp3",
+                "numberInSurah": 1,
+                "juz": 30,
+                "manzil": 7,
+                "page": 602,
+                "ruku": 550,
+                "hizbQuarter": 240,
+                "sajda": false
+            },
+            {
+                "number": 6206,
+                "englishText": "hence, pray unto thy Sustainer [alone], and sacrifice [unto Him alone].",
+                "arabicText": "فَصَلِّ لِرَبِّكَ وَانْحَرْ",
+                "audio": "/API/abdulbasit/ayah/6206.mp3",
+                "numberInSurah": 2,
+                "juz": 30,
+                "manzil": 7,
+                "page": 602,
+                "ruku": 550,
+                "hizbQuarter": 240,
+                "sajda": false
+            },
+            {
+                "number": 6207,
+                "englishText": "Verily, he that hates thee has indeed been cut off [from all that is good]!",
+                "arabicText": "إِنَّ شَانِئَكَ هُوَ الْأَبْتَرُ",
+                "audio": "/API/abdulbasit/ayah/6207.mp3",
+                "numberInSurah": 3,
+                "juz": 30,
+                "manzil": 7,
+                "page": 602,
+                "ruku": 550,
+                "hizbQuarter": 240,
+                "sajda": false
+            }
+        ],
+        "edition": {
+            "identifier": "en.asad",
+            "language": "en",
+            "name": "Asad",
+            "englishName": "Muhammad Asad",
+            "format": "text",
+            "type": "translation"
+        }
+    }
+}

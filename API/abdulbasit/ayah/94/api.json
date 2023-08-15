@@ -1,0 +1,126 @@
+{
+    "code": 200,
+    "status": "OK",
+    "data": {
+        "number": 94,
+        "name": "سُورَةُ الشَّرۡحِ",
+        "englishName": "Ash-Sharh",
+        "englishNameTranslation": "The Consolation",
+        "audio": "/API/abdulbasit/surah/94.mp3",
+        "revelationType": "Meccan",
+        "ayahs": [
+            {
+                "number": 6091,
+                "englishText": "HAVE WE NOT opened up thy heart,",
+                "arabicText": "أَلَمْ نَشْرَحْ لَكَ صَدْرَكَ",
+                "audio": "/API/abdulbasit/ayah/6091.mp3",
+                "numberInSurah": 1,
+                "juz": 30,
+                "manzil": 7,
+                "page": 596,
+                "ruku": 536,
+                "hizbQuarter": 239,
+                "sajda": false
+            },
+            {
+                "number": 6092,
+                "englishText": "and lifted from thee the burden",
+                "arabicText": "وَوَضَعْنَا عَنْكَ وِزْرَكَ",
+                "audio": "/API/abdulbasit/ayah/6092.mp3",
+                "numberInSurah": 2,
+                "juz": 30,
+                "manzil": 7,
+                "page": 596,
+                "ruku": 536,
+                "hizbQuarter": 239,
+                "sajda": false
+            },
+            {
+                "number": 6093,
+                "englishText": "that had weighed so heavily on thy back?",
+                "arabicText": "الَّذِي أَنْقَضَ ظَهْرَكَ",
+                "audio": "/API/abdulbasit/ayah/6093.mp3",
+                "numberInSurah": 3,
+                "juz": 30,
+                "manzil": 7,
+                "page": 596,
+                "ruku": 536,
+                "hizbQuarter": 239,
+                "sajda": false
+            },
+            {
+                "number": 6094,
+                "englishText": "And [have We not] raised thee high in dignity?",
+                "arabicText": "وَرَفَعْنَا لَكَ ذِكْرَكَ",
+                "audio": "/API/abdulbasit/ayah/6094.mp3",
+                "numberInSurah": 4,
+                "juz": 30,
+                "manzil": 7,
+                "page": 596,
+                "ruku": 536,
+                "hizbQuarter": 239,
+                "sajda": false
+            },
+            {
+                "number": 6095,
+                "englishText": "And, behold, with every hardship comes ease:",
+                "arabicText": "فَإِنَّ مَعَ الْعُسْرِ يُسْرًا",
+                "audio": "/API/abdulbasit/ayah/6095.mp3",
+                "numberInSurah": 5,
+                "juz": 30,
+                "manzil": 7,
+                "page": 596,
+                "ruku": 536,
+                "hizbQuarter": 239,
+                "sajda": false
+            },
+            {
+                "number": 6096,
+                "englishText": "verily, with every hardship comes ease!",
+                "arabicText": "إِنَّ مَعَ الْعُسْرِ يُسْرًا",
+                "audio": "/API/abdulbasit/ayah/6096.mp3",
+                "numberInSurah": 6,
+                "juz": 30,
+                "manzil": 7,
+                "page": 596,
+                "ruku": 536,
+                "hizbQuarter": 239,
+                "sajda": false
+            },
+            {
+                "number": 6097,
+                "englishText": "Hence, when thou art freed [from distress], remain steadfast,",
+                "arabicText": "فَإِذَا فَرَغْتَ فَانْصَبْ",
+                "audio": "/API/abdulbasit/ayah/6097.mp3",
+                "numberInSurah": 7,
+                "juz": 30,
+                "manzil": 7,
+                "page": 596,
+                "ruku": 536,
+                "hizbQuarter": 239,
+                "sajda": false
+            },
+            {
+                "number": 6098,
+                "englishText": "and unto thy Sustainer turn with love.",
+                "arabicText": "وَإِلَىٰ رَبِّكَ فَارْغَبْ",
+                "audio": "/API/abdulbasit/ayah/6098.mp3",
+                "numberInSurah": 8,
+                "juz": 30,
+                "manzil": 7,
+                "page": 596,
+                "ruku": 536,
+                "hizbQuarter": 239,
+                "sajda": false
+            }
+        ],
+        "edition": {
+            "identifier": "en.asad",
+            "language": "en",
+            "name": "Asad",
+            "englishName": "Muhammad Asad",
+            "format": "text",
+            "type": "translation"
+        }
+    }
+}

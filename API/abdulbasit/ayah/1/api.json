@@ -1,0 +1,113 @@
+{
+    "code": 200,
+    "status": "OK",
+    "data": {
+        "number": 1,
+        "name": "سُورَةُ ٱلْفَاتِحَةِ",
+        "englishName": "Al-Faatiha",
+        "englishNameTranslation": "The Opening",
+        "audio": "https://axntr01jcwgp.objectstorage.me-dubai-1.oci.customer-oci.com/n/axntr01jcwgp/b/quran-api/o/abdulbasit%2Fsurahs%2Faudio%2F1.mp3",
+        "revelationType": "Meccan",
+        "ayahs": [
+            {
+                "number": 1,
+                "englishText": "In the name of God, The Most Gracious, The Dispenser of Grace:",
+                "arabicText": "﻿بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
+                "audio": "https://axntr01jcwgp.objectstorage.me-dubai-1.oci.customer-oci.com/n/axntr01jcwgp/b/quran-api/o/abdulbasit%2Fayahs%2Faudio%2F1.mp3",
+                "numberInSurah": 1,
+                "juz": 1,
+                "manzil": 1,
+                "page": 1,
+                "ruku": 1,
+                "hizbQuarter": 1,
+                "sajda": false
+            },
+            {
+                "number": 2,
+                "englishText": "All praise is due to God alone, the Sustainer of all the worlds,",
+                "arabicText": "الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ",
+                "audio": "https://axntr01jcwgp.objectstorage.me-dubai-1.oci.customer-oci.com/n/axntr01jcwgp/b/quran-api/o/abdulbasit%2Fayahs%2Faudio%2F2.mp3",
+                "numberInSurah": 2,
+                "juz": 1,
+                "manzil": 1,
+                "page": 1,
+                "ruku": 1,
+                "hizbQuarter": 1,
+                "sajda": false
+            },
+            {
+                "number": 3,
+                "englishText": "The Most Gracious, the Dispenser of Grace,",
+                "arabicText": "الرَّحْمَٰنِ الرَّحِيمِ",
+                "audio": "https://axntr01jcwgp.objectstorage.me-dubai-1.oci.customer-oci.com/n/axntr01jcwgp/b/quran-api/o/abdulbasit%2Fayahs%2Faudio%2F3.mp3",
+                "numberInSurah": 3,
+                "juz": 1,
+                "manzil": 1,
+                "page": 1,
+                "ruku": 1,
+                "hizbQuarter": 1,
+                "sajda": false
+            },
+            {
+                "number": 4,
+                "englishText": "Lord of the Day of Judgment!",
+                "arabicText": "مَالِكِ يَوْمِ الدِّينِ",
+                "audio": "https://axntr01jcwgp.objectstorage.me-dubai-1.oci.customer-oci.com/n/axntr01jcwgp/b/quran-api/o/abdulbasit%2Fayahs%2Faudio%2F4.mp3",
+                "numberInSurah": 4,
+                "juz": 1,
+                "manzil": 1,
+                "page": 1,
+                "ruku": 1,
+                "hizbQuarter": 1,
+                "sajda": false
+            },
+            {
+                "number": 5,
+                "englishText": "Thee alone do we worship; and unto Thee alone do we turn for aid.",
+                "arabicText": "إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ",
+                "audio": "https://axntr01jcwgp.objectstorage.me-dubai-1.oci.customer-oci.com/n/axntr01jcwgp/b/quran-api/o/abdulbasit%2Fayahs%2Faudio%2F5.mp3",
+                "numberInSurah": 5,
+                "juz": 1,
+                "manzil": 1,
+                "page": 1,
+                "ruku": 1,
+                "hizbQuarter": 1,
+                "sajda": false
+            },
+            {
+                "number": 6,
+                "englishText": "Guide us the straight way.",
+                "arabicText": "اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ",
+                "audio": "https://axntr01jcwgp.objectstorage.me-dubai-1.oci.customer-oci.com/n/axntr01jcwgp/b/quran-api/o/abdulbasit%2Fayahs%2Faudio%2F6.mp3",
+                "numberInSurah": 6,
+                "juz": 1,
+                "manzil": 1,
+                "page": 1,
+                "ruku": 1,
+                "hizbQuarter": 1,
+                "sajda": false
+            },
+            {
+                "number": 7,
+                "englishText": "The way of those upon whom Thou hast bestowed Thy blessings, not of those who have been condemned [by Thee], nor of those who go astray!",
+                "arabicText": "صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ",
+                "audio": "https://axntr01jcwgp.objectstorage.me-dubai-1.oci.customer-oci.com/n/axntr01jcwgp/b/quran-api/o/abdulbasit%2Fayahs%2Faudio%2F7.mp3",
+                "numberInSurah": 7,
+                "juz": 1,
+                "manzil": 1,
+                "page": 1,
+                "ruku": 1,
+                "hizbQuarter": 1,
+                "sajda": false
+            }
+        ],
+        "edition": {
+            "identifier": "en.asad",
+            "language": "en",
+            "name": "Asad",
+            "englishName": "Muhammad Asad",
+            "format": "text",
+            "type": "translation"
+        }
+    }
+}
