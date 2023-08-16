@@ -1,0 +1,1 @@
+tr -d '\r' < list.txt | xargs -n 1 curl -O -L -J -k
