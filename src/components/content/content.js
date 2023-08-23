@@ -14,7 +14,7 @@ export const QuranChapters = () => {
 
     const fetchData = useCallback(() => {
         Promise.all([
-          fetch(`https://axntr01jcwgp.objectstorage.me-dubai-1.oci.customer-oci.com/n/axntr01jcwgp/b/quran-api/o/abdulbasit%2Fsurahs%2Fapi.json`),
+          fetch(`https://raw.githubusercontent.com/qararulhassan/quran-web/main/API/text/abdulbasit/surah/api.json`),
         ])
           .then(([responseSurah]) =>
             Promise.all([
@@ -76,7 +76,7 @@ export const QuranAyahs = () => {
 
     const fetchData = useCallback(() => {
         Promise.all([
-          fetch(`https://axntr01jcwgp.objectstorage.me-dubai-1.oci.customer-oci.com/n/axntr01jcwgp/b/quran-api/o/abdulbasit%2Fayahs%2F${paramValue}%2Fapi.json`),
+          fetch(`https://raw.githubusercontent.com/qararulhassan/quran-web/main/API/text/abdulbasit/ayah/${paramValue}.json`),
         ])
           .then(([responseSurah]) =>
             Promise.all([
