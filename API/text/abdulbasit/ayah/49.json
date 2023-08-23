@@ -6,6 +6,8 @@
         "name": "سُورَةُ الحُجُرَاتِ",
         "englishName": "Al-Hujuraat",
         "englishNameTranslation": "The Inner Apartments",
+        "bism": "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
+        "englishBism": "In the name of God, The Most Gracious, The Dispenser of Grace",
         "audio": "/API/abdulbasit/surah/49.mp3",
         "revelationType": "Medinan",
         "ayahs": [

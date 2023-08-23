@@ -6,6 +6,8 @@
         "name": "سُورَةُ الأَعۡرَافِ",
         "englishName": "Al-A'raaf",
         "englishNameTranslation": "The Heights",
+        "bism": "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
+        "englishBism": "In the name of God, The Most Gracious, The Dispenser of Grace",
         "audio": "/API/abdulbasit/surah/7.mp3",
         "revelationType": "Meccan",
         "ayahs": [

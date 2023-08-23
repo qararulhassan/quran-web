@@ -7,6 +7,8 @@
         "name": "سُورَةُ الشَّمۡسِ",
         "englishName": "Ash-Shams",
         "englishNameTranslation": "The Sun",
+        "bism": "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
+        "englishBism": "In the name of God, The Most Gracious, The Dispenser of Grace",
         "audio": "/API/abdulbasit/surah/91.mp3",
         "revelationType": "Meccan",
         "ayahs": [

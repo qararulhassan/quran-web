@@ -6,6 +6,8 @@
         "name": "سُورَةُ النَّبَإِ",
         "englishName": "An-Naba",
         "englishNameTranslation": "The Announcement",
+        "bism": "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
+        "englishBism": "In the name of God, The Most Gracious, The Dispenser of Grace",
         "audio": "/API/abdulbasit/surah/78.mp3",
         "revelationType": "Meccan",
         "ayahs": [

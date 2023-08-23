@@ -6,6 +6,8 @@
         "name": "سُورَةُ البَلَدِ",
         "englishName": "Al-Balad",
         "englishNameTranslation": "The City",
+        "bism": "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
+        "englishBism": "In the name of God, The Most Gracious, The Dispenser of Grace",
         "audio": "/API/abdulbasit/surah/90.mp3",
         "revelationType": "Meccan",
         "ayahs": [

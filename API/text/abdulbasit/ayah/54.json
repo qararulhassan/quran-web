@@ -6,6 +6,8 @@
         "name": "سُورَةُ القَمَرِ",
         "englishName": "Al-Qamar",
         "englishNameTranslation": "The Moon",
+        "bism": "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
+        "englishBism": "In the name of God, The Most Gracious, The Dispenser of Grace",
         "audio": "/API/abdulbasit/surah/54.mp3",
         "revelationType": "Meccan",
         "ayahs": [

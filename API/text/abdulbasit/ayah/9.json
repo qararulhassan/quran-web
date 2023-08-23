@@ -6,6 +6,8 @@
         "name": "سُورَةُ التَّوۡبَةِ",
         "englishName": "At-Tawba",
         "englishNameTranslation": "The Repentance",
+        "bism": "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
+        "englishBism": "In the name of God, The Most Gracious, The Dispenser of Grace",
         "audio": "/API/abdulbasit/surah/9.mp3",
         "revelationType": "Medinan",
         "ayahs": [

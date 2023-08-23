@@ -6,6 +6,8 @@
         "name": "سُورَةُ الأَنۡعَامِ",
         "englishName": "Al-An'aam",
         "englishNameTranslation": "The Cattle",
+        "bism": "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
+        "englishBism": "In the name of God, The Most Gracious, The Dispenser of Grace",
         "audio": "/API/abdulbasit/surah/6.mp3",
         "revelationType": "Meccan",
         "ayahs": [

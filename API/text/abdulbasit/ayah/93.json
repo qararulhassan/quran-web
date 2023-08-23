@@ -6,6 +6,8 @@
         "name": "سُورَةُ الضُّحَىٰ",
         "englishName": "Ad-Dhuhaa",
         "englishNameTranslation": "The Morning Hours",
+        "bism": "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
+        "englishBism": "In the name of God, The Most Gracious, The Dispenser of Grace",
         "audio": "/API/abdulbasit/surah/93.mp3",
         "revelationType": "Meccan",
         "ayahs": [

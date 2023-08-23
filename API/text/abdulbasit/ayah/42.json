@@ -6,6 +6,8 @@
         "name": "سُورَةُ الشُّورَىٰ",
         "englishName": "Ash-Shura",
         "englishNameTranslation": "Consultation",
+        "bism": "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
+        "englishBism": "In the name of God, The Most Gracious, The Dispenser of Grace",
         "audio": "/API/abdulbasit/surah/42.mp3",
         "revelationType": "Meccan",
         "ayahs": [

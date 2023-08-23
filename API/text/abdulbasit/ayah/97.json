@@ -6,6 +6,8 @@
         "name": "سُورَةُ القَدۡرِ",
         "englishName": "Al-Qadr",
         "englishNameTranslation": "The Power, Fate",
+        "bism": "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
+        "englishBism": "In the name of God, The Most Gracious, The Dispenser of Grace",
         "audio": "/API/abdulbasit/surah/97.mp3",
         "revelationType": "Meccan",
         "ayahs": [

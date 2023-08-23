@@ -6,6 +6,8 @@
         "name": "سُورَةُ العَلَقِ",
         "englishName": "Al-Alaq",
         "englishNameTranslation": "The Clot",
+        "bism": "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
+        "englishBism": "In the name of God, The Most Gracious, The Dispenser of Grace",
         "audio": "/API/abdulbasit/surah/96.mp3",
         "revelationType": "Meccan",
         "ayahs": [

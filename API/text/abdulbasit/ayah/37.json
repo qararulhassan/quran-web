@@ -6,6 +6,8 @@
         "name": "سُورَةُ الصَّافَّاتِ",
         "englishName": "As-Saaffaat",
         "englishNameTranslation": "Those drawn up in Ranks",
+        "bism": "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
+        "englishBism": "In the name of God, The Most Gracious, The Dispenser of Grace",
         "audio": "/API/abdulbasit/surah/37.mp3",
         "revelationType": "Meccan",
         "ayahs": [

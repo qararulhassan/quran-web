@@ -6,6 +6,8 @@
         "name": "سُورَةُ المُرۡسَلَاتِ",
         "englishName": "Al-Mursalaat",
         "englishNameTranslation": "The Emissaries",
+        "bism": "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
+        "englishBism": "In the name of God, The Most Gracious, The Dispenser of Grace",
         "audio": "/API/abdulbasit/surah/77.mp3",
         "revelationType": "Meccan",
         "ayahs": [

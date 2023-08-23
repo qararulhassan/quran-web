@@ -6,6 +6,8 @@
         "name": "سُورَةُ الإِنسَانِ",
         "englishName": "Al-Insaan",
         "englishNameTranslation": "Man",
+        "bism": "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
+        "englishBism": "In the name of God, The Most Gracious, The Dispenser of Grace",
         "audio": "/API/abdulbasit/surah/76.mp3",
         "revelationType": "Medinan",
         "ayahs": [

@@ -108,6 +108,9 @@ export const QuranAyahs = () => {
                     <div className="col-span-12 grid grid-flow-col">
                         <div className="bg-gray-100 rounded-t-[2em] p-16">
                             <TopFilters />
+                            <h1>
+                                {surahs.bism}
+                            </h1>
                             {loading ? (
                                 <div>Loading...</div>
                             ) : error ? (

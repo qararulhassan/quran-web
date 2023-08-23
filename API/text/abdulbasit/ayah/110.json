@@ -6,6 +6,8 @@
         "name": "سُورَةُ النَّصۡرِ",
         "englishName": "An-Nasr",
         "englishNameTranslation": "Divine Support",
+        "bism": "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
+        "englishBism": "In the name of God, The Most Gracious, The Dispenser of Grace",
         "audio": "/API/abdulbasit/surah/110.mp3",
         "revelationType": "Medinan",
         "ayahs": [

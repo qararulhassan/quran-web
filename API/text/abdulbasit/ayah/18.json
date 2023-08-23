@@ -6,6 +6,8 @@
         "name": "سُورَةُ الكَهۡفِ",
         "englishName": "Al-Kahf",
         "englishNameTranslation": "The Cave",
+        "bism": "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
+        "englishBism": "In the name of God, The Most Gracious, The Dispenser of Grace",
         "audio": "/API/abdulbasit/surah/18.mp3",
         "revelationType": "Meccan",
         "ayahs": [

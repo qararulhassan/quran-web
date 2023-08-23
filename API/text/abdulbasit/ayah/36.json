@@ -6,6 +6,8 @@
         "name": "سُورَةُ يسٓ",
         "englishName": "Yaseen",
         "englishNameTranslation": "Yaseen",
+        "bism": "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
+        "englishBism": "In the name of God, The Most Gracious, The Dispenser of Grace",
         "audio": "/API/abdulbasit/surah/36.mp3",
         "revelationType": "Meccan",
         "ayahs": [
