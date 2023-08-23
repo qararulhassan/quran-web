@@ -9,7 +9,7 @@ function App() {
       <Routes>
         <Route exact path='/' Component={HomePage} />
         <Route exact path='/surah' Component={HomePage} />
-        <Route exact path='/surah/:paramValue' Component={AyahPage} />
+        <Route exact path='/surah/:surahNumber' Component={AyahPage} />
       </Routes>
     </Router>
   );

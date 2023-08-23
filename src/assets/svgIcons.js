@@ -1,3 +1,7 @@
+import Lottie from 'lottie-react';
+import React from 'react';
+import loadingAnimation from "./loading.json";
+import ErrorAnimation from "./network-error.json";
 
 export const Logo = (props) => {
     const svgStyle = props.svgStyle;
@@ -301,6 +305,17 @@ export const Previous = (props) => {
     )
 }
 
+export const ArrowBack = (props) => {
+    const svgStyle = props.svgStyle;
+    const strokeWidth = props.strokeWidth;
+
+    return (
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 230 186" className={svgStyle} fill="none">
+            <path d="M29.257 93H211.965M94.662 18.271L18.035 93L94.662 167.729" stroke="currentColor" strokeWidth={strokeWidth} strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+    )
+}
+
 export const Forward2 = (props) => {
     const svgStyle = props.svgStyle;
     const strokeWidth = props.strokeWidth;
@@ -493,5 +508,40 @@ export const Download = (props) => {
                 <path d="M336 336.142h76c44.182 0 80-35.818 80-80 0-44.185-31.818-80-76-80 0-44.185-35.818-80-80-80-9.526 0-18.538 1.948-27.012 5.005-22-27.236-55.251-45.005-92.988-45.005-66.274 0-120 53.726-120 120-44.182 0-76 35.815-76 80 0 44.182 35.818 80 80 80h76M256 216.142v239.711M196 404.142 241.858 450c7.81 7.81 20.474 7.81 28.284 0L316 404.142" fill="none" stroke="currentColor" strokeWidth={strokeWidth} strokeLinecap="round" strokeLinejoin="round"></path>
             </g>
         </svg>
+    )
+}
+
+export const Loading = (props) => {
+    const svgStyle = props.svgStyle;
+    const strokeWidth = props.strokeWidth;
+
+    return (
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className={svgStyle}>
+            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth={strokeWidth}></circle>
+            <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+        </svg>
+    )
+}
+
+export const LoadingAnimation = (props) => {
+    const animationStyle = props.animationStyle;
+
+    return (
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 grid gap-4">
+            <Lottie animationData={loadingAnimation} loop={true} autoplay={true} className={animationStyle} />
+            <span className="flex gap-3 items-center justify-center text-2xl"><Loading svgStyle="animate-spin w-12 aspect-square text-teal-500" strokeWidth="1" /> Processing</span>
+        </div>
+    )
+}
+
+export const NetworkError = (props) => {
+    const animationStyle = props.animationStyle;
+    const errorText = props.errorText;
+
+    return (
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 grid">
+            <Lottie animationData={ErrorAnimation} loop={false} autoplay={true} className={animationStyle} />
+            <span className="flex gap-3 items-center justify-center text-2xl">{errorText}</span>
+        </div>
     )
 }
