@@ -100,7 +100,7 @@ const Waveform = (props) => {
       <div className="player-wrapper">
           <div className="player-container">
               <div className="player">
-                  <div className="bg-gradient-to-br from-teal-300 via-teal-400 to-teal-500 w-full aspect-square rounded-xl text-white flex justify-center items-center font-cairo text-4xl relative p-8 animate-gradient">
+                  <div className="bg-gradient-to-br from-teal-300 via-teal-400 to-teal-500 w-full aspect-square rounded-xl text-white flex justify-center items-center font-cairo text-3xl xxl:text-4xl relative p-8 animate-gradient">
                       {revelationType === 'Meccan' ? ( <Mecca svgStyle="absolute w-[60%] opacity-20 aspect-square" /> ) : ( <Madina svgStyle="absolute w-[60%] opacity-20 aspect-square" /> )}
                       <p className="relative z-10">{name}</p>
                   </div>

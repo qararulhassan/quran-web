@@ -11,7 +11,7 @@ body {
 }
 
 .surah-window {
-  @apply overflow-x-hidden overflow-y-scroll max-h-[calc(100vh-26em)];
+  @apply overflow-x-hidden overflow-y-scroll max-h-[calc(100vh-28em)];
 }
 
 svg {

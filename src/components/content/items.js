@@ -81,15 +81,15 @@ export const ItemList = ( props ) => {
 
     return (
         <div className="list-item-wrapper">
-            <div className="list-item-container bg-white p-8 rounded-2xl grid gap-8">
+            <div className="list-item-container bg-white p-8 rounded-2xl grid gap-6 xxl:gap-8">
                 <div className="flex justify-between">
-                    <span className="inline-block text-teal-500 text-4xl mr-8">{surahNumber}:{ayahNumber}</span>
-                    <p className="font-cairo text-4xl text-right leading-relaxed">{ayahTextAR}</p>
+                    <span className="inline-block text-teal-500 text-3xl xxxl:text-4xl mr-8">{surahNumber}:{ayahNumber}</span>
+                    <p className="font-cairo text-3xl xxl:text-4xl text-right leading-relaxed">{ayahTextAR}</p>
                 </div>
                 <div className="uppercase flex gap-4">
-                    <p className="text-teal-500">English - Sahih International</p>
+                    <p className="text-teal-500 text-sm xxl:text-base">English - Sahih International</p>
                     <p className="border-l border-gray-300"></p>
-                    <a href="#!" className="text-yellow-500 flex items-center gap-2">See Tafsir <Right svgStyle="w-5 aspect-square" strokeWidth="0" /></a>
+                    <a href="#!" className="text-yellow-500 flex items-center gap-2 text-sm xxl:text-base">See Tafsir <Right svgStyle="w-5 aspect-square" strokeWidth="0" /></a>
                 </div>
                 <p>{ayahTextEN}</p>
                 <p className="text-white block w-fill h-px bg-gray-300 text-[0px]">space</p>
