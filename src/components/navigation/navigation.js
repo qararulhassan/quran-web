@@ -1,7 +1,8 @@
 // Desc: Navigation component
-import React from "react"
-import { Book, Cog, Donate, Heart, PowerOff, Store } from "../../assets/svgIcons"
-import { Link } from "react-router-dom"
+import React from "react";
+import { Book, Cog, Donate, Heart, PowerOff, Store } from "../../assets/svgIcons";
+import { Link } from "react-router-dom";
+
 
 export const NavPath = (props) => {
     if (props.path === "surahsList") {

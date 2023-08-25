@@ -541,7 +541,7 @@ export const NetworkError = (props) => {
     return (
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 grid">
             <Lottie animationData={ErrorAnimation} loop={false} autoplay={true} className={animationStyle} />
-            <span className="flex gap-3 items-center justify-center text-2xl">{errorText}</span>
+            <span className="flex gap-3 items-center justify-center text-2xl text-center">{errorText}</span>
         </div>
     )
 }

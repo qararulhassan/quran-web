@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import { Download, Forward, Forward2, Heart, HeartFill, List2, Loop, Madina, Mecca, PauseFill, PlayFill, Previous } from "../../assets/svgIcons";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect, useCallback } from 'react';
+import { Download, Forward, Forward2, Heart, HeartFill, List2, LoadingAnimation, Loop, Madina, Mecca, NetworkError, PauseFill, PlayFill, Previous } from "../../assets/svgIcons";
+import { Link, useParams } from "react-router-dom";
 import WaveSurfer from "wavesurfer.js";
+import audioRef from "../../assets/audio.mp3";
 
-const Waveform = (props) => {
+export const Waveform = (props) => {
     const {number, revelationType, name, englishName, englishNameTranslation, surahAudio} = props;
     const [waveform, setWaveform] = useState(null);
     const [playing, setPlaying] = useState(false);
@@ -13,19 +14,30 @@ const Waveform = (props) => {
     useEffect(() => {
         const track = document.querySelector("#track");
 
+        const canvas = document.createElement('canvas');
+        const ctx = canvas.getContext('2d');
+
+        // Define the progress gradient
+        const progressGradient = ctx.createLinearGradient(0, 0, 0, canvas.height * 1.35)
+        progressGradient.addColorStop(0, '#2dd4bf') // Top color
+        progressGradient.addColorStop(1, '#14b8a6') // Bottom color
+
         const newWaveform = WaveSurfer.create({
             barWidth: 3,
             barRadius: 3,
             barGap: 3,
             barMinHeight: 1,
             cursorWidth: 1,
+            splitChannels: false,
+            interact: true,
             container: "#waveform",
             backend: "WebAudio",
             height: 60,
-            progressColor: "#FE6E00",
+            progressColor: progressGradient,
             responsive: true,
             waveColor: "#C4C4C4",
-            cursorColor: "transparent"
+            cursorColor: "transparent",
+            cursor: "pointer",
         });
 
         newWaveform.on('ready', () => {
@@ -121,11 +133,11 @@ const Waveform = (props) => {
                       <p className="text-center text-base text-cyan-800">{englishNameTranslation}</p>
                   </div>
                   <div>
-                        <div id="waveform" className="my-4" />
-                        <audio id="track" src={surahAudio} controls />
+                        <div id="waveform" className="my-4 cursor-pointer" />
+                        <audio id="track" src={surahAudio} />
                         <p className="flex justify-between text-cyan-800"><span id="time">{formatTime(currentTime)}</span><span id="duration">{formatTime(duration)}</span></p>
                   </div>
-                  <ul className="flex gap-8 items-center justify-center mt-8">
+                  <ul className="flex gap-8 items-center justify-center mt-4">
                       <li className="cursor-pointer">
                           <Loop svgStyle="w-5 aspect-square text-teal-500 hover:text-teal-600" strokeWidth="30" />
                       </li>
@@ -158,4 +170,46 @@ const Waveform = (props) => {
     );
 }
 
-export default Waveform;
+// Desc: Surah player component
+export const SurahsPlayer = () => {
+    const { surahNumber } = useParams();
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+    const [surahs, setSurahs] = useState([]);
+
+    const fetchData = useCallback(() => {
+        Promise.all([
+            fetch(`https://raw.githubusercontent.com/qararulhassan/quran-web/main/API/text/abdulbasit/ayah/${surahNumber}.json`),
+        ])
+          .then(([responseSurah]) =>
+            Promise.all([
+              responseSurah.json()
+            ])
+          )
+          .then(([quran]) => {
+            setSurahs(quran.data);
+            setLoading(false);
+          })
+          .catch(error => {
+            setError(error.message);
+            setLoading(false);
+          });
+    }, [surahNumber]);
+    
+    useEffect(() => {
+        fetchData();
+    }, [fetchData]);
+
+
+    return (
+        <React.Fragment>
+            {loading ? (
+                <LoadingAnimation animationStyle="w-full" />
+            ) : error ? (
+                <NetworkError errorText={error} animationStyle="w-full" />
+            ) : (
+                <Waveform number={surahs.number} revelationType={surahs.revelationType} name={surahs.name} englishName={surahs.englishName} englishNameTranslation={surahs.englishNameTranslation} surahAudio={audioRef} />
+            )}
+        </React.Fragment>
+    )
+}

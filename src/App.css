@@ -2,6 +2,11 @@ body {
   @apply p-8 pb-0 min-h-screen font-alegreya;
 }
 
+.col-span-13 { grid-column: span 13 / span 13; }
+.col-span-14 { grid-column: span 14 / span 14; }
+.col-span-15 { grid-column: span 15 / span 15; }
+.col-span-16 { grid-column: span 16 / span 16; }
+
 #root {
   @apply min-h-[calc(100vh-4rem)];
 }
@@ -25,7 +30,7 @@ svg {
   animation: animatedgradient 4s ease infinite alternate;
 }
 
-#waveform wave:first-child {
+#waveform > wave:not(:first-child) {
   @apply !hidden;
 }
 
