@@ -12,13 +12,10 @@ export const SurahsBody = () => {
                     <div className="col-span-1 flex flex-col justify-between pt-8 py-16">
                         <SideNavigation />
                     </div>
-                    <div className="col-span-12 grid grid-flow-col">
-                        <div className="bg-gray-100 rounded-t-[2em] p-16 relative">
+                    <div className="col-span-15 grid grid-flow-col">
+                        <div className="bg-slate-100 p-16 relative">
                             <SurahsListing />
                         </div>
-                    </div>
-                    <div className="col-span-3">
-                        
                     </div>
                 </div>
             </div>

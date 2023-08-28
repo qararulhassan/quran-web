@@ -1,26 +1,58 @@
 // Desc: List Item component
 import React, { useState, useEffect, useRef } from 'react'
-import { Heart, HeartFill, Play, Right, Share, Copy, Mecca, Madina, Pause } from "../../assets/svgIcons";
-import { Link } from "react-router-dom";
+import { Heart, HeartFill, Play, Right, Share, Copy, Mecca, Madina, Pause, IslamicStar, IslamicStarFill } from "../../assets/svgIcons";
+import { Link, useParams } from "react-router-dom";
 
 export const ItemGrid = ( props ) => {
-    const { surahNumber, surahNameEN, surahMeaningEN, surahType } = props;
+    const { authorName, surahNumber, surahNameEN, surahMeaningEN, surahType } = props;
 
     return (
         <div className="list-item-wrapper">
-            <Link to={`/surah/${surahNumber}`}>
+            <Link to={`/${authorName}/surah/${surahNumber}`}>
                 <div className="list-item-container cursor-pointer bg-white p-5 rounded-2xl grid gap-8">
                     <div className="flex justify-between items-center">
                         <span className="bg-teal-100 text-teal-500 font-medium text-xl w-10 aspect-square inline-flex justify-center items-center rounded-full">{surahNumber}</span>
                         <div className="relative w-7 aspect-square group">    
-                            <Heart svgStyle="absolute w-full aspect-square text-gray-300 opacity-100 group-hover:opacity-0 transition duration-300 group-[.active]:opacity-0]" strokeWidth="35"  />
+                            <Heart svgStyle="absolute w-full aspect-square text-slate-300 opacity-100 group-hover:opacity-0 transition duration-300 group-[.active]:opacity-0]" strokeWidth="35"  />
                             <HeartFill svgStyle="absolute w-full aspect-square text-red-500 opacity-0 group-hover:opacity-100 transition duration-300 group-[.active]:opacity-100" strokeWidth="35"  />
                         </div>
                     </div>
                     <div className="grid gap-1">
                         <h2 className="font-bold text-xl">{surahNameEN}</h2>
-                        <p className="font-medium uppercase text-gray-400 grid grid-flow-col items-center justify-between w-full"><span>{surahMeaningEN}</span> {surahType === 'Meccan' ? ( <Mecca svgStyle="w-7 aspect-square" /> ) : ( <Madina svgStyle="w-8 aspect-square" /> )}</p>
+                        <p className="font-medium uppercase text-slate-400 grid grid-flow-col items-center justify-between w-full"><span>{surahMeaningEN}</span> {surahType === 'Meccan' ? ( <Mecca svgStyle="w-7 aspect-square" /> ) : ( <Madina svgStyle="w-8 aspect-square" /> )}</p>
                     </div>
+                </div>
+            </Link>
+        </div>
+    )
+}
+
+export const ItemSideLIst = ( props ) => {
+    const { surahNumber } = useParams();
+    const { authorName, surahNo, surahNameEN, surahMeaningEN, surahType } = props;
+
+    return (
+        <div className="list-item-wrapper">
+            <Link to={`/${authorName}/surah/${surahNo}`}>
+                <div className="list-item-container cursor-pointer bg-white p-5 rounded-2xl grid gap-8 relative">
+                    <div className="flex gap-8">
+                        <div className='grid items-center w-fit'>
+                            <span className={`font-medium text-xl w-12 aspect-square inline-flex justify-center items-center ${parseInt(surahNumber) === parseInt(surahNo) ? 'text-white' : 'text-teal-600' }`}>
+                                {parseInt(surahNumber) === parseInt(surahNo) ? 
+                                    (
+                                        <IslamicStarFill svgStyle="w-12 aspect-square absolute text-teal-500" strokeWidth="35" />
+                                    ) : (
+                                        <IslamicStar svgStyle="w-12 aspect-square absolute text-teal-500" strokeWidth="35" />
+                                    )
+                                } <span className='relative z-10'>{surahNo}</span>
+                            </span>
+                        </div>
+                        <div className='grid justify-start w-full'>
+                            <h2 className="font-bold text-xl">{surahNameEN}</h2>
+                            <p className="font-medium uppercase text-sm text-slate-400 grid w-full">{surahMeaningEN}</p>
+                        </div>
+                    </div>
+                    <span className='absolute right-4 bottom-4'>{surahType === 'Meccan' ? ( <Mecca svgStyle="w-7 aspect-square" /> ) : ( <Madina svgStyle="w-8 aspect-square" /> )}</span>
                 </div>
             </Link>
         </div>

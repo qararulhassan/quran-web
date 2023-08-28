@@ -112,7 +112,7 @@ export const Waveform = (props) => {
       <div className="player-wrapper">
           <div className="player-container">
               <div className="player">
-                  <div className="bg-gradient-to-br from-teal-300 via-teal-400 to-teal-500 w-full aspect-square rounded-xl text-white flex justify-center items-center font-cairo text-3xl xxl:text-4xl relative p-8 animate-gradient">
+                  <div className="bg-gradient-to-br from-teal-300 via-teal-400 to-teal-500 w-full aspect-square rounded-xl text-white flex justify-center items-center font-cairo text-3xl xl:text-4xl relative p-8 animate-gradient">
                       {revelationType === 'Meccan' ? ( <Mecca svgStyle="absolute w-[60%] opacity-20 aspect-square" /> ) : ( <Madina svgStyle="absolute w-[60%] opacity-20 aspect-square" /> )}
                       <p className="relative z-10">{name}</p>
                   </div>
@@ -172,14 +172,14 @@ export const Waveform = (props) => {
 
 // Desc: Surah player component
 export const SurahsPlayer = () => {
-    const { surahNumber } = useParams();
+    const { author, surahNumber } = useParams();
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const [surahs, setSurahs] = useState([]);
 
     const fetchData = useCallback(() => {
         Promise.all([
-            fetch(`https://raw.githubusercontent.com/qararulhassan/quran-web/main/API/text/abdulbasit/ayah/${surahNumber}.json`),
+            fetch(`https://raw.githubusercontent.com/qararulhassan/quran-web/main/API/text/${author}/ayah/${surahNumber}.json`),
         ])
           .then(([responseSurah]) =>
             Promise.all([
@@ -194,7 +194,7 @@ export const SurahsPlayer = () => {
             setError(error.message);
             setLoading(false);
           });
-    }, [surahNumber]);
+    }, [author, surahNumber]);
     
     useEffect(() => {
         fetchData();

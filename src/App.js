@@ -1,18 +1,30 @@
 import './App.css';
 import React from 'react';
 import { AyahsPage, SurahsPage } from './pages';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, useNavigate } from 'react-router-dom';
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route exact path='/' Component={SurahsPage} />
-        <Route exact path='/surah' Component={SurahsPage} />
-        <Route exact path='/surah/:surahNumber' Component={AyahsPage} />
+        <Route exact path='/:author' Component={SurahsPage} />
+        <Route exact path='/:author/surah' Component={SurahsPage} />
+        <Route exact path='/:author/surah/:surahNumber' Component={AyahsPage} />
+
+        <Route exact path='/*' Component={RedirectToDefault} />
       </Routes>
     </Router>
   );
+}
+
+function RedirectToDefault() {
+  const navigate = useNavigate();
+
+  React.useEffect(() => {
+    navigate('/muhammad-asad', { replace: true });
+  }, [navigate]);
+
+  return null;
 }
 
 export default App;

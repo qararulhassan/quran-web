@@ -545,3 +545,25 @@ export const NetworkError = (props) => {
         </div>
     )
 }
+
+export const IslamicStar = (props) => {
+    const svgStyle = props.svgStyle;
+    const strokeWidth = props.strokeWidth;
+
+    return (
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 510.426 510.426" className={svgStyle}>
+            <path d="m420.676 323.75 68.537-68.537-68.537-68.537V89.75H323.75l-68.537-68.537-68.537 68.537H89.75v96.926l-68.537 68.537L89.75 323.75v96.926h96.926l68.537 68.537 68.537-68.537h96.926z" fill="none" stroke="currentColor" strokeWidth={strokeWidth}></path>
+        </svg>
+    )
+}
+
+export const IslamicStarFill = (props) => {
+    const svgStyle = props.svgStyle;
+    const strokeWidth = props.strokeWidth;
+
+    return (
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 510.426 510.426" className={svgStyle}>
+            <path d="m420.676 323.75 68.537-68.537-68.537-68.537V89.75H323.75l-68.537-68.537-68.537 68.537H89.75v96.926l-68.537 68.537L89.75 323.75v96.926h96.926l68.537 68.537 68.537-68.537h96.926z" fill="currentColor" stroke="currentColor" strokeWidth={strokeWidth}></path>
+        </svg>
+    )
+}
