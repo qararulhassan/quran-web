@@ -9,7 +9,8 @@
                 "englishName": "Al-Faatiha",
                 "englishNameTranslation": "The Opening",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/1.mp3",
-                "revelationType": "Meccan"
+                "revelationType": "Meccan",
+                "totalAyahs": "7"
             },
             {
                 "number": 2,
@@ -17,7 +18,8 @@
                 "englishName": "Al-Baqara",
                 "englishNameTranslation": "The Cow",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/2.mp3",
-                "revelationType": "Medinan"
+                "revelationType": "Medinan",
+                "totalAyahs": "286"
             },
             {
                 "number": 3,
@@ -25,7 +27,8 @@
                 "englishName": "Aal-i-Imraan",
                 "englishNameTranslation": "The Family of Imraan",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/3.mp3",
-                "revelationType": "Medinan"
+                "revelationType": "Medinan",
+                "totalAyahs": "200"
             },
             {
                 "number": 4,
@@ -33,7 +36,8 @@
                 "englishName": "An-Nisaa",
                 "englishNameTranslation": "The Women",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/4.mp3",
-                "revelationType": "Medinan"
+                "revelationType": "Medinan",
+                "totalAyahs": "176"
             },
             {
                 "number": 5,
@@ -41,7 +45,8 @@
                 "englishName": "Al-Maaida",
                 "englishNameTranslation": "The Table",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/5.mp3",
-                "revelationType": "Medinan"
+                "revelationType": "Medinan",
+                "totalAyahs": "120"
             },
             {
                 "number": 6,
@@ -49,7 +54,8 @@
                 "englishName": "Al-An'aam",
                 "englishNameTranslation": "The Cattle",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/6.mp3",
-                "revelationType": "Meccan"
+                "revelationType": "Meccan",
+                "totalAyahs": "165"
             },
             {
                 "number": 7,
@@ -57,7 +63,8 @@
                 "englishName": "Al-A'raaf",
                 "englishNameTranslation": "The Heights",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/7.mp3",
-                "revelationType": "Meccan"
+                "revelationType": "Meccan",
+                "totalAyahs": "206"
             },
             {
                 "number": 8,
@@ -65,7 +72,8 @@
                 "englishName": "Al-Anfaal",
                 "englishNameTranslation": "The Spoils of War",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/8.mp3",
-                "revelationType": "Medinan"
+                "revelationType": "Medinan",
+                "totalAyahs": "75"
             },
             {
                 "number": 9,
@@ -73,7 +81,8 @@
                 "englishName": "At-Tawba",
                 "englishNameTranslation": "The Repentance",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/9.mp3",
-                "revelationType": "Medinan"
+                "revelationType": "Medinan",
+                "totalAyahs": "129"
             },
             {
                 "number": 10,
@@ -81,7 +90,8 @@
                 "englishName": "Yunus",
                 "englishNameTranslation": "Jonas",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/10.mp3",
-                "revelationType": "Meccan"
+                "revelationType": "Meccan",
+                "totalAyahs": "109"
             },
             {
                 "number": 11,
@@ -89,7 +99,8 @@
                 "englishName": "Hud",
                 "englishNameTranslation": "Hud",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/11.mp3",
-                "revelationType": "Meccan"
+                "revelationType": "Meccan",
+                "totalAyahs": "123"
             },
             {
                 "number": 12,
@@ -97,7 +108,8 @@
                 "englishName": "Yusuf",
                 "englishNameTranslation": "Joseph",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/12.mp3",
-                "revelationType": "Meccan"
+                "revelationType": "Meccan",
+                "totalAyahs": "111"
             },
             {
                 "number": 13,
@@ -105,7 +117,8 @@
                 "englishName": "Ar-Ra'd",
                 "englishNameTranslation": "The Thunder",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/13.mp3",
-                "revelationType": "Medinan"
+                "revelationType": "Medinan",
+                "totalAyahs": "43"
             },
             {
                 "number": 14,
@@ -113,7 +126,8 @@
                 "englishName": "Ibrahim",
                 "englishNameTranslation": "Abraham",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/14.mp3",
-                "revelationType": "Meccan"
+                "revelationType": "Meccan",
+                "totalAyahs": "52"
             },
             {
                 "number": 15,
@@ -121,7 +135,8 @@
                 "englishName": "Al-Hijr",
                 "englishNameTranslation": "The Rock",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/15.mp3",
-                "revelationType": "Meccan"
+                "revelationType": "Meccan",
+                "totalAyahs": "99"
             },
             {
                 "number": 16,
@@ -129,7 +144,8 @@
                 "englishName": "An-Nahl",
                 "englishNameTranslation": "The Bee",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/16.mp3",
-                "revelationType": "Meccan"
+                "revelationType": "Meccan",
+                "totalAyahs": "128"
             },
             {
                 "number": 17,
@@ -137,7 +153,8 @@
                 "englishName": "Al-Israa",
                 "englishNameTranslation": "The Night Journey",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/17.mp3",
-                "revelationType": "Meccan"
+                "revelationType": "Meccan",
+                "totalAyahs": "111"
             },
             {
                 "number": 18,
@@ -145,7 +162,8 @@
                 "englishName": "Al-Kahf",
                 "englishNameTranslation": "The Cave",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/18.mp3",
-                "revelationType": "Meccan"
+                "revelationType": "Meccan",
+                "totalAyahs": "110"
             },
             {
                 "number": 19,
@@ -153,7 +171,8 @@
                 "englishName": "Maryam",
                 "englishNameTranslation": "Mary",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/19.mp3",
-                "revelationType": "Meccan"
+                "revelationType": "Meccan",
+                "totalAyahs": "98"
             },
             {
                 "number": 20,
@@ -161,7 +180,8 @@
                 "englishName": "Taa-Haa",
                 "englishNameTranslation": "Taa-Haa",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/20.mp3",
-                "revelationType": "Meccan"
+                "revelationType": "Meccan",
+                "totalAyahs": "135"
             },
             {
                 "number": 21,
@@ -169,7 +189,8 @@
                 "englishName": "Al-Anbiyaa",
                 "englishNameTranslation": "The Prophets",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/21.mp3",
-                "revelationType": "Meccan"
+                "revelationType": "Meccan",
+                "totalAyahs": "122"
             },
             {
                 "number": 22,
@@ -177,7 +198,8 @@
                 "englishName": "Al-Hajj",
                 "englishNameTranslation": "The Pilgrimage",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/22.mp3",
-                "revelationType": "Medinan"
+                "revelationType": "Medinan",
+                "totalAyahs": "78"
             },
             {
                 "number": 23,
@@ -185,7 +207,8 @@
                 "englishName": "Al-Muminoon",
                 "englishNameTranslation": "The Believers",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/23.mp3",
-                "revelationType": "Meccan"
+                "revelationType": "Meccan",
+                "totalAyahs": "118"
             },
             {
                 "number": 24,
@@ -193,7 +216,8 @@
                 "englishName": "An-Noor",
                 "englishNameTranslation": "The Light",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/24.mp3",
-                "revelationType": "Medinan"
+                "revelationType": "Medinan",
+                "totalAyahs": "64"
             },
             {
                 "number": 25,
@@ -201,7 +225,8 @@
                 "englishName": "Al-Furqaan",
                 "englishNameTranslation": "The Criterion",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/25.mp3",
-                "revelationType": "Meccan"
+                "revelationType": "Meccan",
+                "totalAyahs": "77"
             },
             {
                 "number": 26,
@@ -209,7 +234,8 @@
                 "englishName": "Ash-Shu'araa",
                 "englishNameTranslation": "The Poets",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/26.mp3",
-                "revelationType": "Meccan"
+                "revelationType": "Meccan",
+                "totalAyahs": "227"
             },
             {
                 "number": 27,
@@ -217,7 +243,8 @@
                 "englishName": "An-Naml",
                 "englishNameTranslation": "The Ant",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/27.mp3",
-                "revelationType": "Meccan"
+                "revelationType": "Meccan",
+                "totalAyahs": "93"
             },
             {
                 "number": 28,
@@ -225,7 +252,8 @@
                 "englishName": "Al-Qasas",
                 "englishNameTranslation": "The Stories",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/28.mp3",
-                "revelationType": "Meccan"
+                "revelationType": "Meccan",
+                "totalAyahs": "88"
             },
             {
                 "number": 29,
@@ -233,7 +261,8 @@
                 "englishName": "Al-Ankaboot",
                 "englishNameTranslation": "The Spider",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/29.mp3",
-                "revelationType": "Meccan"
+                "revelationType": "Meccan",
+                "totalAyahs": "69"
             },
             {
                 "number": 30,
@@ -241,7 +270,8 @@
                 "englishName": "Ar-Room",
                 "englishNameTranslation": "The Romans",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/30.mp3",
-                "revelationType": "Meccan"
+                "revelationType": "Meccan",
+                "totalAyahs": "60"
             },
             {
                 "number": 31,
@@ -249,7 +279,8 @@
                 "englishName": "Luqman",
                 "englishNameTranslation": "Luqman",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/31.mp3",
-                "revelationType": "Meccan"
+                "revelationType": "Meccan",
+                "totalAyahs": "34"
             },
             {
                 "number": 32,
@@ -257,7 +288,8 @@
                 "englishName": "As-Sajda",
                 "englishNameTranslation": "The Prostration",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/32.mp3",
-                "revelationType": "Meccan"
+                "revelationType": "Meccan",
+                "totalAyahs": "30"
             },
             {
                 "number": 33,
@@ -265,7 +297,8 @@
                 "englishName": "Al-Ahzaab",
                 "englishNameTranslation": "The Clans",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/33.mp3",
-                "revelationType": "Medinan"
+                "revelationType": "Medinan",
+                "totalAyahs": "73"
             },
             {
                 "number": 34,
@@ -273,7 +306,8 @@
                 "englishName": "Saba",
                 "englishNameTranslation": "Sheba",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/34.mp3",
-                "revelationType": "Meccan"
+                "revelationType": "Meccan",
+                "totalAyahs": "54"
             },
             {
                 "number": 35,
@@ -281,7 +315,8 @@
                 "englishName": "Faatir",
                 "englishNameTranslation": "The Originator",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/35.mp3",
-                "revelationType": "Meccan"
+                "revelationType": "Meccan",
+                "totalAyahs": "45"
             },
             {
                 "number": 36,
@@ -289,7 +324,8 @@
                 "englishName": "Yaseen",
                 "englishNameTranslation": "Yaseen",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/36.mp3",
-                "revelationType": "Meccan"
+                "revelationType": "Meccan",
+                "totalAyahs": "83"
             },
             {
                 "number": 37,
@@ -297,7 +333,8 @@
                 "englishName": "As-Saaffaat",
                 "englishNameTranslation": "Those drawn up in Ranks",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/37.mp3",
-                "revelationType": "Meccan"
+                "revelationType": "Meccan",
+                "totalAyahs": "182"
             },
             {
                 "number": 38,
@@ -305,7 +342,8 @@
                 "englishName": "Saad",
                 "englishNameTranslation": "The letter Saad",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/38.mp3",
-                "revelationType": "Meccan"
+                "revelationType": "Meccan",
+                "totalAyahs": "88"
             },
             {
                 "number": 39,
@@ -313,7 +351,8 @@
                 "englishName": "Az-Zumar",
                 "englishNameTranslation": "The Groups",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/39.mp3",
-                "revelationType": "Meccan"
+                "revelationType": "Meccan",
+                "totalAyahs": "75"
             },
             {
                 "number": 40,
@@ -321,7 +360,8 @@
                 "englishName": "Ghafir",
                 "englishNameTranslation": "The Forgiver",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/40.mp3",
-                "revelationType": "Meccan"
+                "revelationType": "Meccan",
+                "totalAyahs": "85"
             },
             {
                 "number": 41,
@@ -329,7 +369,8 @@
                 "englishName": "Fussilat",
                 "englishNameTranslation": "Explained in detail",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/41.mp3",
-                "revelationType": "Meccan"
+                "revelationType": "Meccan",
+                "totalAyahs": "54"
             },
             {
                 "number": 42,
@@ -337,7 +378,8 @@
                 "englishName": "Ash-Shura",
                 "englishNameTranslation": "Consultation",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/42.mp3",
-                "revelationType": "Meccan"
+                "revelationType": "Meccan",
+                "totalAyahs": "53"
             },
             {
                 "number": 43,
@@ -345,7 +387,8 @@
                 "englishName": "Az-Zukhruf",
                 "englishNameTranslation": "Ornaments of gold",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/43.mp3",
-                "revelationType": "Meccan"
+                "revelationType": "Meccan",
+                "totalAyahs": "89"
             },
             {
                 "number": 44,
@@ -353,7 +396,8 @@
                 "englishName": "Ad-Dukhaan",
                 "englishNameTranslation": "The Smoke",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/44.mp3",
-                "revelationType": "Meccan"
+                "revelationType": "Meccan",
+                "totalAyahs": "59"
             },
             {
                 "number": 45,
@@ -361,7 +405,8 @@
                 "englishName": "Al-Jaathiya",
                 "englishNameTranslation": "Crouching",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/45.mp3",
-                "revelationType": "Meccan"
+                "revelationType": "Meccan",
+                "totalAyahs": "37"
             },
             {
                 "number": 46,
@@ -369,7 +414,8 @@
                 "englishName": "Al-Ahqaf",
                 "englishNameTranslation": "The Dunes",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/46.mp3",
-                "revelationType": "Meccan"
+                "revelationType": "Meccan",
+                "totalAyahs": "35"
             },
             {
                 "number": 47,
@@ -377,7 +423,8 @@
                 "englishName": "Muhammad",
                 "englishNameTranslation": "Muhammad",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/47.mp3",
-                "revelationType": "Medinan"
+                "revelationType": "Medinan",
+                "totalAyahs": "38"
             },
             {
                 "number": 48,
@@ -385,7 +432,8 @@
                 "englishName": "Al-Fath",
                 "englishNameTranslation": "The Victory",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/48.mp3",
-                "revelationType": "Medinan"
+                "revelationType": "Medinan",
+                "totalAyahs": ""
             },
             {
                 "number": 49,
@@ -393,7 +441,8 @@
                 "englishName": "Al-Hujuraat",
                 "englishNameTranslation": "The Inner Apartments",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/49.mp3",
-                "revelationType": "Medinan"
+                "revelationType": "Medinan",
+                "totalAyahs": ""
             },
             {
                 "number": 50,
@@ -401,7 +450,8 @@
                 "englishName": "Qaaf",
                 "englishNameTranslation": "The letter Qaaf",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/50.mp3",
-                "revelationType": "Meccan"
+                "revelationType": "Meccan",
+                "totalAyahs": ""
             },
             {
                 "number": 51,
@@ -409,7 +459,8 @@
                 "englishName": "Adh-Dhaariyat",
                 "englishNameTranslation": "The Winnowing Winds",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/51.mp3",
-                "revelationType": "Meccan"
+                "revelationType": "Meccan",
+                "totalAyahs": ""
             },
             {
                 "number": 52,
@@ -417,7 +468,8 @@
                 "englishName": "At-Tur",
                 "englishNameTranslation": "The Mount",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/52.mp3",
-                "revelationType": "Meccan"
+                "revelationType": "Meccan",
+                "totalAyahs": ""
             },
             {
                 "number": 53,
@@ -425,7 +477,8 @@
                 "englishName": "An-Najm",
                 "englishNameTranslation": "The Star",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/53.mp3",
-                "revelationType": "Meccan"
+                "revelationType": "Meccan",
+                "totalAyahs": ""
             },
             {
                 "number": 54,
@@ -433,7 +486,8 @@
                 "englishName": "Al-Qamar",
                 "englishNameTranslation": "The Moon",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/54.mp3",
-                "revelationType": "Meccan"
+                "revelationType": "Meccan",
+                "totalAyahs": ""
             },
             {
                 "number": 55,
@@ -441,7 +495,8 @@
                 "englishName": "Ar-Rahmaan",
                 "englishNameTranslation": "The Beneficent",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/55.mp3",
-                "revelationType": "Medinan"
+                "revelationType": "Medinan",
+                "totalAyahs": ""
             },
             {
                 "number": 56,
@@ -449,7 +504,8 @@
                 "englishName": "Al-Waaqia",
                 "englishNameTranslation": "The Inevitable",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/56.mp3",
-                "revelationType": "Meccan"
+                "revelationType": "Meccan",
+                "totalAyahs": ""
             },
             {
                 "number": 57,
@@ -457,7 +513,8 @@
                 "englishName": "Al-Hadid",
                 "englishNameTranslation": "The Iron",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/57.mp3",
-                "revelationType": "Medinan"
+                "revelationType": "Medinan",
+                "totalAyahs": ""
             },
             {
                 "number": 58,
@@ -465,7 +522,8 @@
                 "englishName": "Al-Mujaadila",
                 "englishNameTranslation": "The Pleading Woman",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/58.mp3",
-                "revelationType": "Medinan"
+                "revelationType": "Medinan",
+                "totalAyahs": ""
             },
             {
                 "number": 59,
@@ -473,7 +531,8 @@
                 "englishName": "Al-Hashr",
                 "englishNameTranslation": "The Exile",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/59.mp3",
-                "revelationType": "Medinan"
+                "revelationType": "Medinan",
+                "totalAyahs": ""
             },
             {
                 "number": 60,
@@ -481,7 +540,8 @@
                 "englishName": "Al-Mumtahana",
                 "englishNameTranslation": "She that is to be examined",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/60.mp3",
-                "revelationType": "Medinan"
+                "revelationType": "Medinan",
+                "totalAyahs": ""
             },
             {
                 "number": 61,
@@ -489,7 +549,8 @@
                 "englishName": "As-Saff",
                 "englishNameTranslation": "The Ranks",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/61.mp3",
-                "revelationType": "Medinan"
+                "revelationType": "Medinan",
+                "totalAyahs": ""
             },
             {
                 "number": 62,
@@ -497,7 +558,8 @@
                 "englishName": "Al-Jumu'a",
                 "englishNameTranslation": "Friday",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/62.mp3",
-                "revelationType": "Medinan"
+                "revelationType": "Medinan",
+                "totalAyahs": ""
             },
             {
                 "number": 63,
@@ -505,7 +567,8 @@
                 "englishName": "Al-Munaafiqoon",
                 "englishNameTranslation": "The Hypocrites",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/63.mp3",
-                "revelationType": "Medinan"
+                "revelationType": "Medinan",
+                "totalAyahs": ""
             },
             {
                 "number": 64,
@@ -513,7 +576,8 @@
                 "englishName": "At-Taghaabun",
                 "englishNameTranslation": "Mutual Disillusion",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/64.mp3",
-                "revelationType": "Medinan"
+                "revelationType": "Medinan",
+                "totalAyahs": ""
             },
             {
                 "number": 65,
@@ -521,7 +585,8 @@
                 "englishName": "At-Talaaq",
                 "englishNameTranslation": "Divorce",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/65.mp3",
-                "revelationType": "Medinan"
+                "revelationType": "Medinan",
+                "totalAyahs": ""
             },
             {
                 "number": 66,
@@ -529,7 +594,8 @@
                 "englishName": "At-Tahrim",
                 "englishNameTranslation": "The Prohibition",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/66.mp3",
-                "revelationType": "Medinan"
+                "revelationType": "Medinan",
+                "totalAyahs": ""
             },
             {
                 "number": 67,
@@ -537,7 +603,8 @@
                 "englishName": "Al-Mulk",
                 "englishNameTranslation": "The Sovereignty",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/67.mp3",
-                "revelationType": "Meccan"
+                "revelationType": "Meccan",
+                "totalAyahs": ""
             },
             {
                 "number": 68,
@@ -545,7 +612,8 @@
                 "englishName": "Al-Qalam",
                 "englishNameTranslation": "The Pen",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/68.mp3",
-                "revelationType": "Meccan"
+                "revelationType": "Meccan",
+                "totalAyahs": ""
             },
             {
                 "number": 69,
@@ -553,7 +621,8 @@
                 "englishName": "Al-Haaqqa",
                 "englishNameTranslation": "The Reality",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/69.mp3",
-                "revelationType": "Meccan"
+                "revelationType": "Meccan",
+                "totalAyahs": ""
             },
             {
                 "number": 70,
@@ -561,7 +630,8 @@
                 "englishName": "Al-Ma'aarij",
                 "englishNameTranslation": "The Ascending Stairways",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/70.mp3",
-                "revelationType": "Meccan"
+                "revelationType": "Meccan",
+                "totalAyahs": ""
             },
             {
                 "number": 71,
@@ -569,7 +639,8 @@
                 "englishName": "Nooh",
                 "englishNameTranslation": "Noah",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/71.mp3",
-                "revelationType": "Meccan"
+                "revelationType": "Meccan",
+                "totalAyahs": ""
             },
             {
                 "number": 72,
@@ -577,7 +648,8 @@
                 "englishName": "Al-Jinn",
                 "englishNameTranslation": "The Jinn",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/72.mp3",
-                "revelationType": "Meccan"
+                "revelationType": "Meccan",
+                "totalAyahs": ""
             },
             {
                 "number": 73,
@@ -585,7 +657,8 @@
                 "englishName": "Al-Muzzammil",
                 "englishNameTranslation": "The Enshrouded One",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/73.mp3",
-                "revelationType": "Meccan"
+                "revelationType": "Meccan",
+                "totalAyahs": ""
             },
             {
                 "number": 74,
@@ -593,7 +666,8 @@
                 "englishName": "Al-Muddaththir",
                 "englishNameTranslation": "The Cloaked One",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/74.mp3",
-                "revelationType": "Meccan"
+                "revelationType": "Meccan",
+                "totalAyahs": ""
             },
             {
                 "number": 75,
@@ -601,7 +675,8 @@
                 "englishName": "Al-Qiyaama",
                 "englishNameTranslation": "The Resurrection",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/75.mp3",
-                "revelationType": "Meccan"
+                "revelationType": "Meccan",
+                "totalAyahs": ""
             },
             {
                 "number": 76,
@@ -609,7 +684,8 @@
                 "englishName": "Al-Insaan",
                 "englishNameTranslation": "Man",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/76.mp3",
-                "revelationType": "Medinan"
+                "revelationType": "Medinan",
+                "totalAyahs": ""
             },
             {
                 "number": 77,
@@ -617,7 +693,8 @@
                 "englishName": "Al-Mursalaat",
                 "englishNameTranslation": "The Emissaries",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/77.mp3",
-                "revelationType": "Meccan"
+                "revelationType": "Meccan",
+                "totalAyahs": ""
             },
             {
                 "number": 78,
@@ -625,7 +702,8 @@
                 "englishName": "An-Naba",
                 "englishNameTranslation": "The Announcement",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/78.mp3",
-                "revelationType": "Meccan"
+                "revelationType": "Meccan",
+                "totalAyahs": ""
             },
             {
                 "number": 79,
@@ -633,7 +711,8 @@
                 "englishName": "An-Naazi'aat",
                 "englishNameTranslation": "Those who drag forth",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/79.mp3",
-                "revelationType": "Meccan"
+                "revelationType": "Meccan",
+                "totalAyahs": ""
             },
             {
                 "number": 80,
@@ -641,7 +720,8 @@
                 "englishName": "Abasa",
                 "englishNameTranslation": "He frowned",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/80.mp3",
-                "revelationType": "Meccan"
+                "revelationType": "Meccan",
+                "totalAyahs": ""
             },
             {
                 "number": 81,
@@ -649,7 +729,8 @@
                 "englishName": "At-Takwir",
                 "englishNameTranslation": "The Overthrowing",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/81.mp3",
-                "revelationType": "Meccan"
+                "revelationType": "Meccan",
+                "totalAyahs": ""
             },
             {
                 "number": 82,
@@ -657,7 +738,8 @@
                 "englishName": "Al-Infitaar",
                 "englishNameTranslation": "The Cleaving",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/82.mp3",
-                "revelationType": "Meccan"
+                "revelationType": "Meccan",
+                "totalAyahs": ""
             },
             {
                 "number": 83,
@@ -665,7 +747,8 @@
                 "englishName": "Al-Mutaffifin",
                 "englishNameTranslation": "Defrauding",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/83.mp3",
-                "revelationType": "Meccan"
+                "revelationType": "Meccan",
+                "totalAyahs": ""
             },
             {
                 "number": 84,
@@ -673,7 +756,8 @@
                 "englishName": "Al-Inshiqaaq",
                 "englishNameTranslation": "The Splitting Open",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/84.mp3",
-                "revelationType": "Meccan"
+                "revelationType": "Meccan",
+                "totalAyahs": ""
             },
             {
                 "number": 85,
@@ -681,7 +765,8 @@
                 "englishName": "Al-Burooj",
                 "englishNameTranslation": "The Constellations",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/85.mp3",
-                "revelationType": "Meccan"
+                "revelationType": "Meccan",
+                "totalAyahs": ""
             },
             {
                 "number": 86,
@@ -689,7 +774,8 @@
                 "englishName": "At-Taariq",
                 "englishNameTranslation": "The Morning Star",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/86.mp3",
-                "revelationType": "Meccan"
+                "revelationType": "Meccan",
+                "totalAyahs": ""
             },
             {
                 "number": 87,
@@ -697,7 +783,8 @@
                 "englishName": "Al-A'laa",
                 "englishNameTranslation": "The Most High",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/87.mp3",
-                "revelationType": "Meccan"
+                "revelationType": "Meccan",
+                "totalAyahs": ""
             },
             {
                 "number": 88,
@@ -705,7 +792,8 @@
                 "englishName": "Al-Ghaashiya",
                 "englishNameTranslation": "The Overwhelming",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/88.mp3",
-                "revelationType": "Meccan"
+                "revelationType": "Meccan",
+                "totalAyahs": ""
             },
             {
                 "number": 89,
@@ -713,7 +801,8 @@
                 "englishName": "Al-Fajr",
                 "englishNameTranslation": "The Dawn",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/89.mp3",
-                "revelationType": "Meccan"
+                "revelationType": "Meccan",
+                "totalAyahs": ""
             },
             {
                 "number": 90,
@@ -721,7 +810,8 @@
                 "englishName": "Al-Balad",
                 "englishNameTranslation": "The City",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/90.mp3",
-                "revelationType": "Meccan"
+                "revelationType": "Meccan",
+                "totalAyahs": ""
             },
             {
                 "number": 91,
@@ -729,7 +819,8 @@
                 "englishName": "Ash-Shams",
                 "englishNameTranslation": "The Sun",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/91.mp3",
-                "revelationType": "Meccan"
+                "revelationType": "Meccan",
+                "totalAyahs": ""
             },
             {
                 "number": 92,
@@ -737,7 +828,8 @@
                 "englishName": "Al-Lail",
                 "englishNameTranslation": "The Night",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/92.mp3",
-                "revelationType": "Meccan"
+                "revelationType": "Meccan",
+                "totalAyahs": ""
             },
             {
                 "number": 93,
@@ -745,7 +837,8 @@
                 "englishName": "Ad-Dhuhaa",
                 "englishNameTranslation": "The Morning Hours",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/93.mp3",
-                "revelationType": "Meccan"
+                "revelationType": "Meccan",
+                "totalAyahs": ""
             },
             {
                 "number": 94,
@@ -753,7 +846,8 @@
                 "englishName": "Ash-Sharh",
                 "englishNameTranslation": "The Consolation",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/94.mp3",
-                "revelationType": "Meccan"
+                "revelationType": "Meccan",
+                "totalAyahs": ""
             },
             {
                 "number": 95,
@@ -761,7 +855,8 @@
                 "englishName": "At-Tin",
                 "englishNameTranslation": "The Fig",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/95.mp3",
-                "revelationType": "Meccan"
+                "revelationType": "Meccan",
+                "totalAyahs": ""
             },
             {
                 "number": 96,
@@ -769,7 +864,8 @@
                 "englishName": "Al-Alaq",
                 "englishNameTranslation": "The Clot",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/96.mp3",
-                "revelationType": "Meccan"
+                "revelationType": "Meccan",
+                "totalAyahs": ""
             },
             {
                 "number": 97,
@@ -777,7 +873,8 @@
                 "englishName": "Al-Qadr",
                 "englishNameTranslation": "The Power, Fate",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/97.mp3",
-                "revelationType": "Meccan"
+                "revelationType": "Meccan",
+                "totalAyahs": ""
             },
             {
                 "number": 98,
@@ -785,7 +882,8 @@
                 "englishName": "Al-Bayyina",
                 "englishNameTranslation": "The Evidence",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/98.mp3",
-                "revelationType": "Medinan"
+                "revelationType": "Medinan",
+                "totalAyahs": ""
             },
             {
                 "number": 99,
@@ -793,7 +891,8 @@
                 "englishName": "Az-Zalzala",
                 "englishNameTranslation": "The Earthquake",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/99.mp3",
-                "revelationType": "Medinan"
+                "revelationType": "Medinan",
+                "totalAyahs": ""
             },
             {
                 "number": 100,
@@ -801,7 +900,8 @@
                 "englishName": "Al-Aadiyaat",
                 "englishNameTranslation": "The Chargers",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/100.mp3",
-                "revelationType": "Meccan"
+                "revelationType": "Meccan",
+                "totalAyahs": ""
             },
             {
                 "number": 101,
@@ -809,7 +909,8 @@
                 "englishName": "Al-Qaari'a",
                 "englishNameTranslation": "The Calamity",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/101.mp3",
-                "revelationType": "Meccan"
+                "revelationType": "Meccan",
+                "totalAyahs": ""
             },
             {
                 "number": 102,
@@ -817,7 +918,8 @@
                 "englishName": "At-Takaathur",
                 "englishNameTranslation": "Competition",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/102.mp3",
-                "revelationType": "Meccan"
+                "revelationType": "Meccan",
+                "totalAyahs": ""
             },
             {
                 "number": 103,
@@ -825,7 +927,8 @@
                 "englishName": "Al-Asr",
                 "englishNameTranslation": "The Declining Day, Epoch",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/103.mp3",
-                "revelationType": "Meccan"
+                "revelationType": "Meccan",
+                "totalAyahs": ""
             },
             {
                 "number": 104,
@@ -833,7 +936,8 @@
                 "englishName": "Al-Humaza",
                 "englishNameTranslation": "The Traducer",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/104.mp3",
-                "revelationType": "Meccan"
+                "revelationType": "Meccan",
+                "totalAyahs": ""
             },
             {
                 "number": 105,
@@ -841,7 +945,8 @@
                 "englishName": "Al-Fil",
                 "englishNameTranslation": "The Elephant",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/105.mp3",
-                "revelationType": "Meccan"
+                "revelationType": "Meccan",
+                "totalAyahs": ""
             },
             {
                 "number": 106,
@@ -849,7 +954,8 @@
                 "englishName": "Quraish",
                 "englishNameTranslation": "Quraysh",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/106.mp3",
-                "revelationType": "Meccan"
+                "revelationType": "Meccan",
+                "totalAyahs": ""
             },
             {
                 "number": 107,
@@ -857,7 +963,8 @@
                 "englishName": "Al-Maa'un",
                 "englishNameTranslation": "Almsgiving",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/107.mp3",
-                "revelationType": "Meccan"
+                "revelationType": "Meccan",
+                "totalAyahs": ""
             },
             {
                 "number": 108,
@@ -865,7 +972,8 @@
                 "englishName": "Al-Kawthar",
                 "englishNameTranslation": "Abundance",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/108.mp3",
-                "revelationType": "Meccan"
+                "revelationType": "Meccan",
+                "totalAyahs": ""
             },
             {
                 "number": 109,
@@ -873,7 +981,8 @@
                 "englishName": "Al-Kaafiroon",
                 "englishNameTranslation": "The Disbelievers",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/109.mp3",
-                "revelationType": "Meccan"
+                "revelationType": "Meccan",
+                "totalAyahs": ""
             },
             {
                 "number": 110,
@@ -881,7 +990,8 @@
                 "englishName": "An-Nasr",
                 "englishNameTranslation": "Divine Support",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/110.mp3",
-                "revelationType": "Medinan"
+                "revelationType": "Medinan",
+                "totalAyahs": ""
             },
             {
                 "number": 111,
@@ -889,7 +999,8 @@
                 "englishName": "Al-Masad",
                 "englishNameTranslation": "The Palm Fibre",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/111.mp3",
-                "revelationType": "Meccan"
+                "revelationType": "Meccan",
+                "totalAyahs": ""
             },
             {
                 "number": 112,
@@ -897,7 +1008,8 @@
                 "englishName": "Al-Ikhlaas",
                 "englishNameTranslation": "Sincerity",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/112.mp3",
-                "revelationType": "Meccan"
+                "revelationType": "Meccan",
+                "totalAyahs": ""
             },
             {
                 "number": 113,
@@ -905,7 +1017,8 @@
                 "englishName": "Al-Falaq",
                 "englishNameTranslation": "The Dawn",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/113.mp3",
-                "revelationType": "Meccan"
+                "revelationType": "Meccan",
+                "totalAyahs": ""
             },
             {
                 "number": 114,
@@ -913,7 +1026,8 @@
                 "englishName": "An-Naas",
                 "englishNameTranslation": "Mankind",
                 "audio": "https://quran-bucket.s3.amazonaws.com/abdulbasit/surah/audio/114.mp3",
-                "revelationType": "Meccan"
+                "revelationType": "Meccan",
+                "totalAyahs": ""
             }
         ],
         "edition": {
