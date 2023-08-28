@@ -1,6 +1,6 @@
 // Desc: Content component
-import React, { useState, useCallback, useEffect } from "react";
-import { ItemList } from "./items";
+import React, { useState, useCallback, useEffect, useRef } from "react";
+import { ItemList, ItemSideList } from "./items";
 import { useParams } from "react-router-dom";
 import { LoadingAnimation, NetworkError } from "../../assets/svgIcons";
 
@@ -61,3 +61,63 @@ export const AyahsListing = () => {
         </React.Fragment>
     )
 }
+
+export const SideSurahsListing = () => {
+    const { author, surahNumber } = useParams();
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+    const [surahs, setSurahs] = useState([]);
+    const containerRef = useRef(null);
+  
+    let authorName;
+    if (author === undefined) {
+        authorName = "muhammad-asad";
+    } else {
+        authorName = author;
+    }
+  
+    const fetchData = useCallback(() => {
+        Promise.all([
+          fetch(`https://raw.githubusercontent.com/qararulhassan/quran-web/main/API/text/${authorName}/surah/api.json`),
+        ])
+          .then(([responseSurah]) =>
+            Promise.all([
+              responseSurah.json()
+            ])
+          )
+          .then(([quran]) => {
+            setSurahs(quran.data.surahs);
+            setLoading(false);
+          })
+          .catch(error => {
+            setError(error.message);
+            setLoading(false);
+          });
+    }, [authorName]);
+    
+    useEffect(() => {
+        fetchData();
+        if (containerRef.current) {
+            const itemToScrollTo = containerRef.current.querySelector(`.list-item-wrapper:nth-child(${surahNumber})`);
+            itemToScrollTo.scrollIntoView({ behavior: 'smooth' });
+        };
+    }, [fetchData, surahNumber]);
+  
+    return (
+        <React.Fragment>
+            {loading ? (
+                <LoadingAnimation animationStyle="w-full" />
+            ) : error ? (
+                <NetworkError errorText={error} animationStyle="w-full" />
+            ) : (
+                <React.Fragment>
+                    <div className="side-listing-wrapper grid gap-6 relative overflow-y-scroll overflow-x-hidden h-full" ref={containerRef}>
+                        {surahs.map((surah, index) => (
+                            <ItemSideList key={index} authorName={authorName} surahNo={surah.number} totalAyahs={surah.totalAyahs} surahNameEN={surah.englishName} surahMeaningEN={surah.englishNameTranslation} surahType={surah.revelationType} />
+                        ))}
+                    </div>                
+                </React.Fragment>
+            )}
+        </React.Fragment>
+    );
+  }

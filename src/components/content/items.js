@@ -27,7 +27,7 @@ export const ItemGrid = ( props ) => {
     )
 }
 
-export const ItemSideLIst = ( props ) => {
+export const ItemSideList = ( props ) => {
     const { surahNumber } = useParams();
     const { authorName, surahNo, surahNameEN, surahMeaningEN, surahType } = props;
 
@@ -40,9 +40,9 @@ export const ItemSideLIst = ( props ) => {
                             <span className={`font-medium text-xl w-12 aspect-square inline-flex justify-center items-center ${parseInt(surahNumber) === parseInt(surahNo) ? 'text-white' : 'text-teal-600' }`}>
                                 {parseInt(surahNumber) === parseInt(surahNo) ? 
                                     (
-                                        <IslamicStarFill svgStyle="w-12 aspect-square absolute text-teal-500" strokeWidth="35" />
+                                        <IslamicStarFill svgStyle="w-12 aspect-square absolute text-teal-500" strokeWidth="17" />
                                     ) : (
-                                        <IslamicStar svgStyle="w-12 aspect-square absolute text-teal-500" strokeWidth="35" />
+                                        <IslamicStar svgStyle="w-12 aspect-square absolute text-teal-500" strokeWidth="17" />
                                     )
                                 } <span className='relative z-10'>{surahNo}</span>
                             </span>

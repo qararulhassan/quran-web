@@ -18,7 +18,7 @@ module.exports = {
       fontFamily: {
         'alegreya': ['Alegreya Sans', 'sans-serif'],
         'cairo': ['Cairo Play', 'sans-serif'],
-        'messiri': ['El Messiri', 'sans-serif'],
+        'amiri-quran': ['Amiri Quran', 'serif'],
       },
     },
   },

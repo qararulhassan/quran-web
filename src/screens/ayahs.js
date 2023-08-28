@@ -1,7 +1,6 @@
 import React from 'react';
 import { SideNavigation } from '../components/navigation/navigation';
-import { AyahsListing } from '../components/content/ayahs';
-import { SideSurahsListing } from '../components/content/surahs';
+import { AyahsListing, SideSurahsListing } from '../components/content/ayahs';
 
 export const AyahsBody = () => {
     return (

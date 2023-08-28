@@ -19,7 +19,7 @@ body {
   @apply overflow-x-hidden overflow-y-scroll max-h-[calc(100vh-22em)];
 }
 .listing-window {
-  @apply overflow-x-hidden overflow-y-scroll max-h-[calc(100vh-13em)];
+  @apply overflow-hidden max-h-[calc(100vh-13em)];
 }
 
 svg {
