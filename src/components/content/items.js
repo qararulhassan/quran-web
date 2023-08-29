@@ -29,11 +29,11 @@ export const ItemGrid = ( props ) => {
 
 export const ItemSideList = ( props ) => {
     const { surahNumber } = useParams();
-    const { authorName, surahNo, surahNameEN, surahMeaningEN, surahType } = props;
+    const { author, surahNo, surahNameEN, surahMeaningEN, surahType } = props;
 
     return (
         <div className="list-item-wrapper">
-            <Link to={`/${authorName}/surah/${surahNo}`}>
+            <Link to={`/${author}/surah/${surahNo}`}>
                 <div className="list-item-container cursor-pointer bg-white p-5 rounded-2xl grid gap-8 relative">
                     <div className="flex gap-8">
                         <div className='grid items-center w-fit'>
@@ -115,7 +115,7 @@ export const ItemList = ( props ) => {
         <div className="list-item-wrapper">
             <div className="list-item-container bg-white p-8 rounded-2xl grid gap-6 xxl:gap-8">
                 <div className="flex justify-between">
-                    <span className="inline-block text-teal-500 text-3xl xxxl:text-4xl mr-8">{surahNumber}:{ayahNumber}</span>
+                    <span className="inline-block text-teal-500 text-3xl xxxl:text-4xl mr-8 relative">{surahNumber}:{ayahNumber}</span>
                     <p className="font-cairo text-3xl xxl:text-4xl text-right leading-relaxed">{ayahTextAR}</p>
                 </div>
                 <div className="uppercase flex gap-4">

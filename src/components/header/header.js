@@ -1,15 +1,18 @@
 // Desc: Header component
 import { Link } from "react-router-dom"
-import { Bell, Headphone, Logo, Search } from "../../assets/svgIcons"
+import { Bell, Headphone, Logo2, Search } from "../../assets/svgIcons";
+import { NavPath } from "../../pages";
 
 export const Header = () => {
 
     return (
-        <div className="header-wrapper mb-10">
+        <div className="header-wrapper">
             <div className="header-container">
                 <div className="grid grid-cols-15 gap-4 items-center">
                     <div className="col-span-1">
-                        <Link to="/" className="bg-gradient-to-br from-teal-400 to-teal-500 w-16 aspect-square flex justify-center items-center rounded-full text-white mx-auto"><Logo svgStyle="w-[60%] aspect-square" /></Link>
+                        <Link to={NavPath({path: "surahsList"})} className="w-full aspect-square flex justify-center items-center rounded-full text-white mx-auto relative">
+                            <Logo2 svgStyle="w-28 aspect-square" />
+                        </Link>
                     </div>
                     <div className="col-span-12 grid grid-flow-col">
                         <p className="flex gap-4 items-center text-4xl font-medium">Quran</p>

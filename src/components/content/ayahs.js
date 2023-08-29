@@ -3,12 +3,12 @@ import React, { useState, useCallback, useEffect, useRef } from "react";
 import { ItemList, ItemSideList } from "./items";
 import { useParams } from "react-router-dom";
 import { LoadingAnimation, NetworkError } from "../../assets/svgIcons";
+import { SurahsPlayer } from "./Waveform";
 
 export const AyahsListing = () => {
     const { author, surahNumber } = useParams();
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
-    const [surahs, setSurahs] = useState([]);
     const [ayahs, setAyahs] = useState([]);
 
     const fetchData = useCallback(() => {
@@ -21,7 +21,6 @@ export const AyahsListing = () => {
             ])
           )
           .then(([quran]) => {
-            setSurahs(quran.data);
             setAyahs(quran.data.ayahs);
             setLoading(false);
           })
@@ -45,12 +44,7 @@ export const AyahsListing = () => {
                 <NetworkError errorText={error} animationStyle="w-full" />
             ) : (
                 <React.Fragment>
-                    <div>
-                        <h1 className="text-center text-2xl xxl:text-3xl grid gap-y-6 mb-16">
-                            <span className="font-cairo">{surahs.bism}</span>
-                            <span className="text-xl xxl:text-2xl">{surahs.englishBism}</span>
-                        </h1>
-                    </div>
+                    <SurahsPlayer location="aside" />
                     <div className="grid gap-6 surah-window">
                         {ayahs.map((ayah, index) => (
                             <ItemList key={index} surahNumber={surahNumber} ayahNumber={ayah.numberInSurah} ayahTextEN={ayah.englishText} ayahTextAR={ayah.arabicText} ayahAudio={audioRef} />
@@ -69,16 +63,9 @@ export const SideSurahsListing = () => {
     const [surahs, setSurahs] = useState([]);
     const containerRef = useRef(null);
   
-    let authorName;
-    if (author === undefined) {
-        authorName = "muhammad-asad";
-    } else {
-        authorName = author;
-    }
-  
     const fetchData = useCallback(() => {
         Promise.all([
-          fetch(`https://raw.githubusercontent.com/qararulhassan/quran-web/main/API/text/${authorName}/surah/api.json`),
+          fetch(`https://raw.githubusercontent.com/qararulhassan/quran-web/main/API/text/${author}/surah/api.json`),
         ])
           .then(([responseSurah]) =>
             Promise.all([
@@ -93,7 +80,7 @@ export const SideSurahsListing = () => {
             setError(error.message);
             setLoading(false);
           });
-    }, [authorName]);
+    }, [author]);
     
     useEffect(() => {
         fetchData();
@@ -113,7 +100,7 @@ export const SideSurahsListing = () => {
                 <React.Fragment>
                     <div className="side-listing-wrapper grid gap-6 relative overflow-y-scroll overflow-x-hidden h-full" ref={containerRef}>
                         {surahs.map((surah, index) => (
-                            <ItemSideList key={index} authorName={authorName} surahNo={surah.number} totalAyahs={surah.totalAyahs} surahNameEN={surah.englishName} surahMeaningEN={surah.englishNameTranslation} surahType={surah.revelationType} />
+                            <ItemSideList key={index} author={author} surahNo={surah.number} totalAyahs={surah.totalAyahs} surahNameEN={surah.englishName} surahMeaningEN={surah.englishNameTranslation} surahType={surah.revelationType} />
                         ))}
                     </div>                
                 </React.Fragment>

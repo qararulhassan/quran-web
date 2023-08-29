@@ -1,26 +1,26 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { Download, Forward, Forward2, Heart, HeartFill, List2, LoadingAnimation, Loop, Madina, Mecca, NetworkError, PauseFill, PlayFill, Previous } from "../../assets/svgIcons";
+import { Download, Forward, ForwardFill, Heart, HeartFill, IslamicStar, List2, LoadingAnimation, Loop, Madina, Mecca, NetworkError, PauseFill, PauseSymbol, PlayFill, PlaySymbol, Previous, PreviousFill } from "../../assets/svgIcons";
 import { Link, useParams } from "react-router-dom";
 import WaveSurfer from "wavesurfer.js";
 import audioRef from "../../assets/audio.mp3";
 
 export const Waveform = (props) => {
-    const {number, revelationType, name, englishName, englishNameTranslation, surahAudio} = props;
+    const {number, revelationType, name, englishName, englishNameTranslation, surahAudio, location} = props;
     const [waveform, setWaveform] = useState(null);
     const [playing, setPlaying] = useState(false);
     const [currentTime, setCurrentTime] = useState(0);
     const [duration, setDuration] = useState(0);
 
     useEffect(() => {
-        const track = document.querySelector("#track");
+        const track = document.querySelector(".track");
 
         const canvas = document.createElement('canvas');
         const ctx = canvas.getContext('2d');
 
         // Define the progress gradient
         const progressGradient = ctx.createLinearGradient(0, 0, 0, canvas.height * 1.35)
-        progressGradient.addColorStop(0, '#2dd4bf') // Top color
-        progressGradient.addColorStop(1, '#14b8a6') // Bottom color
+        progressGradient.addColorStop(0, '#134e4a') // Top color
+        progressGradient.addColorStop(1, '#134e4a') // Bottom color
 
         const newWaveform = WaveSurfer.create({
             barWidth: 3,
@@ -30,12 +30,12 @@ export const Waveform = (props) => {
             cursorWidth: 1,
             splitChannels: false,
             interact: true,
-            container: "#waveform",
+            container: ".waveform",
             backend: "WebAudio",
             height: 60,
             progressColor: progressGradient,
             responsive: true,
-            waveColor: "#C4C4C4",
+            waveColor: "#FFFFFF",
             cursorColor: "transparent",
             cursor: "pointer",
         });
@@ -109,69 +109,122 @@ export const Waveform = (props) => {
     };
 
     return (
-      <div className="player-wrapper">
-          <div className="player-container">
-              <div className="player">
-                  <div className="bg-gradient-to-br from-teal-300 via-teal-400 to-teal-500 w-full aspect-square rounded-xl text-white flex justify-center items-center font-cairo text-3xl xl:text-4xl relative p-8 animate-gradient">
-                      {revelationType === 'Meccan' ? ( <Mecca svgStyle="absolute w-[60%] opacity-20 aspect-square" /> ) : ( <Madina svgStyle="absolute w-[60%] opacity-20 aspect-square" /> )}
-                      <p className="relative z-10">{name}</p>
-                  </div>
-                  <div className="grid justify-center relative -mt-8">
-                      <ul className="flex gap-8 border border-white rounded-full px-8 py-4 justify-center bg-gradient-to-b from-teal-300 to-teal-500">
-                          <li><Forward svgStyle="w-5 aspect-square text-white cursor-pointer" strokeWidth="35" /></li>
-                          <li>
-                              <div className="relative w-5 aspect-square group cursor-pointer">    
-                                  <Heart svgStyle="absolute w-full aspect-square text-white opacity-100 group-hover:opacity-0 transition duration-300 group-[.active]:opacity-0]" strokeWidth="35"  />
-                                  <HeartFill svgStyle="absolute w-full aspect-square text-red-500 opacity-0 group-hover:opacity-100 transition duration-300 group-[.active]:opacity-100" strokeWidth="35"  />
-                              </div>
-                          </li>
-                          <li onClick={handleDownload}><Download svgStyle="w-5 aspect-square text-white cursor-pointer" strokeWidth="35" /></li>
-                      </ul>
-                  </div>
-                  <div className="mt-4">
-                      <p className="text-center font-bold text-2xl mb-1">{englishName}</p>
-                      <p className="text-center text-base text-cyan-800">{englishNameTranslation}</p>
-                  </div>
-                  <div>
-                        <div id="waveform" className="my-4 cursor-pointer" />
-                        <audio id="track" src={surahAudio} />
-                        <p className="flex justify-between text-cyan-800"><span id="time">{formatTime(currentTime)}</span><span id="duration">{formatTime(duration)}</span></p>
-                  </div>
-                  <ul className="flex gap-8 items-center justify-center mt-4">
-                      <li className="cursor-pointer">
-                          <Loop svgStyle="w-5 aspect-square text-teal-500 hover:text-teal-600" strokeWidth="30" />
-                      </li>
-                      <li className="cursor-pointer">
-                          {number > 1 ? (
-                              <Link to={`/surah/${number - 1}`} onClick={handleStop}>
-                                <Previous svgStyle="w-5 aspect-square text-teal-500 hover:text-teal-600" strokeWidth="20" />
-                              </Link>
-                          ) : (
-                              <Previous svgStyle="w-5 aspect-square text-gray-300 hover:text-gray-400 cursor-not-allowed" strokeWidth="20" />
-                          )}
-                      </li>
-                      <li className="cursor-pointer" onClick={handlePlay}>
-                            {playing ? <PauseFill svgStyle="w-12 aspect-square text-teal-500 hover:text-teal-600" /> : <PlayFill svgStyle="w-12 aspect-square text-teal-500 hover:text-teal-600" />}
-                      </li>
-                      <li className="cursor-pointer">
-                          {number < 114 ? (
-                              <Link to={`/surah/${number + 1}`} onClick={handleStop}>
-                                  <Forward2 svgStyle="w-5 aspect-square text-teal-500 hover:text-teal-600" strokeWidth="20" />
-                              </Link>
-                          ) : (
-                              <Forward2 svgStyle="w-5 aspect-square text-gray-300 hover:text-gray-400 cursor-not-allowed" strokeWidth="20" />
-                          )}
-                      </li>
-                      <li className="cursor-pointer"><Link to="/"><List2 svgStyle="w-5 aspect-square text-teal-500 hover:text-teal-600" strokeWidth="30" /></Link></li>
-                  </ul>
-              </div>
-          </div>
-      </div>
+        <React.Fragment>
+        { location === 'aside' ? (
+                <div className="player-wrapper bg-gradient-to-r from-teal-400 to-teal-400 rounded-xl p-12 mb-6">
+                    <div className="player-container">
+                        <div className="player">
+                            <div className='text-wrapper flex gap-8'>
+                                <div className="font-medium text-4xl w-24 aspect-square inline-flex justify-center items-center text-white relative">
+                                    <IslamicStar svgStyle="w-24 aspect-square absolute text-white" strokeWidth="35" />
+                                    <span className='relative z-10 '>{number}</span>
+                                </div>
+                                <div className='flex flex-col justify-center items-center w-full text-lg text-white'>
+                                    <p className='w-fit text-4xl font-medium'>{englishName}</p>
+                                    <p className='w-fit opacity-90 border-b border-solid border-white/90'>( {englishNameTranslation} )</p>
+                                    <p className='w-fit'>{revelationType} - 7 Ayahs</p>
+                                </div>
+                            </div>
+                            <div className='flex items-center gap-6'>
+                                <ul>
+                                    <li className="cursor-pointer" onClick={handlePlay}>
+                                        {playing ? <PauseSymbol svgStyle="w-8 aspect-square text-white hover:text-teal-800" /> : <PlaySymbol svgStyle="w-8 aspect-square text-white hover:text-teal-800" />}
+                                    </li>
+                                </ul>
+                                <div className='w-full'><div className="waveform my-4 cursor-pointer" /></div>
+                                <ul className='flex gap-4 justify-center items-center'>
+                                    <li className="cursor-pointer">
+                                        {number > 1 ? (
+                                            <Link to={`/surah/${number - 1}`} onClick={handleStop}>
+                                                <PreviousFill svgStyle="w-8 aspect-square text-white hover:text-teal-800" />
+                                            </Link>
+                                        ) : (
+                                            <PreviousFill svgStyle="w-8 aspect-square text-teal-800 hover:text-teal-800 cursor-not-allowed" />
+                                        )}
+                                    </li>
+                                    <li className="cursor-pointer">
+                                        {number < 114 ? (
+                                            <Link to={`/surah/${number + 1}`} onClick={handleStop}>
+                                                <ForwardFill svgStyle="w-8 aspect-square text-white hover:text-teal-800" />
+                                            </Link>
+                                        ) : (
+                                            <ForwardFill svgStyle="w-8 aspect-square text-teal-800 hover:text-teal-800 cursor-not-allowed" />
+                                        )}
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <audio className="track" src={surahAudio} />
+                </div>
+            ) : (
+                <div className="player-wrapper">
+                    <div className="player-container">
+                        <div className="player">
+                            <div className="bg-gradient-to-br from-teal-300 via-teal-400 to-teal-500 w-full aspect-square rounded-xl text-white flex justify-center items-center font-cairo text-3xl xl:text-4xl relative p-8 animate-gradient">
+                                {revelationType === 'Meccan' ? ( <Mecca svgStyle="absolute w-[60%] opacity-20 aspect-square" /> ) : ( <Madina svgStyle="absolute w-[60%] opacity-20 aspect-square" /> )}
+                                <p className="relative z-10">{name}</p>
+                            </div>
+                            <div className="grid justify-center relative -mt-8">
+                                <ul className="flex gap-8 border border-white rounded-full px-8 py-4 justify-center bg-gradient-to-b from-teal-300 to-teal-500">
+                                    <li><Forward svgStyle="w-5 aspect-square text-white cursor-pointer" strokeWidth="35" /></li>
+                                    <li>
+                                        <div className="relative w-5 aspect-square group cursor-pointer">    
+                                            <Heart svgStyle="absolute w-full aspect-square text-white opacity-100 group-hover:opacity-0 transition duration-300 group-[.active]:opacity-0]" strokeWidth="35"  />
+                                            <HeartFill svgStyle="absolute w-full aspect-square text-red-500 opacity-0 group-hover:opacity-100 transition duration-300 group-[.active]:opacity-100" strokeWidth="35"  />
+                                        </div>
+                                    </li>
+                                    <li onClick={handleDownload}><Download svgStyle="w-5 aspect-square text-white cursor-pointer" strokeWidth="35" /></li>
+                                </ul>
+                            </div>
+                            <div className="mt-4">
+                                <p className="text-center font-bold text-2xl mb-1">{englishName}</p>
+                                <p className="text-center text-base text-cyan-800">{englishNameTranslation}</p>
+                            </div>
+                            <div>
+                                <div id="waveform" className="my-4 cursor-pointer" />
+                                <audio id="track" src={surahAudio} />
+                                <p className="flex justify-between text-cyan-800"><span id="time">{formatTime(currentTime)}</span><span id="duration">{formatTime(duration)}</span></p>
+                            </div>
+                            <ul className="flex gap-8 items-center justify-center mt-4">
+                                <li className="cursor-pointer">
+                                    <Loop svgStyle="w-5 aspect-square text-teal-500 hover:text-teal-600" strokeWidth="30" />
+                                </li>
+                                <li className="cursor-pointer">
+                                    {number > 1 ? (
+                                        <Link to={`/surah/${number - 1}`} onClick={handleStop}>
+                                        <Previous svgStyle="w-5 aspect-square text-teal-500 hover:text-teal-600" strokeWidth="20" />
+                                        </Link>
+                                    ) : (
+                                        <Previous svgStyle="w-5 aspect-square text-gray-300 hover:text-gray-400 cursor-not-allowed" strokeWidth="20" />
+                                    )}
+                                </li>
+                                <li className="cursor-pointer" onClick={handlePlay}>
+                                    {playing ? <PauseFill svgStyle="w-12 aspect-square text-teal-500 hover:text-teal-600" /> : <PlayFill svgStyle="w-12 aspect-square text-teal-500 hover:text-teal-600" />}
+                                </li>
+                                <li className="cursor-pointer">
+                                    {number < 114 ? (
+                                        <Link to={`/surah/${number + 1}`} onClick={handleStop}>
+                                            <Forward svgStyle="w-5 aspect-square text-teal-500 hover:text-teal-600" strokeWidth="20" />
+                                        </Link>
+                                    ) : (
+                                        <Forward svgStyle="w-5 aspect-square text-gray-300 hover:text-gray-400 cursor-not-allowed" strokeWidth="20" />
+                                    )}
+                                </li>
+                                <li className="cursor-pointer"><Link to="/"><List2 svgStyle="w-5 aspect-square text-teal-500 hover:text-teal-600" strokeWidth="30" /></Link></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            )
+        }
+        </React.Fragment>
     );
 }
 
 // Desc: Surah player component
-export const SurahsPlayer = () => {
+export const SurahsPlayer = (props) => {
+    const { location } = props;
     const { author, surahNumber } = useParams();
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -208,7 +261,7 @@ export const SurahsPlayer = () => {
             ) : error ? (
                 <NetworkError errorText={error} animationStyle="w-full" />
             ) : (
-                <Waveform number={surahs.number} revelationType={surahs.revelationType} name={surahs.name} englishName={surahs.englishName} englishNameTranslation={surahs.englishNameTranslation} surahAudio={audioRef} />
+                <Waveform location={location} number={surahs.number} revelationType={surahs.revelationType} name={surahs.name} englishName={surahs.englishName} englishNameTranslation={surahs.englishNameTranslation} surahAudio={audioRef} />
             )}
         </React.Fragment>
     )
