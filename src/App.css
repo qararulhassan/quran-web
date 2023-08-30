@@ -1,5 +1,5 @@
 body {
-  @apply p-8 pb-0 min-h-screen font-alegreya;
+  @apply font-alegreya;
 }
 
 .col-span-13 { grid-column: span 13 / span 13; }
@@ -8,18 +8,18 @@ body {
 .col-span-16 { grid-column: span 16 / span 16; }
 
 #root {
-  @apply min-h-[calc(100vh-4rem)];
+  @apply min-h-screen;
 }
 
-.content-wrapper .adjust-height {
-  @apply min-h-[calc(100vh-8.5rem)];
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
 }
 
-.surah-window {
-  @apply overflow-x-hidden overflow-y-scroll max-h-[calc(100vh-22em)];
-}
-.listing-window {
-  @apply overflow-hidden max-h-[calc(100vh-13em)];
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
 
 svg {

@@ -13,18 +13,18 @@ export const NavPath = (props) => {
 
 export const SurahsPage = () => {
     return (
-        <React.Fragment>
+        <div className='flex flex-col max-h-screen overflow-hidden'>
             <Header />
             <SurahsBody />
-        </React.Fragment>
+        </div>
     )
 }
 
 export const AyahsPage = () => {
     return (
-        <React.Fragment>
+        <div className='flex flex-col max-h-screen overflow-hidden'>
             <Header />
             <AyahsBody />
-        </React.Fragment>
+        </div>
     )
 }

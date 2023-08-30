@@ -50,7 +50,7 @@ export const SurahsListing = () => {
             ) : (
                 <React.Fragment>
                     <TopFilters />
-                    <div className="grid grid-cols-4 xl:grid-cols-6 gap-6 surah-window">
+                    <div className="grid grid-cols-4 xl:grid-cols-6 gap-6 overflow-x-hidden overflow-y-scroll no-scrollbar">
                         {surahs.map((surah, index) => (
                             <ItemGrid key={index} authorName={authorName} surahNumber={surah.number} surahNameEN={surah.englishName} surahMeaningEN={surah.englishNameTranslation} surahType={surah.revelationType} />
                         ))}

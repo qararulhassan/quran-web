@@ -5,6 +5,15 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        '2xl': '1366px',
+        '3xl': '1440px',
+        '4xl': '1536px',
+        '5xl': '1600px',
+        '6xl': '1920px',
+        '7xl': '2048px',
+        '8xl': '2560px',
+      },
       container: {
         center: true,
         padding: '1rem'
@@ -24,4 +33,3 @@ module.exports = {
   },
   plugins: [],
 }
-

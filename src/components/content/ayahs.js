@@ -1,5 +1,5 @@
 // Desc: Content component
-import React, { useState, useCallback, useEffect, useRef } from "react";
+import React, { useState, useCallback, useEffect } from "react";
 import { ItemList, ItemSideList } from "./items";
 import { useParams } from "react-router-dom";
 import { LoadingAnimation, NetworkError } from "../../assets/svgIcons";
@@ -45,7 +45,7 @@ export const AyahsListing = () => {
             ) : (
                 <React.Fragment>
                     <SurahsPlayer location="aside" />
-                    <div className="grid gap-6 surah-window">
+                    <div className="flex flex-col flex-grow gap-6 overflow-scroll no-scrollbar">
                         {ayahs.map((ayah, index) => (
                             <ItemList key={index} surahNumber={surahNumber} ayahNumber={ayah.numberInSurah} ayahTextEN={ayah.englishText} ayahTextAR={ayah.arabicText} ayahAudio={audioRef} />
                         ))}
@@ -61,7 +61,6 @@ export const SideSurahsListing = () => {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const [surahs, setSurahs] = useState([]);
-    const containerRef = useRef(null);
   
     const fetchData = useCallback(() => {
         Promise.all([
@@ -84,10 +83,6 @@ export const SideSurahsListing = () => {
     
     useEffect(() => {
         fetchData();
-        if (containerRef.current) {
-            const itemToScrollTo = containerRef.current.querySelector(`.list-item-wrapper:nth-child(${surahNumber})`);
-            itemToScrollTo.scrollIntoView({ behavior: 'smooth' });
-        };
     }, [fetchData, surahNumber]);
   
     return (
@@ -98,11 +93,11 @@ export const SideSurahsListing = () => {
                 <NetworkError errorText={error} animationStyle="w-full" />
             ) : (
                 <React.Fragment>
-                    <div className="side-listing-wrapper grid gap-6 relative overflow-y-scroll overflow-x-hidden h-full" ref={containerRef}>
+                    <div className="flex flex-col gap-6 relative overflow-x-hidden overflow-y-scroll max-h-screen no-scrollbar">
                         {surahs.map((surah, index) => (
                             <ItemSideList key={index} author={author} surahNo={surah.number} totalAyahs={surah.totalAyahs} surahNameEN={surah.englishName} surahMeaningEN={surah.englishNameTranslation} surahType={surah.revelationType} />
                         ))}
-                    </div>                
+                    </div>
                 </React.Fragment>
             )}
         </React.Fragment>

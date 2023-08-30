@@ -1,6 +1,6 @@
 // Desc: List Item component
 import React, { useState, useEffect, useRef } from 'react'
-import { Heart, HeartFill, Play, Right, Share, Copy, Mecca, Madina, Pause, IslamicStar, IslamicStarFill } from "../../assets/svgIcons";
+import { Heart, HeartFill, Play, Right, Share, Copy, Mecca, Madina, Pause } from "../../assets/svgIcons";
 import { Link, useParams } from "react-router-dom";
 
 export const ItemGrid = ( props ) => {
@@ -35,16 +35,10 @@ export const ItemSideList = ( props ) => {
         <div className="list-item-wrapper">
             <Link to={`/${author}/surah/${surahNo}`}>
                 <div className="list-item-container cursor-pointer bg-white p-5 rounded-2xl grid gap-8 relative">
-                    <div className="flex gap-8">
+                    <div className="flex gap-6">
                         <div className='grid items-center w-fit'>
-                            <span className={`font-medium text-xl w-12 aspect-square inline-flex justify-center items-center ${parseInt(surahNumber) === parseInt(surahNo) ? 'text-white' : 'text-teal-600' }`}>
-                                {parseInt(surahNumber) === parseInt(surahNo) ? 
-                                    (
-                                        <IslamicStarFill svgStyle="w-12 aspect-square absolute text-teal-500" strokeWidth="17" />
-                                    ) : (
-                                        <IslamicStar svgStyle="w-12 aspect-square absolute text-teal-500" strokeWidth="17" />
-                                    )
-                                } <span className='relative z-10'>{surahNo}</span>
+                            <span className={`font-medium text-xl w-12 aspect-square inline-flex justify-center items-center rounded-full ${parseInt(surahNumber) === parseInt(surahNo) ? 'text-white bg-teal-800' : 'text-teal-800 bg-teal-200' }`}>
+                                <span className='relative z-10'>{surahNo}</span>
                             </span>
                         </div>
                         <div className='grid justify-start w-full'>

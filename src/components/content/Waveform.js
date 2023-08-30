@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { Download, Forward, ForwardFill, Heart, HeartFill, IslamicStar, List2, LoadingAnimation, Loop, Madina, Mecca, NetworkError, PauseFill, PauseSymbol, PlayFill, PlaySymbol, Previous, PreviousFill } from "../../assets/svgIcons";
+import { Download, Forward, Heart, HeartFill, IslamicStar, List2, LoadingAnimation, Loop, Madina, Mecca, NetworkError, PauseFill, PlayFill, Previous } from "../../assets/svgIcons";
 import { Link, useParams } from "react-router-dom";
 import WaveSurfer from "wavesurfer.js";
 import audioRef from "../../assets/audio.mp3";
@@ -114,44 +114,15 @@ export const Waveform = (props) => {
                 <div className="player-wrapper bg-gradient-to-r from-teal-400 to-teal-400 rounded-xl p-12 mb-6">
                     <div className="player-container">
                         <div className="player">
-                            <div className='text-wrapper flex gap-8'>
-                                <div className="font-medium text-4xl w-24 aspect-square inline-flex justify-center items-center text-white relative">
-                                    <IslamicStar svgStyle="w-24 aspect-square absolute text-white" strokeWidth="35" />
-                                    <span className='relative z-10 '>{number}</span>
-                                </div>
-                                <div className='flex flex-col justify-center items-center w-full text-lg text-white'>
-                                    <p className='w-fit text-4xl font-medium'>{englishName}</p>
-                                    <p className='w-fit opacity-90 border-b border-solid border-white/90'>( {englishNameTranslation} )</p>
-                                    <p className='w-fit'>{revelationType} - {totalAyahs} Ayahs</p>
-                                </div>
+                            <div className='flex flex-col justify-center items-center w-full text-lg text-white'>
+                                <p className='w-fit text-4xl font-medium'>{englishName}</p>
+                                <p className='w-fit opacity-90 border-b border-solid border-white/90 pb-1 mb-1'>( {englishNameTranslation} )</p>
+                                <p className='w-fit'>{revelationType} - {totalAyahs} Ayahs</p>
                             </div>
-                            <div className='flex items-center gap-6'>
-                                <ul>
-                                    <li className="cursor-pointer" onClick={handlePlay}>
-                                        {playing ? <PauseSymbol svgStyle="w-8 aspect-square text-white hover:text-teal-800" /> : <PlaySymbol svgStyle="w-8 aspect-square text-white hover:text-teal-800" />}
-                                    </li>
-                                </ul>
+                            <div className='flex items-center gap-8 mt-4'>
+                                <div className="cursor-pointer" onClick={handlePlay}>{playing ? <PauseFill svgStyle="w-12 aspect-square text-white hover:text-teal-800" /> : <PlayFill svgStyle="w-12 aspect-square text-white hover:text-teal-800" />}</div>
                                 <div className='w-full'><div className="waveform my-4 cursor-pointer" /></div>
-                                <ul className='flex gap-4 justify-center items-center'>
-                                    <li className="cursor-pointer">
-                                        {number > 1 ? (
-                                            <Link to={`/${author}/surah/${number - 1}`} onClick={handleStop}>
-                                                <PreviousFill svgStyle="w-8 aspect-square text-white hover:text-teal-800" />
-                                            </Link>
-                                        ) : (
-                                            <PreviousFill svgStyle="w-8 aspect-square text-white/30 cursor-not-allowed" />
-                                        )}
-                                    </li>
-                                    <li className="cursor-pointer">
-                                        {number < 114 ? (
-                                            <Link to={`/${author}/surah/${number + 1}`} onClick={handleStop}>
-                                                <ForwardFill svgStyle="w-8 aspect-square text-white hover:text-teal-800" />
-                                            </Link>
-                                        ) : (
-                                            <ForwardFill svgStyle="w-8 aspect-square text-white/30 cursor-not-allowed" />
-                                        )}
-                                    </li>
-                                </ul>
+                                <p className='text-white text-lg font-semibold whitespace-nowrap'>{formatTime(currentTime)} &nbsp;/&nbsp; {formatTime(duration)}</p>
                             </div>
                         </div>
                     </div>

@@ -6,7 +6,7 @@ import { NavPath } from "../../pages";
 export const Header = () => {
 
     return (
-        <div className="header-wrapper">
+        <div className="header-wrapper pr-12">
             <div className="header-container">
                 <div className="grid grid-cols-15 gap-4 items-center">
                     <div className="col-span-1">
