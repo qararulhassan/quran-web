@@ -5,7 +5,7 @@ import WaveSurfer from "wavesurfer.js";
 import audioRef from "../../assets/audio.mp3";
 
 export const Waveform = (props) => {
-    const {number, revelationType, name, englishName, englishNameTranslation, surahAudio, location} = props;
+    const {number, revelationType, name, englishName, englishNameTranslation, surahAudio, location, author, totalAyahs} = props;
     const [waveform, setWaveform] = useState(null);
     const [playing, setPlaying] = useState(false);
     const [currentTime, setCurrentTime] = useState(0);
@@ -122,7 +122,7 @@ export const Waveform = (props) => {
                                 <div className='flex flex-col justify-center items-center w-full text-lg text-white'>
                                     <p className='w-fit text-4xl font-medium'>{englishName}</p>
                                     <p className='w-fit opacity-90 border-b border-solid border-white/90'>( {englishNameTranslation} )</p>
-                                    <p className='w-fit'>{revelationType} - 7 Ayahs</p>
+                                    <p className='w-fit'>{revelationType} - {totalAyahs} Ayahs</p>
                                 </div>
                             </div>
                             <div className='flex items-center gap-6'>
@@ -135,20 +135,20 @@ export const Waveform = (props) => {
                                 <ul className='flex gap-4 justify-center items-center'>
                                     <li className="cursor-pointer">
                                         {number > 1 ? (
-                                            <Link to={`/surah/${number - 1}`} onClick={handleStop}>
+                                            <Link to={`/${author}/surah/${number - 1}`} onClick={handleStop}>
                                                 <PreviousFill svgStyle="w-8 aspect-square text-white hover:text-teal-800" />
                                             </Link>
                                         ) : (
-                                            <PreviousFill svgStyle="w-8 aspect-square text-teal-800 hover:text-teal-800 cursor-not-allowed" />
+                                            <PreviousFill svgStyle="w-8 aspect-square text-white/30 cursor-not-allowed" />
                                         )}
                                     </li>
                                     <li className="cursor-pointer">
                                         {number < 114 ? (
-                                            <Link to={`/surah/${number + 1}`} onClick={handleStop}>
+                                            <Link to={`/${author}/surah/${number + 1}`} onClick={handleStop}>
                                                 <ForwardFill svgStyle="w-8 aspect-square text-white hover:text-teal-800" />
                                             </Link>
                                         ) : (
-                                            <ForwardFill svgStyle="w-8 aspect-square text-teal-800 hover:text-teal-800 cursor-not-allowed" />
+                                            <ForwardFill svgStyle="w-8 aspect-square text-white/30 cursor-not-allowed" />
                                         )}
                                     </li>
                                 </ul>
@@ -192,7 +192,7 @@ export const Waveform = (props) => {
                                 </li>
                                 <li className="cursor-pointer">
                                     {number > 1 ? (
-                                        <Link to={`/surah/${number - 1}`} onClick={handleStop}>
+                                        <Link to={`/${author}/surah/${number - 1}`} onClick={handleStop}>
                                         <Previous svgStyle="w-5 aspect-square text-teal-500 hover:text-teal-600" strokeWidth="20" />
                                         </Link>
                                     ) : (
@@ -204,7 +204,7 @@ export const Waveform = (props) => {
                                 </li>
                                 <li className="cursor-pointer">
                                     {number < 114 ? (
-                                        <Link to={`/surah/${number + 1}`} onClick={handleStop}>
+                                        <Link to={`/${author}/surah/${number + 1}`} onClick={handleStop}>
                                             <Forward svgStyle="w-5 aspect-square text-teal-500 hover:text-teal-600" strokeWidth="20" />
                                         </Link>
                                     ) : (
@@ -261,7 +261,7 @@ export const SurahsPlayer = (props) => {
             ) : error ? (
                 <NetworkError errorText={error} animationStyle="w-full" />
             ) : (
-                <Waveform location={location} number={surahs.number} revelationType={surahs.revelationType} name={surahs.name} englishName={surahs.englishName} englishNameTranslation={surahs.englishNameTranslation} surahAudio={audioRef} />
+                <Waveform location={location} author={author} totalAyahs={surahs.totalAyahs} number={surahs.number} revelationType={surahs.revelationType} name={surahs.name} englishName={surahs.englishName} englishNameTranslation={surahs.englishNameTranslation} surahAudio={audioRef} />
             )}
         </React.Fragment>
     )

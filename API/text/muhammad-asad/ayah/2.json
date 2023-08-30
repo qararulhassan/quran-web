@@ -10,6 +10,7 @@
         "englishBism": "In the name of God, The Most Gracious, The Dispenser of Grace",
         "audio": "https://axntr01jcwgp.objectstorage.me-dubai-1.oci.customer-oci.com/n/axntr01jcwgp/b/quran-api/o/abdulbasit%2Fsurahs%2Faudio%2F2.mp3",
         "revelationType": "Medinan",
+        "totalAyahs": "286",
         "ayahs": [
             {
                 "number": 8,

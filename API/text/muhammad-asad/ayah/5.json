@@ -10,6 +10,7 @@
         "englishBism": "In the name of God, The Most Gracious, The Dispenser of Grace",
         "audio": "/API/abdulbasit/surah/5.mp3",
         "revelationType": "Medinan",
+        "totalAyahs": "120",
         "ayahs": [
             {
                 "number": 670,

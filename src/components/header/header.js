@@ -11,7 +11,7 @@ export const Header = () => {
                 <div className="grid grid-cols-15 gap-4 items-center">
                     <div className="col-span-1">
                         <Link to={NavPath({path: "surahsList"})} className="w-full aspect-square flex justify-center items-center rounded-full text-white mx-auto relative">
-                            <Logo2 svgStyle="w-28 aspect-square" />
+                            <Logo2 svgStyle="w-20 aspect-square" />
                         </Link>
                     </div>
                     <div className="col-span-12 grid grid-flow-col">
