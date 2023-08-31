@@ -1,8 +1,9 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { Download, Forward, Heart, HeartFill, IslamicStar, List2, LoadingAnimation, Loop, Madina, Mecca, NetworkError, PauseFill, PlayFill, Previous } from "../../assets/svgIcons";
+import { Bismillah, Download, Forward, Heart, HeartFill, List2, LoadingAnimation, Loop, Madina, Mecca, NetworkError, PauseFill, PlayFill, Previous } from "../../assets/svgIcons";
 import { Link, useParams } from "react-router-dom";
 import WaveSurfer from "wavesurfer.js";
 import audioRef from "../../assets/audio.mp3";
+import { SurahAudio } from '../../pages';
 
 export const Waveform = (props) => {
     const {number, revelationType, name, englishName, englishNameTranslation, surahAudio, location, author, totalAyahs} = props;
@@ -111,9 +112,10 @@ export const Waveform = (props) => {
     return (
         <React.Fragment>
         { location === 'aside' ? (
-                <div className="player-wrapper bg-gradient-to-r from-teal-400 to-teal-400 rounded-xl p-12 mb-6">
+                <div className="player-wrapper bg-gradient-to-r from-teal-400 to-teal-400 rounded-xl p-12 mb-6 relative inline-table overflow-hidden">
                     <div className="player-container">
-                        <div className="player">
+                        <Bismillah svgStyle="absolute w-full text-white/10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
+                        <div className="player relative z-10">
                             <div className='flex flex-col justify-center items-center w-full text-lg text-white'>
                                 <p className='w-fit text-4xl font-medium'>{englishName}</p>
                                 <p className='w-fit opacity-90 border-b border-solid border-white/90 pb-1 mb-1'>( {englishNameTranslation} )</p>
@@ -126,7 +128,7 @@ export const Waveform = (props) => {
                             </div>
                         </div>
                     </div>
-                    <audio className="track" src={surahAudio} />
+                    <audio className="track hidden" src={SurahAudio({author, number})} />
                 </div>
             ) : (
                 <div className="player-wrapper">

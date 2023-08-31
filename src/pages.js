@@ -11,6 +11,12 @@ export const NavPath = (props) => {
     }
 }
 
+export const SurahAudio = (props) => {
+    const author = props.author;
+    const surahNumber = props.number;
+    return `https://quranaudio.s3.us-east-005.backblazeb2.com/${author}/surah/${surahNumber}.mp3`
+}
+
 export const SurahsPage = () => {
     return (
         <div className='flex flex-col max-h-screen overflow-hidden'>

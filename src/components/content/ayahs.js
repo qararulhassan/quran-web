@@ -32,7 +32,7 @@ export const AyahsListing = () => {
     
     useEffect(() => {
             fetchData();
-    }, [fetchData]);
+    }, [fetchData, SurahsPlayer]);
 
     let audioRef = "https://www.learningcontainer.com/wp-content/uploads/2020/02/Kalimba.mp3";
 
