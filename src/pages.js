@@ -11,10 +11,25 @@ export const NavPath = (props) => {
     }
 }
 
+export const SurahsAPI = () => {
+    return "https://raw.githubusercontent.com/qararulhassan/quran-web/main/src/quran/text/surah/api.json";
+}
+
+export const AyahsAPI = (props) => {
+    const fileName = props.fileName;
+    return `https://raw.githubusercontent.com/qararulhassan/quran-web/main/src/quran/text/ayah/${fileName}.json`;
+}
+
 export const SurahAudio = (props) => {
     const author = props.author;
-    const surahNumber = props.number;
-    return `https://quranaudio.s3.us-east-005.backblazeb2.com/${author}/surah/${surahNumber}.mp3`
+    const surahNumber = props.surahNumber;
+    return require(`./quran/audio/${author}/surah/${surahNumber}.mp3`);
+}
+
+export const AyahAudio = (props) => {
+    const author = props.author;
+    const ayahNumber = props.ayahNumber;
+    return require(`./quran/audio/${author}/ayah/${ayahNumber}.mp3`);
 }
 
 export const SurahsPage = () => {

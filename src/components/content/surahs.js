@@ -4,6 +4,7 @@ import { ItemGrid } from "./items";
 import { TopFilters } from "./filters";
 import { useParams } from "react-router-dom";
 import { LoadingAnimation, NetworkError } from "../../assets/svgIcons";
+import { SurahsAPI } from "../../pages";
 
 export const SurahsListing = () => {
     const { author } = useParams();
@@ -12,7 +13,7 @@ export const SurahsListing = () => {
     const [surahs, setSurahs] = useState([]);
 
     let authorName;
-    if (author === undefined) {
+    if (author === "undefined") {
         authorName = "muhammad-asad";
     } else {
         authorName = author;
@@ -20,7 +21,7 @@ export const SurahsListing = () => {
 
     const fetchData = useCallback(() => {
         Promise.all([
-          fetch(`https://raw.githubusercontent.com/qararulhassan/quran-web/main/API/text/${authorName}/surah/api.json`),
+          fetch(SurahsAPI()),
         ])
           .then(([responseSurah]) =>
             Promise.all([
@@ -35,7 +36,7 @@ export const SurahsListing = () => {
             setError(error.message);
             setLoading(false);
           });
-    }, [authorName]);
+    }, []);
     
     useEffect(() => {
         fetchData();

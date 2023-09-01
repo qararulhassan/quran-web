@@ -4,6 +4,7 @@ import { ItemList, ItemSideList } from "./items";
 import { useParams } from "react-router-dom";
 import { LoadingAnimation, NetworkError } from "../../assets/svgIcons";
 import { SurahsPlayer } from "./Waveform";
+import { SurahsAPI, AyahsAPI, AyahAudio } from "../../pages";
 
 export const AyahsListing = () => {
     const { author, surahNumber } = useParams();
@@ -13,7 +14,7 @@ export const AyahsListing = () => {
 
     const fetchData = useCallback(() => {
         Promise.all([
-          fetch(`https://raw.githubusercontent.com/qararulhassan/quran-web/main/API/text/${author}/ayah/${surahNumber}.json`),
+          fetch(AyahsAPI({fileName: surahNumber})),
         ])
           .then(([responseSurah]) =>
             Promise.all([
@@ -28,13 +29,11 @@ export const AyahsListing = () => {
             setError(error.message);
             setLoading(false);
           });
-    }, [author, surahNumber]);
+    }, [surahNumber]);
     
     useEffect(() => {
             fetchData();
-    }, [fetchData, SurahsPlayer]);
-
-    let audioRef = "https://www.learningcontainer.com/wp-content/uploads/2020/02/Kalimba.mp3";
+    }, [fetchData]);
 
     return (
         <React.Fragment>
@@ -47,7 +46,7 @@ export const AyahsListing = () => {
                     <SurahsPlayer location="aside" />
                     <div className="flex flex-col flex-grow gap-6 overflow-scroll no-scrollbar">
                         {ayahs.map((ayah, index) => (
-                            <ItemList key={index} surahNumber={surahNumber} ayahNumber={ayah.numberInSurah} ayahTextEN={ayah.englishText} ayahTextAR={ayah.arabicText} ayahAudio={audioRef} />
+                            <ItemList key={index} surahNumber={surahNumber} ayahNumber={ayah.numberInSurah} ayahTextEN={ayah.englishText} ayahTextAR={ayah.arabicText} ayahAudio={AyahAudio({author: author, ayahNumber: ayah.number})} />
                         ))}
                     </div>
                 </React.Fragment>
@@ -64,7 +63,7 @@ export const SideSurahsListing = () => {
   
     const fetchData = useCallback(() => {
         Promise.all([
-          fetch(`https://raw.githubusercontent.com/qararulhassan/quran-web/main/API/text/${author}/surah/api.json`),
+          fetch(SurahsAPI()),
         ])
           .then(([responseSurah]) =>
             Promise.all([
@@ -79,7 +78,7 @@ export const SideSurahsListing = () => {
             setError(error.message);
             setLoading(false);
           });
-    }, [author]);
+    }, []);
     
     useEffect(() => {
         fetchData();

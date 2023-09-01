@@ -1,23 +1,21 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { Bismillah, Download, Forward, Heart, HeartFill, List2, LoadingAnimation, Loop, Madina, Mecca, NetworkError, PauseFill, PlayFill, Previous } from "../../assets/svgIcons";
 import { Link, useParams } from "react-router-dom";
-import WaveSurfer from "wavesurfer.js";
-import audioRef from "../../assets/audio.mp3";
-import { SurahAudio } from '../../pages';
+import { AyahsAPI, SurahAudio } from '../../pages';
+import WaveSurfer from 'wavesurfer.js';
 
 export const Waveform = (props) => {
-    const {number, revelationType, name, englishName, englishNameTranslation, surahAudio, location, author, totalAyahs} = props;
+    const {surahNumber, revelationType, name, englishName, englishNameTranslation, surahAudio, location, author, totalAyahs} = props;
     const [waveform, setWaveform] = useState(null);
     const [playing, setPlaying] = useState(false);
     const [currentTime, setCurrentTime] = useState(0);
     const [duration, setDuration] = useState(0);
 
     useEffect(() => {
-        const track = document.querySelector(".track");
+        const track = SurahAudio({author: author, surahNumber: surahNumber});
 
         const canvas = document.createElement('canvas');
         const ctx = canvas.getContext('2d');
-
         // Define the progress gradient
         const progressGradient = ctx.createLinearGradient(0, 0, 0, canvas.height * 1.35)
         progressGradient.addColorStop(0, '#134e4a') // Top color
@@ -36,9 +34,27 @@ export const Waveform = (props) => {
             height: 60,
             progressColor: progressGradient,
             responsive: true,
-            waveColor: "#FFFFFF",
+            waveColor: "#ffffff",
             cursorColor: "transparent",
             cursor: "pointer",
+            url: track,
+            peaks: [
+                [
+                    0, 0.0023595101665705442, 0.012107174843549728, 0.005919494666159154, -0.31324470043182373, 0.1511787623167038,
+                    0.2473851442337036, 0.11443428695201874, -0.036057762801647186, -0.0968964695930481, -0.03033737652003765,
+                    0.10682467371225357, 0.23974689841270447, 0.013210971839725971, -0.12377244979143143, 0.046145666390657425,
+                    -0.015757400542497635, 0.10884027928113937, 0.06681904196739197, 0.09432944655418396, -0.17105795443058014,
+                    -0.023439358919858932, -0.10380347073078156, 0.0034454423002898693, 0.08061369508504868, 0.026129156351089478,
+                    0.18730352818965912, 0.020447958260774612, -0.15030759572982788, 0.05689578503370285, -0.0009095853311009705,
+                    0.2749626338481903, 0.2565386891365051, 0.07571295648813248, 0.10791446268558502, -0.06575305759906769,
+                    0.15336275100708008, 0.07056761533021927, 0.03287476301193237, -0.09044631570577621, 0.01777501218020916,
+                    -0.04906218498945236, -0.04756792634725571, -0.006875281687825918, 0.04520256072282791, -0.02362387254834175,
+                    -0.0668797641992569, 0.12266506254673004, -0.10895221680402756, 0.03791835159063339, -0.0195105392485857,
+                    -0.031097881495952606, 0.04252675920724869, -0.09187793731689453, 0.0829525887966156, -0.003812957089394331,
+                    0.0431736595928669, 0.07634212076663971, -0.05335947126150131, 0.0345163568854332, -0.049201950430870056,
+                    0.02300390601158142, 0.007677287794649601, 0.015354577451944351, 0.007677287794649601, 0.007677288725972176,
+                ],
+            ],
         });
 
         newWaveform.on('ready', () => {
@@ -62,7 +78,7 @@ export const Waveform = (props) => {
                 newWaveform.destroy();
             }
         };
-    }, []);
+    }, [author, surahNumber]);
 
     const formatTime = (seconds) => {
         const minutes = Math.floor(seconds / 60);
@@ -128,7 +144,6 @@ export const Waveform = (props) => {
                             </div>
                         </div>
                     </div>
-                    <audio className="track" src={SurahAudio({author, number})} controls="true" />
                 </div>
             ) : (
                 <div className="player-wrapper">
@@ -164,8 +179,8 @@ export const Waveform = (props) => {
                                     <Loop svgStyle="w-5 aspect-square text-teal-500 hover:text-teal-600" strokeWidth="30" />
                                 </li>
                                 <li className="cursor-pointer">
-                                    {number > 1 ? (
-                                        <Link to={`/${author}/surah/${number - 1}`} onClick={handleStop}>
+                                    {surahNumber > 1 ? (
+                                        <Link to={`/${author}/surah/${surahNumber - 1}`} onClick={handleStop}>
                                         <Previous svgStyle="w-5 aspect-square text-teal-500 hover:text-teal-600" strokeWidth="20" />
                                         </Link>
                                     ) : (
@@ -176,8 +191,8 @@ export const Waveform = (props) => {
                                     {playing ? <PauseFill svgStyle="w-12 aspect-square text-teal-500 hover:text-teal-600" /> : <PlayFill svgStyle="w-12 aspect-square text-teal-500 hover:text-teal-600" />}
                                 </li>
                                 <li className="cursor-pointer">
-                                    {number < 114 ? (
-                                        <Link to={`/${author}/surah/${number + 1}`} onClick={handleStop}>
+                                    {surahNumber < 114 ? (
+                                        <Link to={`/${author}/surah/${surahNumber + 1}`} onClick={handleStop}>
                                             <Forward svgStyle="w-5 aspect-square text-teal-500 hover:text-teal-600" strokeWidth="20" />
                                         </Link>
                                     ) : (
@@ -205,7 +220,7 @@ export const SurahsPlayer = (props) => {
 
     const fetchData = useCallback(() => {
         Promise.all([
-            fetch(`https://raw.githubusercontent.com/qararulhassan/quran-web/main/API/text/${author}/ayah/${surahNumber}.json`),
+            fetch(AyahsAPI({fileName: surahNumber})),
         ])
           .then(([responseSurah]) =>
             Promise.all([
@@ -220,7 +235,7 @@ export const SurahsPlayer = (props) => {
             setError(error.message);
             setLoading(false);
           });
-    }, [author, surahNumber]);
+    }, [surahNumber]);
     
     useEffect(() => {
         fetchData();
@@ -234,7 +249,7 @@ export const SurahsPlayer = (props) => {
             ) : error ? (
                 <NetworkError errorText={error} animationStyle="w-full" />
             ) : (
-                <Waveform location={location} author={author} totalAyahs={surahs.totalAyahs} number={surahs.number} revelationType={surahs.revelationType} name={surahs.name} englishName={surahs.englishName} englishNameTranslation={surahs.englishNameTranslation} surahAudio={audioRef} />
+                <Waveform location={location} author={author} totalAyahs={surahs.totalAyahs} surahNumber={surahs.number} revelationType={surahs.revelationType} name={surahs.name} englishName={surahs.englishName} englishNameTranslation={surahs.englishNameTranslation} surahAudio={SurahAudio({author: author, surahNumber: surahNumber})} />
             )}
         </React.Fragment>
     )

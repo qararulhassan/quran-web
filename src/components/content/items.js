@@ -103,7 +103,7 @@ export const ItemList = ( props ) => {
             currentAudioRef.removeEventListener('ended', handleEnded);
           }
         };
-    }, []);      
+    }, [audioRef]);      
 
     return (
         <div className="list-item-wrapper">
@@ -122,8 +122,8 @@ export const ItemList = ( props ) => {
                 <ul className="flex items-center gap-6">
                     <li><Heart svgStyle="w-6 aspect-square text-gray-300 hover:text-red-500 cursor-pointer" strokeWidth="35" /></li>
                     <li><Share svgStyle="w-6 aspect-square text-gray-300 hover:text-teal-500" strokeWidth="35" /></li>
-                    <li className='cursor-pointer' onClick={() => handleAudioClick('audio')}>
-                        {currentAudio === 'audio' && isPlaying ? <Pause svgStyle="w-6 aspect-square text-teal-500" strokeWidth="35" /> : <Play svgStyle="w-6 aspect-square text-gray-300 hover:text-teal-500" strokeWidth="35" />}
+                    <li className='cursor-pointer' onClick={() => handleAudioClick({ayahNumber})}>
+                        {isPlaying ? <Pause svgStyle="w-6 aspect-square text-teal-500" strokeWidth="35" /> : <Play svgStyle="w-6 aspect-square text-gray-300 hover:text-teal-500" strokeWidth="35" />}
                     </li>
                     <li className='cursor-pointer'><Copy svgStyle="w-6 aspect-square text-gray-300 hover:text-teal-500" strokeWidth="35" /></li>
                 </ul>
