@@ -128,7 +128,7 @@ export const Waveform = (props) => {
                             </div>
                         </div>
                     </div>
-                    <audio className="track hidden" src={SurahAudio({author, number})} />
+                    <audio className="track" src={SurahAudio({author, number})} controls="true" />
                 </div>
             ) : (
                 <div className="player-wrapper">
