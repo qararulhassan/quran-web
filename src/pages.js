@@ -24,6 +24,7 @@ export const SurahAudio = (props) => {
     const author = props.author;
     const surahNumber = props.surahNumber;
     return require(`./quran/audio/${author}/surah/${surahNumber}.mp3`);
+    // return `https://quranaudio.s3.us-east-005.backblazeb2.com/${author}/surah/${surahNumber}.mp3`;
 }
 
 export const AyahAudio = (props) => {
