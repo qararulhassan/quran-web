@@ -1,8 +1,8 @@
 import React from 'react';
 import { SideNavigation } from '../components/navigation/navigation';
-import { AyahsListing, SideSurahsListing } from '../components/content/ayahs';
+import { RecitorsList } from '../components/audio/audio';
 
-export const AyahsBody = () => {
+export const AudioBody = () => {
 
     return (
         <div className="flex flex-grow content-wrapper">
@@ -12,11 +12,8 @@ export const AyahsBody = () => {
                         <SideNavigation />
                     </div>
                     <div className="col-span-15 bg-slate-100 flex gap-8 p-12 min-h-full h-[calc(100vh-8.6vh)]">
-                        <div className="flex flex-col max-w-sm relative w-full">
-                            <SideSurahsListing />
-                        </div>
                         <div className="flex flex-col relative w-full">
-                            <AyahsListing />
+                            <RecitorsList />
                         </div>
                     </div>
                 </div>

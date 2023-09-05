@@ -29,6 +29,9 @@ module.exports = {
         'cairo': ['Cairo Play', 'sans-serif'],
         'amiri-quran': ['Amiri Quran', 'serif'],
       },
+      colors: {
+        'highlight': "#7AFFE1",
+      }
     },
   },
   plugins: [],

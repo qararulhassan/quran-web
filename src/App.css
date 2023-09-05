@@ -2,6 +2,10 @@ body {
   @apply font-alegreya;
 }
 
+::selection {
+  @apply bg-highlight;
+}
+
 .col-span-13 { grid-column: span 13 / span 13; }
 .col-span-14 { grid-column: span 14 / span 14; }
 .col-span-15 { grid-column: span 15 / span 15; }

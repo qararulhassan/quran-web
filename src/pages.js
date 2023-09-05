@@ -3,11 +3,18 @@ import { Header } from './components/header/header';
 import { SurahsBody } from './screens/surahs';
 import { AyahsBody } from './screens/ayahs';
 import { useParams } from 'react-router-dom';
+import { AudioBody } from './screens/audio';
 
 export const NavPath = (props) => {
     const { author } = useParams();
     if (props.path === "surahsList") {
         return `/${author}`
+    }
+    if (props.path === "recitorsList") {
+        return `/audio`
+    }
+    if (props.path === "quranAudio") {
+        return `/audio/${props.author}`
     }
 }
 
@@ -33,9 +40,15 @@ export const AyahAudio = (props) => {
     return require(`./quran/audio/${author}/ayah/${ayahNumber}.mp3`);
 }
 
+export const ChaptersAudio = (props) => {
+    const author = props.author;
+    const chapter = props.chapter;
+    return `https://download.quranicaudio.com/quran/${author}/${chapter}.mp3`;
+}
+
 export const SurahsPage = () => {
     return (
-        <div className='flex flex-col max-h-screen overflow-hidden'>
+        <div className='flex flex-col h-screen overflow-hidden'>
             <Header />
             <SurahsBody />
         </div>
@@ -44,9 +57,27 @@ export const SurahsPage = () => {
 
 export const AyahsPage = () => {
     return (
-        <div className='flex flex-col max-h-screen overflow-hidden'>
+        <div className='flex flex-col h-screen overflow-hidden'>
             <Header />
             <AyahsBody />
+        </div>
+    )
+}
+
+export const RecitorsPage = () => {
+    return (
+        <div className='flex flex-col h-screen overflow-hidden'>
+            <Header />
+            <AudioBody />
+        </div>
+    )
+}
+
+export const RecitorsAudioPage = () => {
+    return (
+        <div className='flex flex-col h-screen overflow-hidden'>
+            <Header />
+            <AudioBody />
         </div>
     )
 }
