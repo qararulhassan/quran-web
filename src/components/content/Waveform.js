@@ -12,7 +12,8 @@ export const Waveform = (props) => {
     const [duration, setDuration] = useState(0);
 
     useEffect(() => {
-        const track = SurahAudio({author: author, surahNumber: surahNumber});
+        // const track = SurahAudio({author: author, surahNumber: surahNumber});
+        const track = surahAudio;
 
         const canvas = document.createElement('canvas');
         const ctx = canvas.getContext('2d');
@@ -172,6 +173,12 @@ export const Waveform = (props) => {
                             </div>
                         </div>
                     </div>
+                </div>
+            ) : location === 'line' ? (
+                <div className='player-wrapper flex'>
+                    <div className="cursor-pointer" onClick={handlePlay}>{playing ? <PauseFill svgStyle="w-12 aspect-square text-white hover:text-teal-800" /> : <PlayFill svgStyle="w-12 aspect-square text-white hover:text-teal-800" />}</div>
+                    <div className="waveform my-4 hidden" />
+                    <p className='text-white text-lg font-semibold whitespace-nowrap'>{formatTime(currentTime)} &nbsp;/&nbsp; {formatTime(duration)}</p>
                 </div>
             ) : (
                 <div className="player-wrapper">

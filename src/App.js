@@ -13,20 +13,20 @@ function App() {
         <Route exact path='/audio' Component={RecitorsPage} />
         <Route exact path='/audio/:author' Component={RecitorsAudioPage} />
 
-        <Route exact path='/*' Component={RedirectToDefault} />
+        {/* <Route exact path='/*' Component={RedirectToDefault} /> */}
       </Routes>
     </Router>
   );
 }
 
-function RedirectToDefault() {
-  const navigate = useNavigate();
+// function RedirectToDefault() {
+//   const navigate = useNavigate();
 
-  React.useEffect(() => {
-    navigate('/muhammad-asad', { replace: true });
-  }, [navigate]);
+//   React.useEffect(() => {
+//     navigate('/muhammad-asad', { replace: true });
+//   }, [navigate]);
 
-  return null;
-}
+//   return null;
+// }
 
 export default App;

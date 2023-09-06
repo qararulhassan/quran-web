@@ -3,7 +3,7 @@ import { Header } from './components/header/header';
 import { SurahsBody } from './screens/surahs';
 import { AyahsBody } from './screens/ayahs';
 import { useParams } from 'react-router-dom';
-import { AudioBody } from './screens/audio';
+import { AudioBody, ChapetrsAudioBody } from './screens/audio';
 
 export const NavPath = (props) => {
     const { author } = useParams();
@@ -40,7 +40,7 @@ export const AyahAudio = (props) => {
     return require(`./quran/audio/${author}/ayah/${ayahNumber}.mp3`);
 }
 
-export const ChaptersAudio = (props) => {
+export const ChaptersAudioSrc = (props) => {
     const author = props.author;
     const chapter = props.chapter;
     return `https://download.quranicaudio.com/quran/${author}/${chapter}.mp3`;
@@ -77,7 +77,7 @@ export const RecitorsAudioPage = () => {
     return (
         <div className='flex flex-col h-screen overflow-hidden'>
             <Header />
-            <AudioBody />
+            <ChapetrsAudioBody />
         </div>
     )
 }
