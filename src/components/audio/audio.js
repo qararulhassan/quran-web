@@ -49,7 +49,7 @@ export const RecitorsList = () => {
                 <React.Fragment>
                     <ul className="bg-teal-300 p-1 inline-flex gap-2 mx-auto rounded-full mb-12">
                         {tabs.map((tab, index) => (
-                            <li ket={index} className={`tab ${activeTab === index ? 'bg-white text-teal-500' : ''} transition duration-300 px-5 py-3 rounded-full hover:bg-white hover:text-teal-500 cursor-pointer`} onClick={() => handleTabClick(index)}>{tab}</li>    
+                            <li key={index} className={`tab ${activeTab === index ? 'bg-white text-teal-500' : ''} transition duration-300 px-5 py-3 rounded-full hover:bg-white hover:text-teal-500 cursor-pointer`} onClick={() => handleTabClick(index)}>{tab.name}</li>    
                         ))}
                     </ul>
                 </React.Fragment>

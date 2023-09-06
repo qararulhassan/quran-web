@@ -26604,13 +26604,13 @@
             ]
         },
         {
-            "tab": "Recitations from Haramain Taraweeh"
+            "name": "Recitations from Haramain Taraweeh"
         },
         {
-            "tab": "Non-Hafs Recitations"
+            "name": "Non-Hafs Recitations"
         },
         {
-            "tab": "Recitations with Translations"
+            "name": "Recitations with Translations"
         }
     ]
 }
