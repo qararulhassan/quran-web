@@ -1,7 +1,7 @@
 // Desc: Content component
 import React, { useState, useCallback, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
-import { ChaptersAudioSrc, NavPath } from "../../pages";
+import { AudioAPI, ChaptersAudioSrc, NavPath } from "../../pages";
 import { Waveform } from "../content/Waveform";
 import { LoadingAnimation, NetworkError, PlayFill } from "../../assets/svgIcons";
 
@@ -14,19 +14,19 @@ export const RecitorsList = () => {
     const { author, surahNumber } = useParams();
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
-    const [ayahs, setAyahs] = useState([]);
+    const [tabs, setTabs] = useState([]);
 
     const fetchData = useCallback(() => {
         Promise.all([
-          fetch(),
+          fetch(AudioAPI()),
         ])
           .then(([responseSurah]) =>
             Promise.all([
               responseSurah.json()
             ])
           )
-          .then(([quran]) => {
-            setAyahs(quran.data.ayahs);
+          .then(([quranaudio]) => {
+            setTabs(quranaudio.data);
             setLoading(false);
           })
           .catch(error => {
@@ -48,10 +48,9 @@ export const RecitorsList = () => {
             ) : (
                 <React.Fragment>
                     <ul className="bg-teal-300 p-1 inline-flex gap-2 mx-auto rounded-full mb-12">
-                        <li className={`tab ${activeTab === 1 ? 'bg-white text-teal-500' : ''} transition duration-300 px-5 py-3 rounded-full hover:bg-white hover:text-teal-500 cursor-pointer`} onClick={() => handleTabClick(1)}>Recitations</li>
-                        <li className={`tab ${activeTab === 2 ? 'bg-white text-teal-500' : ''} transition duration-300 px-5 py-3 rounded-full hover:bg-white hover:text-teal-500 cursor-pointer`} onClick={() => handleTabClick(2)}>Recitations from Haramain Taraweeh</li>
-                        <li className={`tab ${activeTab === 3 ? 'bg-white text-teal-500' : ''} transition duration-300 px-5 py-3 rounded-full hover:bg-white hover:text-teal-500 cursor-pointer`} onClick={() => handleTabClick(3)}>Non-Hafs Recitations</li>
-                        <li className={`tab ${activeTab === 4 ? 'bg-white text-teal-500' : ''} transition duration-300 px-5 py-3 rounded-full hover:bg-white hover:text-teal-500 cursor-pointer`} onClick={() => handleTabClick(4)}>Recitations with Translations</li>
+                        {tabs.map((tab, index) => (
+                            <li ket={index} className={`tab ${activeTab === index ? 'bg-white text-teal-500' : ''} transition duration-300 px-5 py-3 rounded-full hover:bg-white hover:text-teal-500 cursor-pointer`} onClick={() => handleTabClick(index)}>{tab}</li>    
+                        ))}
                     </ul>
                 </React.Fragment>
             )}

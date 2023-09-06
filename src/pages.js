@@ -27,6 +27,10 @@ export const AyahsAPI = (props) => {
     return `https://raw.githubusercontent.com/qararulhassan/quran-web/main/src/quran/text/ayah/${fileName}.json`;
 }
 
+export const AudioAPI = (props) => {
+    return `https://raw.githubusercontent.com/qararulhassan/quran-web/main/src/quran/audio/audio.json`;
+}
+
 export const SurahAudio = (props) => {
     const author = props.author;
     const surahNumber = props.surahNumber;
