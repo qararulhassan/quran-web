@@ -106,7 +106,7 @@ export const Waveform = (props) => {
                 newWaveform.destroy();
             }
         };
-    }, [author, surahNumber]);
+    }, [surahAudio]);
 
     const formatTime = (seconds) => {
         const minutes = Math.floor(seconds / 60);

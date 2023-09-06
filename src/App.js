@@ -1,7 +1,7 @@
 import './App.css';
 import React from 'react';
 import { AyahsPage, RecitorsAudioPage, RecitorsPage, SurahsPage } from './pages';
-import { BrowserRouter as Router, Route, Routes, useNavigate } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
