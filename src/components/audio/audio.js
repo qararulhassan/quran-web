@@ -51,7 +51,7 @@ export const RecitorsList = () => {
                                     {subGroup.data && subGroup.data.length > 0 && (
                                         <ul className="grid grid-cols-4 w-full">
                                             {subGroup.data.map((item, itemIndex) => (
-                                                <li key={itemIndex}><Link to={NavPath({path: 'quranAudio', author: 'abdullaah_3awwaad_al-juhaynee'})} className="block hover:bg-white hover:text-teal-500 transition duration-300 p-4">{item.name}</Link></li>
+                                                <li key={itemIndex}><Link to={NavPath({path: 'quranAudio', author: item.url})} className="block hover:bg-white hover:text-teal-500 transition duration-300 p-4">{item.name}</Link></li>
                                             ))}
                                         </ul>
                                     )}
