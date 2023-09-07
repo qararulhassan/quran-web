@@ -40,7 +40,7 @@ export const RecitorsList = () => {
                 ))}
             </ul>
             {groups.map((group, groupIndex) => (
-                <div key={groupIndex} className="flex flex-col flex-grow overflow-scroll no-scrollbar h-full">
+                <div key={groupIndex} className="flex flex-col flex-grow overflow-scroll no-scrollbar min-h-full">
                     {group.data && group.data.length > 0 && (
                         <div>
                             {group.data.map((subGroup, subGroupIndex) => (
