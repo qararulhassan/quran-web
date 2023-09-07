@@ -3,7 +3,22 @@
         "name": "Recitations",
         "data": [
             {
-                "letter": "A"
+                "letter": "A",
+                "data": [
+                    {
+                        "name": "Abdullah Awad al-Juhani",
+                        "surahs": [
+                            {
+                                "number": 1,
+                                "name": "سُورَةُ ٱلْفَاتِحَةِ",
+                                "englishName": "Al-Faatiha",
+                                "englishNameTranslation": "The Opening",
+                                "audio": "https://download.quranicaudio.com/quran/abdullaah_3awwaad_al-juhaynee/001.mp3",
+                                "revelationType": "Meccan"
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 "letter": "B"

@@ -15,21 +15,21 @@ export const RecitorsList = () => {
         Promise.all([
           fetch(AudioAPI()),
         ])
-          .then(([responseSurah]) =>
+        .then(([response]) =>
             Promise.all([
-              responseSurah.json()
+                response.json()
             ])
-          )
-          .then(([quran]) => {
+        )
+        .then(([quran]) => {
             setTabs(quran);
-            setGroups(tabs.data);
+            setGroups(quran.data);
             setLoading(false);
-          })
-          .catch(error => {
+        })
+        .catch(error => {
             setError(error.message);
             setLoading(false);
-          });
-    }, [tabs, groups]);
+        });
+    }, []);
     
     useEffect(() => {
         fetchData();
@@ -40,8 +40,6 @@ export const RecitorsList = () => {
         setActiveTab(tabNumber);
     }
 
-    console.log(groups);
-
     return (
         <React.Fragment>
             <ul className="bg-teal-300 p-1 inline-flex gap-2 mx-auto rounded-full mb-12">
@@ -50,6 +48,18 @@ export const RecitorsList = () => {
                 ))}
             </ul>
             <div className="tab-content overflow-scroll">
+            {tabs.map((group, index) => (
+            <div key={index}>
+                <p>{group.name}</p>
+                {group.data && group.data.length > 0 && (
+                <ul>
+                    {group.data.map((item, itemIndex) => (
+                    <li key={itemIndex}>{item.letter}</li>
+                    ))}
+                </ul>
+                )}
+            </div>
+            ))}
                 {activeTab === 0 && 
                     <div className="flex flex-col flex-grow overflow-scroll no-scrollbar h-full">
                         <div className="flex gap-6 pb-12 mb-12 border-b-2 group">
