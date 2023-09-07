@@ -1,27 +1,25 @@
 [
-    
-        {
-            "name": "Recitations",
-            "data": [
-                {
-                    "letter": "A"
-                },
-                {
-                    "letter": "B"
-                },
-                {
-                    "letter": "C"
-                }
-            ]
-        },
-        {
-            "name": "Recitations from Haramain Taraweeh"
-        },
-        {
-            "name": "Non-Hafs Recitations"
-        },
-        {
-            "name": "Recitations with Translations"
-        }
-    
-    ]
+    {
+        "name": "Recitations",
+        "data": [
+            {
+                "letter": "A"
+            },
+            {
+                "letter": "B"
+            },
+            {
+                "letter": "C"
+            }
+        ]
+    },
+    {
+        "name": "Recitations from Haramain Taraweeh"
+    },
+    {
+        "name": "Non-Hafs Recitations"
+    },
+    {
+        "name": "Recitations with Translations"
+    }    
+]

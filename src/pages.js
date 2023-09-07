@@ -28,7 +28,7 @@ export const AyahsAPI = (props) => {
 }
 
 export const AudioAPI = (props) => {
-    return `https://raw.githubusercontent.com/qararulhassan/quran-web/main/src/quran/audio/audio.json`;
+    return "https://raw.githubusercontent.com/qararulhassan/quran-web/main/src/quran/audio/audio.json";
 }
 
 export const SurahAudio = (props) => {

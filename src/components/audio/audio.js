@@ -21,7 +21,7 @@ export const RecitorsList = () => {
             ])
           )
           .then(([quran]) => {
-            setTabs(quran.data);
+            setTabs(quran);
             setGroups(tabs.data);
             setLoading(false);
           })
