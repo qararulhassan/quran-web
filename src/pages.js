@@ -8,7 +8,7 @@ import { AudioBody, ChapetrsAudioBody } from './screens/audio';
 export const NavPath = (props) => {
     const { author } = useParams();
     if (props.path === "surahsList") {
-        return `/${author}`
+        return `/muhammad-asad`
     }
     if (props.path === "recitorsList") {
         return `/audio`
