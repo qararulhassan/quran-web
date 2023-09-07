@@ -22,14 +22,14 @@ export const RecitorsList = () => {
           )
           .then(([quran]) => {
             setTabs(quran.data);
-            setGroups(tabs);
+            setGroups(tabs.data);
             setLoading(false);
           })
           .catch(error => {
             setError(error.message);
             setLoading(false);
           });
-    }, [tabs]);
+    }, [tabs, groups]);
     
     useEffect(() => {
         fetchData();
