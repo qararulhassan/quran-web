@@ -126,19 +126,6 @@ export const Waveform = (props) => {
         }
     };
 
-    const initializeAudioContext = () => {
-        const audioContext = new (window.AudioContext || window.webkitAudioContext)();
-        // Now you can use the audioContext to start audio operations
-        if (waveform) {
-            if (playing) {
-                waveform.pause();
-            } else {
-                waveform.play();
-            }
-            setPlaying(!playing);
-        }
-    }
-
     const handleStop = () => {
         if (waveform) {
             waveform.stop();
@@ -186,12 +173,6 @@ export const Waveform = (props) => {
                             </div>
                         </div>
                     </div>
-                </div>
-            ) : location === 'line' ? (
-                <div className='player-wrapper flex'>
-                    <div className="cursor-pointer" onClick={initializeAudioContext}>{playing ? <PauseFill svgStyle="w-12 aspect-square text-teal-500 hover:text-teal-800" /> : <PlayFill svgStyle="w-12 aspect-square text-teal-500 hover:text-teal-800" />}</div>
-                    <div className='w-full'><div className="waveform my-4 cursor-pointer" /></div>
-                    <p className='text-black text-lg font-semibold whitespace-nowrap'>{formatTime(currentTime)} &nbsp;/&nbsp; {formatTime(duration)}</p>
                 </div>
             ) : (
                 <div className="player-wrapper">

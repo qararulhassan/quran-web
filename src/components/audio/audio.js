@@ -2,13 +2,14 @@
 import React, { useState, useCallback, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import { AudioAPI, NavPath } from "../../pages";
-import { Waveform } from "../content/Waveform";
 import { LoadingAnimation, Madina, Mecca, NetworkError } from "../../assets/svgIcons";
+import AudioPlayer from "./player";
 
 export const RecitorsList = () => {
     const [groups, setGroups] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+    const [activeTab, setActiveTab] = useState(0);
 
     const fetchData = useCallback(() => {
         Promise.all([fetch(AudioAPI())])
@@ -27,7 +28,6 @@ export const RecitorsList = () => {
         fetchData();
     }, [fetchData]);
 
-    const [activeTab, setActiveTab] = useState(0);
     const handleTabClick = (tabNumber) => {
         setActiveTab(tabNumber);
     }
@@ -125,7 +125,7 @@ export const ChaptersAudio = () => {
                 <div className="grid divide-y relative overflow-x-hidden overflow-y-scroll max-h-screen no-scrollbar">
                     {surahs.map((surah, surahIndex) => (
                         <div key={surahIndex} className="list-item-container cursor-pointer bg-white p-5 grid gap-8 relative">
-                            <Waveform location="line" surahAudio={surah.audio} />
+                            <AudioPlayer audioSrc={surah.audio} id={surah.number} />
                         </div>
                     ))}
                 </div>
