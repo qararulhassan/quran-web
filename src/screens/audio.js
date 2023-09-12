@@ -12,7 +12,7 @@ export const AudioBody = () => {
                         <SideNavigation />
                     </div>
                     <div className="col-span-15 bg-slate-100 flex gap-8 p-12 min-h-full h-[calc(100vh-8.6vh)]">
-                        <div className="flex flex-col relative w-full">
+                        <div className="flex flex-col relative w-full overflow-hidden">
                             <RecitorsList />
                         </div>
                     </div>

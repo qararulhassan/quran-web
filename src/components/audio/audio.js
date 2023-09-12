@@ -2,7 +2,7 @@
 import React, { useState, useCallback, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import { AudioAPI, NavPath } from "../../pages";
-import { LoadingAnimation, Madina, Mecca, NetworkError } from "../../assets/svgIcons";
+import { LoadingAnimation, NetworkError } from "../../assets/svgIcons";
 import AudioPlayer from "./player";
 
 export const RecitorsList = () => {
@@ -31,6 +31,19 @@ export const RecitorsList = () => {
     const handleTabClick = (tabNumber) => {
         setActiveTab(tabNumber);
     }
+
+    const groupp = groups.flatMap((group) =>
+    group.data
+        ? group.data.flatMap((subGroup) =>
+              subGroup.data
+                  ? subGroup.data.map((item) => ({
+                        letter: subGroup.letter,
+                        item,
+                    }))
+                  : []
+          )
+        : []
+    );
 
     return (
         <React.Fragment>
@@ -114,6 +127,17 @@ export const ChaptersAudio = () => {
     )
     .flatMap((item) => (item.surahs ? item.surahs : []));
 
+    const group = groups
+    .flatMap((group) =>
+        group.data
+        ? group.data.flatMap((subGroup) =>
+            subGroup.data
+                ? subGroup.data.filter((item) => item.url === author)
+                : []
+            )
+        : []
+    );
+
     return (
         <React.Fragment>
             {loading ? (
@@ -122,13 +146,14 @@ export const ChaptersAudio = () => {
                 <NetworkError errorText={error} animationStyle="w-full" />
             ) : (
                 <React.Fragment>
-                <div className="grid divide-y relative overflow-x-hidden overflow-y-scroll max-h-screen no-scrollbar">
-                    {surahs.map((surah, surahIndex) => (
-                        <div key={surahIndex} className="list-item-container cursor-pointer bg-white p-5 grid gap-8 relative">
-                            <AudioPlayer audioSrc={surah.audio} id={surah.number} />
-                        </div>
+                    {group.map((item, itemIndex) => (
+                        <p key={itemIndex} className="font-bold text-4xl text-center gap-2 mb-12 w-full block"><span className="block clear-both uppercase text-base text-teal-400 mb-2">Recited By</span>{item.name}</p>
                     ))}
-                </div>
+                    <div className="grid divide-y relative overflow-x-hidden overflow-y-scroll max-h-screen no-scrollbar">
+                        {surahs.map((surah, surahIndex) => (
+                            <AudioPlayer key={surahIndex} audioSrc={surah.audio} id={surah.number} name={surah.englishName} meaning={surah.englishNameTranslation} />
+                        ))}
+                    </div>
                 </React.Fragment>
             )}
         </React.Fragment>
