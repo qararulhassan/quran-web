@@ -157,7 +157,7 @@ export const Waveform = (props) => {
         <React.Fragment>
         { location === 'aside' ? (
                 <div className="player-wrapper bg-gradient-to-r from-teal-400 to-teal-400 rounded-xl p-12 mb-6 relative inline-table overflow-hidden">
-                    <button className="absolute top-4 right-4 py-2 px-4 bg-white text-teal-500 font-semibold text-base tracking-wide z-50 transition duration-300 cursor-pointer rounded-md" onClick={handleDownload}>Download</button>
+                    {/* <button className="absolute top-4 right-4 py-2 px-4 bg-white text-teal-500 font-semibold text-base tracking-wide z-50 transition duration-300 cursor-pointer rounded-md" onClick={handleDownload}>Download</button> */}
                     <div className="player-container">
                         <Bismillah svgStyle="absolute w-full text-white/10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
                         <div className="player relative z-10">

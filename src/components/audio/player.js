@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { PauseFill, PlayFill } from '../../assets/svgIcons';
-import { Link } from 'react-router-dom';
 
 function formatTime(seconds) {
     const minutes = Math.floor(seconds / 60);
@@ -11,14 +10,19 @@ function formatTime(seconds) {
 }
 
 function AudioPlayer(props) {
-    const { id, name, meaning, audioSrc} = props;
+    const { id, name, meaning, audioSrc } = props;
     const [isPlaying, setIsPlaying] = useState(false);
     const [currentTime, setCurrentTime] = useState(0);
-    const [duration, setDuration] = useState(0);
+    const [duration, setDuration] = useState("");
 
     useEffect(() => {
         const audioElement = document.getElementById(`audio-element-${id}`);
         const audioFill = document.getElementById(`audio-fill-${id}`);
+
+        if (!audioElement || !audioFill) {
+            // Element not found, exit early to avoid errors
+            return;
+        }
 
         const handleTimeUpdate = () => {
             setCurrentTime(audioElement.currentTime);
@@ -65,18 +69,19 @@ function AudioPlayer(props) {
     }
 
     return (
-        <div className={`audio-player-${id} bg-white p-5 relative group ${duration === 0 ? ("hidden") : ("block") }`}>
+        <div className={`audio-player-${id} bg-white p-5 relative group`}>
             <div className="cursor-pointer flex gap-6 items-center">
                 <div className="flex gap-6 items-center w-full player-wrapper" onClick={handlePlayPause}>
-                    <button>
-                        {isPlaying ? <PauseFill svgStyle="w-12 aspect-square text-teal-500 hover:text-teal-600" /> : <PlayFill svgStyle="w-12 aspect-square text-teal-500 hover:text-teal-600" />}
-                    </button>
+                    <div className="flex items-center justify-center">
+                        <span className="absolute text-2xl font-bold group-hover:text-white transition duration-300">{id}.</span>
+                        <button className="opacity-0 group-hover:opacity-100 transition duration-300 relative z-10">{isPlaying ? <PauseFill svgStyle="w-12 aspect-square text-teal-500 hover:text-teal-600" /> : <PlayFill svgStyle="w-12 aspect-square text-teal-500 hover:text-teal-600" />}</button>
+                    </div>
                     <p className="font-bold text-xl flex items-center gap-2">{name} <span>-</span> <span className="font-medium uppercase text-sm text-slate-400">{meaning}</span></p>
                     <audio id={`audio-element-${id}`} className="relative z-10 hidden"><source src={audioSrc} type="audio/mp3" /></audio>
                 </div>
-                <div className="text-center w-fit">
+                {/* <div className="text-center w-fit">
                     <Link to={audioSrc} className="bg-gradient-to-br from-teal-400 to-teal-500 hover:bg-gradient-to-bl text-white rounded-md px-8 py-2 inline-block transition duration-300 text-lg relative z-50 opacity-0 group-hover:opacity-100 animate-gradient" target="_blank">Download</Link>
-                </div>
+                </div> */}
                 <div className="font-medium text-right w-full" onClick={handlePlayPause}>
                     <span>{formatTime(currentTime)} / {formatTime(duration)}</span>
                 </div>

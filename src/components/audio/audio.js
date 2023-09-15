@@ -32,19 +32,6 @@ export const RecitorsList = () => {
         setActiveTab(tabNumber);
     }
 
-    const groupp = groups.flatMap((group) =>
-    group.data
-        ? group.data.flatMap((subGroup) =>
-              subGroup.data
-                  ? subGroup.data.map((item) => ({
-                        letter: subGroup.letter,
-                        item,
-                    }))
-                  : []
-          )
-        : []
-    );
-
     return (
         <React.Fragment>
             {loading ? (
@@ -94,68 +81,69 @@ export const RecitorsList = () => {
 }
 
 
-export const ChaptersAudio = () => {
-    const { author } = useParams();
-    const [groups, setGroups] = useState([]);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
+// export const ChaptersAudio = () => {
+//     const { author } = useParams();
+//     const [groups, setGroups] = useState([]);
+//     const [loading, setLoading] = useState(true);
+//     const [error, setError] = useState(null);
 
-    const fetchData = useCallback(() => {
-        Promise.all([fetch(AudioAPI())])
-        .then(([response]) => Promise.all([response.json()]))
-        .then(([quran]) => {
-            setGroups(quran);
-            setLoading(false);
-        })
-        .catch(error => {
-            setError(error.message);
-            setLoading(false);
-        });
-    }, []);
+//     const fetchData = useCallback(() => {
+//         Promise.all([fetch(AudioAPI())])
+//         .then(([response]) => Promise.all([response.json()]))
+//         .then(([quran]) => {
+//             setGroups(quran);
+//             setLoading(false);
+//         })
+//         .catch(error => {
+//             setError(error.message);
+//             setLoading(false);
+//         });
+//     }, []);
     
-    useEffect(() => {
-        fetchData();
-    }, [fetchData]);
+//     useEffect(() => {
+//         fetchData();
+//     }, [fetchData]);
 
-    const surahs = groups
-    .flatMap((group) =>
-      group.data
-        ? group.data.flatMap((subGroup) =>
-            subGroup.data ? subGroup.data.filter((item) => item.url === author) : []
-          )
-        : []
-    )
-    .flatMap((item) => (item.surahs ? item.surahs : []));
+//     const surahs = groups
+//     .flatMap((group) =>
+//       group.data
+//         ? group.data.flatMap((subGroup) =>
+//             subGroup.data ? subGroup.data.filter((item) => item.url === author) : []
+//           )
+//         : []
+//     )
+//     .flatMap((item) => (item.surahs ? item.surahs : []));
 
-    const group = groups
-    .flatMap((group) =>
-        group.data
-        ? group.data.flatMap((subGroup) =>
-            subGroup.data
-                ? subGroup.data.filter((item) => item.url === author)
-                : []
-            )
-        : []
-    );
+//     const group = groups
+//     .flatMap((group) =>
+//         group.data
+//         ? group.data.flatMap((subGroup) =>
+//             subGroup.data
+//                 ? subGroup.data.filter((item) => item.url === author)
+//                 : []
+//             )
+//         : []
+//     );
 
-    return (
-        <React.Fragment>
-            {loading ? (
-                <LoadingAnimation animationStyle="w-full" />
-            ) : error ? (
-                <NetworkError errorText={error} animationStyle="w-full" />
-            ) : (
-                <React.Fragment>
-                    {group.map((item, itemIndex) => (
-                        <p key={itemIndex} className="font-bold text-4xl text-center gap-2 mb-12 w-full block"><span className="block clear-both uppercase text-base text-teal-400 mb-2">Recited By</span>{item.name}</p>
-                    ))}
-                    <div className="grid divide-y relative overflow-x-hidden overflow-y-scroll max-h-screen no-scrollbar">
-                        {surahs.map((surah, surahIndex) => (
-                            <AudioPlayer key={surahIndex} audioSrc={surah.audio} id={surah.number} name={surah.englishName} meaning={surah.englishNameTranslation} />
-                        ))}
-                    </div>
-                </React.Fragment>
-            )}
-        </React.Fragment>
-    )
-}
+//     return (
+//         <React.Fragment>
+//             {loading ? (
+//                 <LoadingAnimation animationStyle="w-full" />
+//             ) : error ? (
+//                 <NetworkError errorText={error} animationStyle="w-full" />
+//             ) : (
+//                 <React.Fragment>
+//                     {group.map((item, itemIndex) => (
+//                         <p key={itemIndex} className="font-bold text-4xl text-center gap-2 mb-12 w-full block"><span className="block clear-both uppercase text-base text-teal-400 mb-2">Recited By</span>{item.name}</p>
+//                     ))}
+//                     <div className="grid divide-y relative overflow-x-hidden overflow-y-scroll max-h-screen no-scrollbar">
+//                         {surahs.map((surah, surahIndex) => (
+//                             <AudioPlayer key={surahIndex} audioSrc={surah.audio} id={surah.number} name={surah.englishName} meaning={surah.englishNameTranslation} />
+//                         ))}
+//                     </div>
+//                 </React.Fragment>
+//             )}
+//         </React.Fragment>
+//     )
+// }
+
